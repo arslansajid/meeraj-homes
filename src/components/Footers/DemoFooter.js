@@ -12,26 +12,32 @@ function DemoFooter() {
             <ul>
               <li>
                 <a
-                  href="https://www.creative-tim.com?ref=pkr-footer"
-                  // target="_blank"
+                  href="/"
+                // target="_blank"
                 >
-                  Facebook
+                  {/* Facebook */}
+                  <i className="fa fa-2x fa-twitter" />
+                  <p className="d-lg-none">Twitter</p>
                 </a>
               </li>
               <li>
                 <a
-                  href="http://blog.creative-tim.com/?ref=pkr-footer"
-                  // target="_blank"
+                  href="/"
+                // target="_blank"
                 >
-                  Instagram
+                  {/* Instagram */}
+                  <i className="fa fa-2x fa-facebook-square" />
+                  <p className="d-lg-none">Facebook</p>
                 </a>
               </li>
               <li>
                 <a
-                  href="https://www.creative-tim.com/license?ref=pkr-footer"
-                  // target="_blank"
+                  href="/"
+                // target="_blank"
                 >
-                  Licenses
+                  {/* Licenses */}
+                  <i className="fa fa-2x fa-instagram" />
+                  <p className="d-lg-none">Instagram</p>
                 </a>
               </li>
             </ul>

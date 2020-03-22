@@ -22,7 +22,7 @@ import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 
-function ProfilePage() {
+function AboutUs() {
   const [activeTab, setActiveTab] = React.useState("1");
 
   const toggle = tab => {
@@ -43,11 +43,11 @@ function ProfilePage() {
       <ExamplesNavbar />
       <ProfilePageHeader />
       <div className="section profile-content">
-        <h1>Contact Us</h1>
+        <h1>About Us</h1>
       </div>
       <DemoFooter />
     </>
   );
 }
 
-export default ProfilePage;
+export default AboutUs;

@@ -43,7 +43,7 @@ function ProfilePage() {
       <ExamplesNavbar />
       <ProfilePageHeader />
       <div className="section profile-content">
-        <h1>Contact Us</h1>
+        <h1>Payments</h1>
       </div>
       <DemoFooter />
     </>

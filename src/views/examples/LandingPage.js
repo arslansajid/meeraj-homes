@@ -1,21 +1,3 @@
-/*!
-
-=========================================================
-* Paper Kit React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/meeraj-homes
-
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/meeraj-homes/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
@@ -87,7 +69,7 @@ function LandingPage() {
                     <i className="nc-icon nc-album-2" />
                   </div>
                   <div className="description">
-                    <h4 className="info-title">Beautiful Gallery</h4>
+                    <h4 className="info-title">Beautiful Interior</h4>
                     <p className="description">
                       Spend your time generating new ideas. You don't have to
                       think of implementing.
@@ -169,8 +151,8 @@ function LandingPage() {
                   <CardBody>
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <div className="author">
-                        <CardTitle tag="h4">Henry Ford</CardTitle>
-                        <h6 className="card-category">Product Manager</h6>
+                        <CardTitle tag="h4">Arslan Sajid</CardTitle>
+                        <h6 className="card-category">Product Owner</h6>
                       </div>
                     </a>
                     <p className="card-description text-center">
@@ -220,8 +202,8 @@ function LandingPage() {
                   <CardBody>
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <div className="author">
-                        <CardTitle tag="h4">Sophie West</CardTitle>
-                        <h6 className="card-category">Designer</h6>
+                        <CardTitle tag="h4">Shahid Afridi</CardTitle>
+                        <h6 className="card-category">CTO PIA</h6>
                       </div>
                     </a>
                     <p className="card-description text-center">
@@ -272,8 +254,8 @@ function LandingPage() {
                   <CardBody>
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <div className="author">
-                        <CardTitle tag="h4">Robert Orben</CardTitle>
-                        <h6 className="card-category">Developer</h6>
+                        <CardTitle tag="h4">Imran Khan</CardTitle>
+                        <h6 className="card-category">CEO BAHRIA TOWN</h6>
                       </div>
                     </a>
                     <p className="card-description text-center">

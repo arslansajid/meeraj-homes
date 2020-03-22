@@ -6,10 +6,10 @@
 
 * Product Page: https://www.creative-tim.com/product/meeraj-homes
 
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Copyright 2019 Meeraj Homes (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/meeraj-homes/blob/master/LICENSE.md)
 
-* Coded by Creative Tim
+* Coded by Meeraj Homes
 
 =========================================================
 
@@ -72,9 +72,9 @@ function ExamplesNavbar() {
         <div className="navbar-translate">
           <NavbarBrand
             data-placement="bottom"
-            to="/index"
+            to="/"
             // target="_blank"
-            // title="Coded by Creative Tim"
+            // title="Coded by Meeraj Homes"
             tag={Link}
           >
             Meeraj Homes
@@ -98,32 +98,26 @@ function ExamplesNavbar() {
         >
           <Nav navbar>
             <NavItem>
-              <NavLink to="/index" tag={Link}>
-                <i className="nc-icon nc-layout-11" /> Projects
+              <NavLink to="/projects" tag={Link}>
+                <i className="nc-icon nc-bank" /> Projects
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink
-                href="/profile-page"
-                target="_blank"
-              >
+              <NavLink to="/about-us" tag={Link}>
                 <i className="nc-icon nc-book-bookmark" /> About Us
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/index" tag={Link}>
+              <NavLink to="/contact-us" tag={Link}>
                 <i className="nc-icon nc-layout-11" /> Contact Us
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink
-                href="/profile-page"
-                target="_blank"
-              >
+              <NavLink to="/payments" tag={Link}>
                 <i className="nc-icon nc-book-bookmark" /> Payments
               </NavLink>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLink
                 data-placement="bottom"
                 href="https://twitter.com/CreativeTim?ref=creativetim"
@@ -166,7 +160,7 @@ function ExamplesNavbar() {
                 <i className="fa fa-github" />
                 <p className="d-lg-none">GitHub</p>
               </NavLink>
-            </NavItem>
+            </NavItem> */}
           </Nav>
         </Collapse>
       </Container>

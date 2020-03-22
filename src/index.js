@@ -10,6 +10,8 @@ import "assets/demo/demo.css";
 // pages
 import Index from "views/Index.js";
 import NucleoIcons from "views/NucleoIcons.js";
+import AboutUs from "views/examples/AboutUs.js";
+import Payments from "views/examples/Payments.js";
 import LandingPage from "views/examples/LandingPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 import RegisterPage from "views/examples/RegisterPage.js";
@@ -19,25 +21,29 @@ ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route
-        path="/index"
-        render={props => <Index {...props} />} />
+        path="/projects"
+        render={props => <RegisterPage {...props} />}
+      />
+      {/* <Route
+        path="/projects"
+        render={props => <Index {...props} />} /> */}
       <Route
-        path="/nucleo-icons"
-        render={props => <NucleoIcons {...props} />}
+        path="/about-us"
+        render={props => <AboutUs {...props} />}
       />
       <Route
-        path="/landing-page"
-        render={props => <LandingPage {...props} />}
-      />
-      <Route
-        path="/profile-page"
+        path="/contact-us"
         render={props => <ProfilePage {...props} />}
       />
       <Route
-        path="/register-page"
-        render={props => <RegisterPage {...props} />}
+        path="/payments"
+        render={props => <Payments {...props} />}
       />
-      <Redirect to="/landing-page" />
+      <Route
+        path="/"
+        render={props => <LandingPage {...props} />}
+      />
+      {/* <Redirect to="/landing-page" /> */}
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
