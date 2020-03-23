@@ -42,9 +42,89 @@ function ProfilePage() {
     <>
       <ExamplesNavbar />
       <ProfilePageHeader />
-      <div className="section profile-content">
-        <h1>Payments</h1>
-      </div>
+      <Container>
+        <Row>
+          <Col md="12">
+            <div className="section profile-content">
+              <h2>Payments</h2>
+              <h5 className="heading-grey mt-5 mb-4">
+                Housing Societies
+              </h5>
+
+              <table className="table">
+                <tr>
+                  <th>Project</th>
+                  <th>Installments</th>
+                  <th>Client</th>
+                  <th>Project Description</th>
+                </tr>
+                <tr>
+                  <td>Engineering University Employees Cooperative Housing Society, Lahore</td>
+                  <td>6000</td>
+                  <td>University of Engineering and Technology, Lahore</td>
+                  <td>Detailed Design of Road works and Structures, Bill of Quantities and Specifications</td>
+                </tr>
+                <tr>
+                  <td>Hostels for Oil Field Company</td>
+                  <td>2000</td>
+                  <td>Ikan</td>
+                  <td>Detailed Design of Structures, Bill of Quantities and Specifications.</td>
+                </tr>
+              </table>
+
+              <h5 className="heading-grey mt-5 mb-4">
+                Studies
+              </h5>
+
+              <table className="table">
+                <tr>
+                  <th>Project</th>
+                  <th>Installments</th>
+                  <th>Client</th>
+                  <th>Project Description</th>
+                </tr>
+                <tr>
+                  <td>Engineering University Employees Cooperative Housing Society, Lahore</td>
+                  <td>5000</td>
+                  <td>University of Engineering and Technology, Lahore</td>
+                  <td>Detailed Design of Road works and Structures, Bill of Quantities and Specifications</td>
+                </tr>
+                <tr>
+                  <td>Hostels for Oil Field Company</td>
+                  <td>25000</td>
+                  <td>Ikan</td>
+                  <td>Detailed Design of Structures, Bill of Quantities and Specifications.</td>
+                </tr>
+              </table>
+
+              <h5 className="heading-grey mt-5 mb-4">
+                Underground Oil Storage Tanks
+              </h5>
+
+              <table className="table">
+                <tr>
+                  <th>Project</th>
+                  <th>Installments</th>
+                  <th>Client</th>
+                  <th>Project Description</th>
+                </tr>
+                <tr>
+                  <td>Engineering University Employees Cooperative Housing Society, Lahore</td>
+                  <td>2000</td>
+                  <td>University of Engineering and Technology, Lahore</td>
+                  <td>Detailed Design of Road works and Structures, Bill of Quantities and Specifications</td>
+                </tr>
+                <tr>
+                  <td>Hostels for Oil Field Company</td>
+                  <td>8000</td>
+                  <td>Ikan</td>
+                  <td>Detailed Design of Structures, Bill of Quantities and Specifications.</td>
+                </tr>
+              </table>
+            </div>
+          </Col>
+        </Row>
+      </Container>
       <DemoFooter />
     </>
   );
