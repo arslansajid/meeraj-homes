@@ -51,7 +51,7 @@ const LandingPage = () => {
       {/* <LandingPageHeader /> */}
       <IndexHeader />
       <div className="main">
-        <div className="section text-center">
+        <div className="section text-center darkgrey-bg">
           <Container>
             <Row>
               <Col className="ml-auto mr-auto" md="8">
@@ -148,7 +148,7 @@ const LandingPage = () => {
             </Row>
           </Container>
         </div>
-        <div className="section section-dark text-center">
+        <div className="section section-dark text-center lightgrey-bg">
           <Container>
             <h2 className="title">Let's talk about us</h2>
             <Row>
@@ -310,7 +310,7 @@ const LandingPage = () => {
             </Row>
           </Container>
         </div>
-        <div className="section map-container">
+        <div className="section map-container darkgrey-bg">
           <Container>
             <Row>
             <Col md="6">
@@ -329,7 +329,7 @@ const LandingPage = () => {
             </Row>
           </Container>
         </div>
-        <div className="section landing-section" ref={formRef}>
+        <div className="section landing-section lightgrey-bg" ref={formRef}>
           <Container>
             <Row>
               <Col className="ml-auto mr-auto" md="8">

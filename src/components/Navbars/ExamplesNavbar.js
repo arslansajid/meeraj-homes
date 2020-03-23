@@ -69,7 +69,7 @@ const ExamplesNavbar = (props) => {
               <div className="text-center">Meraj Housing</div>
             </div>
           </NavbarBrand>
-          <div className="logo-container">
+          <div className="logo-container center-logo">
             <img className="logo" src={require("assets/img/logo_png.png")} />
           </div>
           <div className="d-flex">
@@ -100,7 +100,7 @@ const ExamplesNavbar = (props) => {
         >
           <Nav navbar>
           <div className="logo-container navbar-toggler">
-            <img className="logo" src={require("assets/img/logo_png.png")} />
+            <img className="logo sidebar-logo" src={require("assets/img/logo_png.png")} />
           </div>
             {props.location.pathname === '/' &&
               <NavItem id="get-in-touch-btn">
