@@ -17,6 +17,7 @@ import {
   Col
 } from "reactstrap";
 import Swal from 'sweetalert2';
+import Map from '../../components/Map/map';
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
@@ -305,6 +306,25 @@ const LandingPage = () => {
                     </Button>
                   </CardFooter>
                 </Card>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+        <div className="section map-container">
+          <Container>
+            <Row>
+            <Col md="6">
+                <h3>Location</h3>
+                <p className="card-description">
+                  This is the paragraph where you can write more details about
+                  your product. Keep you user engaged by providing meaningful
+                  information. Remember that by this time, the user is curious,
+                  otherwise he wouldn't scroll to get here. Add a button if you
+                  want the user to see more.
+                </p>
+              </Col>
+              <Col md="6">
+                <Map />
               </Col>
             </Row>
           </Container>
