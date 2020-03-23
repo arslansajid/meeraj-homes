@@ -8,6 +8,29 @@ const Marker = () => {
     )
 }
 
+const Locations = [
+  {
+    label: "Daska",
+    cordinates: {lat: "32.20", lng: "74.21"}
+  },
+  {
+    label: "Sialkot Airport",
+    cordinates: {lat: "32.3208", lng: "74.2150"}
+  },
+  {
+    label: "Daska Pasrur road interchange",
+    cordinates: {lat: "32.20", lng: "74.21"}
+  },
+  {
+    label: "Sialkot City",
+    cordinates: {lat: "32.2933", lng: "74.3152"}
+  },
+  {
+    label: "Sambrial",
+    cordinates: {lat: "32.16", lng: "74.40"}
+  },
+]
+
 function createMapOptions(maps) {
     // next props are exposed at maps
     // "Animation", "ControlPosition", "MapTypeControlStyle", "MapTypeId",
@@ -112,17 +135,32 @@ function createMapOptions(maps) {
 
 const Map = () => {
     const {center, setCenter} = [{ lat: 33.726030, lng: 73.074607 }];
+    const handleGoogleMapApi = (google) => {
+      var flightPath = new google.maps.Polyline({
+        path: [{ "lat": 32.20, "lng": 74.21 },{ "lat": 32.3208, "lng": 74.2150 },{ "lat": 32.2933, "lng": 74.3152 },{ "lat": 32.16, "lng": 74.40 },{ "lat": 32.20, "lng": 74.21 }],
+        geodesic: true,
+        strokeColor: '#33BD4E',
+        strokeOpacity: 1,
+        strokeWeight: 2
+      });
+
+      flightPath.setMap(google.map);
+    }
     return (
         <div className="map" style={{ height: '400px', width: '100%', background: "lightgrey" }}>
             <GoogleMapReact
                 bootstrapURLKeys={{ key: 'AIzaSyDai50O1JJN5mgRPVI4qb7kr7SUxDZvpnA' }}
-                defaultCenter={{ lat: 33.726030, lng: 73.074607 }}
+                defaultCenter={{ lat: 32.22, lng: 74.3152 }}
                 defaultZoom={11}
                 options={createMapOptions}
-            >
-                <Marker lat={33.726030} lng={73.074607} />
-                <Marker lat={33.73} lng={73.09} />
-                <Marker lat={33.77} lng={73.1} />
+                yesIWantToUseGoogleMapApiInternals
+                onGoogleApiLoaded={handleGoogleMapApi}
+              >
+              {Locations.map((location, index) => {
+                return(
+                  <Marker key={index} lat={location.cordinates.lat} lng={location.cordinates.lng} />
+                )
+              })}
             </GoogleMapReact>
         </div>
     )
