@@ -107,8 +107,12 @@
         }
 
         &:after {
-          background-color: #FFFCF5;
+          // background-color: #FFFCF5;
+          background-color: #172a50;
         }
+    }
+    .navbar .navbar-collapse.show .navbar-nav .nav-item {
+      color: white !important;
     }
     #navbarSupportedContent{
         .nav-item{
