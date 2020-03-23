@@ -6,10 +6,10 @@
 
 * Product Page: https://www.creative-tim.com/product/meeraj-homes
 
-* Copyright 2019 Meeraj Homes (https://www.creative-tim.com)
+* Copyright 2019 Meraj Housing (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/meeraj-homes/blob/master/LICENSE.md)
 
-* Coded by Meeraj Homes
+* Coded by Meraj Housing
 
 =========================================================
 
@@ -87,7 +87,7 @@
 
 .demo-icons body {
   font-size: 1.6rem;
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #333333;
   background: white;
 }
@@ -312,6 +312,15 @@
   border: 1px solid #333333;
   width: 50px;
   float: left;
+}
+
+.landing-logo-container {
+  width: 200px;
+  height: 200px;
+}
+
+.landing-logo-container .logo{
+  width: 100%;
 }
 
 .logo-container .brand {

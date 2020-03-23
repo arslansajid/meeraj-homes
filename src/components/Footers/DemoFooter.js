@@ -12,8 +12,8 @@ function DemoFooter() {
             <ul>
               <li>
                 <a
-                  href="/"
-                // target="_blank"
+                  href="https://twitter.com/home"
+                  target="_blank"
                 >
                   {/* Facebook */}
                   <i className="fa fa-2x fa-twitter" />
@@ -22,8 +22,8 @@ function DemoFooter() {
               </li>
               <li>
                 <a
-                  href="/"
-                // target="_blank"
+                  href="https://www.facebook.com/"
+                  target="_blank"
                 >
                   {/* Instagram */}
                   <i className="fa fa-2x fa-facebook-square" />
@@ -32,8 +32,8 @@ function DemoFooter() {
               </li>
               <li>
                 <a
-                  href="/"
-                // target="_blank"
+                  href="https://instagram.com"
+                  target="_blank"
                 >
                   {/* Licenses */}
                   <i className="fa fa-2x fa-instagram" />
@@ -45,7 +45,7 @@ function DemoFooter() {
           <div className="credits ml-auto">
             <span className="copyright">
               © {new Date().getFullYear()}, made with{" "}
-              <i className="fa fa-heart heart" /> by Meeraj Homes
+              <i className="fa fa-heart heart" /> by Meraj Housing
             </span>
           </div>
         </Row>

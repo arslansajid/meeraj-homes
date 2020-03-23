@@ -21,7 +21,10 @@ function IndexHeader() {
         <div className="content-center">
           <Container>
             <div className="title-brand">
-              <h1 className="presentation-title">Meeraj Homes</h1>
+              {/* <h1 className="presentation-title">Meraj Housing</h1> */}
+              <div className="landing-logo-container">
+                <img className="logo" src={require('../../assets/img/logo_png.png')} />
+              </div>
               {/* <div className="fog-low">
                 <img alt="..." src={require("assets/img/fog-low.png")} />
               </div>
@@ -29,17 +32,17 @@ function IndexHeader() {
                 <img alt="..." src={require("assets/img/fog-low.png")} />
               </div> */}
             </div>
-            <h2 className="presentation-subtitle text-center">
-              {/* Make your mark with a Free Bootstrap 4 (Reactstrap) UI Kit! */}
-            </h2>
+            {/* <h2 className="presentation-subtitle text-center">
+              Make your mark with a Free Bootstrap 4 (Reactstrap) UI Kit!
+            </h2> */}
           </Container>
         </div>
-        <div
+        {/* <div
           className="moving-clouds"
           style={{
             backgroundImage: "url(" + require("assets/img/clouds.png") + ")"
           }}
-        />
+        /> */}
         <h6 className="category category-absolute">
           <a
             href="/"
@@ -52,7 +55,7 @@ function IndexHeader() {
             /> */}
             <i className="fa fa-home" style={{fontSize: '1.5em', marginRight: '10px'}} />
           </a>
-          We Innovate and Design
+          Finest Living
         </h6>
       </div>
     </>

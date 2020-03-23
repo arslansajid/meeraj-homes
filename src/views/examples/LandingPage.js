@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef, useEffect} from "react";
 
 // reactstrap components
 import {
@@ -16,6 +16,7 @@ import {
   Row,
   Col
 } from "reactstrap";
+import Swal from 'sweetalert2';
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
@@ -23,7 +24,7 @@ import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 import IndexHeader from "components/Headers/IndexHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 
-function LandingPage() {
+const LandingPage = () => {
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("profile-page");
@@ -31,9 +32,21 @@ function LandingPage() {
       document.body.classList.remove("profile-page");
     };
   });
+
+  const onFormSubmit = (e) => {
+    e.preventDefault();
+    Swal.fire(
+      'Thank you!',
+      'Your response has been submitted!',
+      'success'
+    )
+  };
+
+  const formRef = useRef(null);
+
   return (
     <>
-      <ExamplesNavbar />
+      <ExamplesNavbar formRef={formRef} />
       {/* <LandingPageHeader /> */}
       <IndexHeader />
       <div className="main">
@@ -296,12 +309,12 @@ function LandingPage() {
             </Row>
           </Container>
         </div>
-        <div className="section landing-section">
+        <div className="section landing-section" ref={formRef}>
           <Container>
             <Row>
               <Col className="ml-auto mr-auto" md="8">
                 <h2 className="text-center">Keep in touch?</h2>
-                <Form className="contact-form">
+                <Form className="contact-form" onSubmit={e => onFormSubmit(e)}>
                   <Row>
                     <Col md="6">
                       <label>Name</label>
@@ -311,7 +324,7 @@ function LandingPage() {
                             <i className="nc-icon nc-single-02" />
                           </InputGroupText>
                         </InputGroupAddon>
-                        <Input placeholder="Name" type="text" />
+                        <Input placeholder="Name" type="text" required />
                       </InputGroup>
                     </Col>
                     <Col md="6">
@@ -322,7 +335,7 @@ function LandingPage() {
                             <i className="nc-icon nc-email-85" />
                           </InputGroupText>
                         </InputGroupAddon>
-                        <Input placeholder="Email" type="text" />
+                        <Input placeholder="Email" type="text" required />
                       </InputGroup>
                     </Col>
                   </Row>
@@ -331,6 +344,7 @@ function LandingPage() {
                     placeholder="Tell us your thoughts and feelings..."
                     type="textarea"
                     rows="4"
+                    required
                   />
                   <Row>
                     <Col className="ml-auto mr-auto" md="4">

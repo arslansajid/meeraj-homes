@@ -6,10 +6,10 @@
 
 * Product Page: https://www.creative-tim.com/product/meeraj-homes
 
-* Copyright 2019 Meeraj Homes (https://www.creative-tim.com)
+* Copyright 2019 Meraj Housing (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/meeraj-homes/blob/master/LICENSE.md)
 
-* Coded by Meeraj Homes
+* Coded by Meraj Housing
 
 =========================================================
 

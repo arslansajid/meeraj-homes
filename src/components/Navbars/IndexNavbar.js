@@ -6,10 +6,10 @@
 
 * Product Page: https://www.creative-tim.com/product/meeraj-homes
 
-* Copyright 2019 Meeraj Homes (https://www.creative-tim.com)
+* Copyright 2019 Meraj Housing (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/meeraj-homes/blob/master/LICENSE.md)
 
-* Coded by Meeraj Homes
+* Coded by Meraj Housing
 
 =========================================================
 
@@ -69,7 +69,7 @@ function IndexNavbar() {
             data-placement="bottom"
             href="/index"
             target="_blank"
-            title="Coded by Meeraj Homes"
+            title="Coded by Meraj Housing"
           >
             Paper Kit React
           </NavbarBrand>

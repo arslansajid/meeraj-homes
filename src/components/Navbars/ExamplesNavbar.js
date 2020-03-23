@@ -1,23 +1,6 @@
-/*!
 
-=========================================================
-* Paper Kit React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/meeraj-homes
-
-* Copyright 2019 Meeraj Homes (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/meeraj-homes/blob/master/LICENSE.md)
-
-* Coded by Meeraj Homes
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 // nodejs library that concatenates strings
 import classnames from "classnames";
 
@@ -29,16 +12,23 @@ import {
   NavItem,
   NavLink,
   Nav,
-  Container
+  Container,
+  Button,
 } from "reactstrap";
 
-function ExamplesNavbar() {
+const ExamplesNavbar = (props) => {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
-
+  console.log("PROPS", props);
   const toggleNavbarCollapse = () => {
     setNavbarCollapse(!navbarCollapse);
     document.documentElement.classList.toggle("nav-open");
+  };
+
+  const scrollToContactForm = () => {
+    console.log("navbar formRef", props)
+    // window.scrollTo(0, props.formRef.current.offsetHeight);
+    props.formRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
   React.useEffect(() => {
@@ -73,11 +63,14 @@ function ExamplesNavbar() {
           <NavbarBrand
             data-placement="bottom"
             to="/"
-            // target="_blank"
-            // title="Coded by Meeraj Homes"
             tag={Link}
           >
-            Meeraj Homes
+            <div className="d-flex justify-content-center align-items-center">
+            <div className="logo-container">
+              <img className="logo" src={require("assets/img/logo_png.png")} />
+            </div>
+            <div className="text-center">Meraj Housing</div>
+            </div>
           </NavbarBrand>
           <button
             aria-expanded={navbarCollapse}
@@ -97,6 +90,17 @@ function ExamplesNavbar() {
           isOpen={navbarCollapse}
         >
           <Nav navbar>
+            {props.location.pathname === '/' &&
+              <NavItem>
+                <Button
+                  className="btn-round"
+                  color="danger"
+                  onClick={() => scrollToContactForm()}
+                >
+                  Get In Touch
+                </Button>
+              </NavItem>
+            }
             <NavItem>
               <NavLink to="/projects" tag={Link}>
                 <i className="nc-icon nc-bank" /> Projects
@@ -107,60 +111,16 @@ function ExamplesNavbar() {
                 <i className="nc-icon nc-book-bookmark" /> About Us
               </NavLink>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLink to="/contact-us" tag={Link}>
                 <i className="nc-icon nc-layout-11" /> Contact Us
               </NavLink>
-            </NavItem>
+            </NavItem> */}
             <NavItem>
               <NavLink to="/payments" tag={Link}>
                 <i className="nc-icon nc-book-bookmark" /> Payments
               </NavLink>
             </NavItem>
-            {/* <NavItem>
-              <NavLink
-                data-placement="bottom"
-                href="https://twitter.com/CreativeTim?ref=creativetim"
-                target="_blank"
-                title="Follow us on Twitter"
-              >
-                <i className="fa fa-twitter" />
-                <p className="d-lg-none">Twitter</p>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                data-placement="bottom"
-                href="https://www.facebook.com/CreativeTim?ref=creativetim"
-                target="_blank"
-                title="Like us on Facebook"
-              >
-                <i className="fa fa-facebook-square" />
-                <p className="d-lg-none">Facebook</p>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                data-placement="bottom"
-                href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
-                target="_blank"
-                title="Follow us on Instagram"
-              >
-                <i className="fa fa-instagram" />
-                <p className="d-lg-none">Instagram</p>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                data-placement="bottom"
-                href="https://www.github.com/CreativeTimOfficial?ref=creativetim"
-                target="_blank"
-                title="Star on GitHub"
-              >
-                <i className="fa fa-github" />
-                <p className="d-lg-none">GitHub</p>
-              </NavLink>
-            </NavItem> */}
           </Nav>
         </Collapse>
       </Container>
@@ -168,4 +128,4 @@ function ExamplesNavbar() {
   );
 }
 
-export default ExamplesNavbar;
+export default withRouter(ExamplesNavbar);
