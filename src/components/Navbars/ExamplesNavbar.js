@@ -66,6 +66,9 @@ const ExamplesNavbar = (props) => {
             tag={Link}
           >
             <div className="d-flex justify-content-center align-items-center">
+              <div className="logo-container left-logo" style={{marginRight: '10px'}}>
+                <img className="logo" src={require("assets/img/logo_png.png")} />
+              </div>
               <div className="text-center">Meraj Housing</div>
             </div>
           </NavbarBrand>

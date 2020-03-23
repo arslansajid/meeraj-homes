@@ -11,11 +11,11 @@ function IndexHeader() {
   return (
     <>
       <div
-        className="page-header section-dark"
-        style={{
-          backgroundImage:
-            "url(" + require("assets/img/JCC.jpg") + ")"
-        }}
+        className="page-header section-dark lightgrey-bg"
+        // style={{
+        //   backgroundImage:
+        //     "url(" + require("assets/img/JCC.jpg") + ")"
+        // }}
       >
         <div className="filter" />
         <div className="content-center">

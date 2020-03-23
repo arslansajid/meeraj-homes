@@ -22,7 +22,8 @@
     text-align: center;
 }
 .footer nav > ul a:not(.btn) {
-    color: #777777;
+    // color: #777777;
+    color: #fff;
     display: block;
     margin-bottom: 3px;
     line-height: 1.6;
@@ -37,7 +38,8 @@
   opacity: 1;
 }
 .footer .copyright {
-  color: #777777;
+//   color: #777777;
+  color: #fff !important;
   padding: 10px 0px;
   font-size: 14px;
   margin: 15px 3px;

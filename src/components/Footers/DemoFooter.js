@@ -5,7 +5,7 @@ import { Row, Container } from "reactstrap";
 
 function DemoFooter() {
   return (
-    <footer className="footer footer-black footer-white">
+    <footer className="footer darkgrey-bg">
       <Container>
         <Row>
           <nav className="footer-nav">
