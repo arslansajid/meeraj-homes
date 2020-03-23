@@ -19,7 +19,7 @@ import {
 const ExamplesNavbar = (props) => {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
-  
+
   const toggleNavbarCollapse = () => {
     setNavbarCollapse(!navbarCollapse);
     document.documentElement.classList.toggle("nav-open");
@@ -66,23 +66,32 @@ const ExamplesNavbar = (props) => {
             tag={Link}
           >
             <div className="d-flex justify-content-center align-items-center">
-            <div className="logo-container">
-              <img className="logo" src={require("assets/img/logo_png.png")} />
-            </div>
-            <div className="text-center">Meraj Housing</div>
+              <div className="text-center">Meraj Housing</div>
             </div>
           </NavbarBrand>
-          <button
-            aria-expanded={navbarCollapse}
-            className={classnames("navbar-toggler navbar-toggler", {
-              toggled: navbarCollapse
-            })}
-            onClick={toggleNavbarCollapse}
-          >
-            <span className="navbar-toggler-bar bar1" />
-            <span className="navbar-toggler-bar bar2" />
-            <span className="navbar-toggler-bar bar3" />
-          </button>
+          <div className="logo-container">
+            <img className="logo" src={require("assets/img/logo_png.png")} />
+          </div>
+          <div className="d-flex">
+            <Button
+              className="btn-round navbar-toggler"
+              color="danger"
+              onClick={() => scrollToContactForm()}
+            >
+              Get In Touch
+            </Button>
+            <button
+              aria-expanded={navbarCollapse}
+              className={classnames("navbar-toggler navbar-toggler", {
+                toggled: navbarCollapse
+              })}
+              onClick={toggleNavbarCollapse}
+            >
+              <span className="navbar-toggler-bar bar1" />
+              <span className="navbar-toggler-bar bar2" />
+              <span className="navbar-toggler-bar bar3" />
+            </button>
+          </div>
         </div>
         <Collapse
           className="justify-content-end"
@@ -90,8 +99,11 @@ const ExamplesNavbar = (props) => {
           isOpen={navbarCollapse}
         >
           <Nav navbar>
+          <div className="logo-container navbar-toggler">
+            <img className="logo" src={require("assets/img/logo_png.png")} />
+          </div>
             {props.location.pathname === '/' &&
-              <NavItem>
+              <NavItem id="get-in-touch-btn">
                 <Button
                   className="btn-round"
                   color="danger"
