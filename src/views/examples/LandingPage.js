@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from "react";
+import React, { useRef, useEffect } from "react";
 
 // reactstrap components
 import {
@@ -16,7 +16,6 @@ import {
   Row,
   Col
 } from "reactstrap";
-import Swal from 'sweetalert2';
 import Map from '../../components/Map/map';
 
 // core components
@@ -34,15 +33,6 @@ const LandingPage = () => {
     };
   });
 
-  const onFormSubmit = (e) => {
-    e.preventDefault();
-    Swal.fire(
-      'Thank you!',
-      'Your response has been submitted!',
-      'success'
-    )
-  };
-
   const formRef = useRef(null);
 
   return (
@@ -51,7 +41,7 @@ const LandingPage = () => {
       {/* <LandingPageHeader /> */}
       <IndexHeader />
       <div className="main">
-        <div className="section text-center darkgrey-bg">
+        <div className="section text-center lightgrey-bg">
           <Container>
             <Row>
               <Col className="ml-auto mr-auto" md="8">
@@ -148,7 +138,7 @@ const LandingPage = () => {
             </Row>
           </Container>
         </div>
-        <div className="section section-dark text-center lightgrey-bg">
+        <div className="section section-dark text-center darkgrey-bg">
           <Container>
             <h2 className="title">Let's talk about us</h2>
             <Row>
@@ -310,10 +300,10 @@ const LandingPage = () => {
             </Row>
           </Container>
         </div>
-        <div className="section map-container darkgrey-bg">
+        <div className="section map-container lightgrey-bg">
           <Container>
             <Row>
-            <Col md="6">
+              <Col md="6">
                 <h3>Location</h3>
                 <p className="card-description">
                   This is the paragraph where you can write more details about
@@ -329,51 +319,38 @@ const LandingPage = () => {
             </Row>
           </Container>
         </div>
-        <div className="section landing-section lightgrey-bg" ref={formRef}>
+        <div className="section landing-section darkgrey-bg" ref={formRef}>
           <Container>
             <Row>
-              <Col className="ml-auto mr-auto" md="8">
-                <h2 className="text-center">Keep in touch?</h2>
-                <Form className="contact-form" onSubmit={e => onFormSubmit(e)}>
-                  <Row>
-                    <Col md="6">
-                      <label>Name</label>
-                      <InputGroup>
-                        <InputGroupAddon addonType="prepend">
-                          <InputGroupText>
-                            <i className="nc-icon nc-single-02" />
-                          </InputGroupText>
-                        </InputGroupAddon>
-                        <Input placeholder="Name" type="text" required />
-                      </InputGroup>
-                    </Col>
-                    <Col md="6">
-                      <label>Email</label>
-                      <InputGroup>
-                        <InputGroupAddon addonType="prepend">
-                          <InputGroupText>
-                            <i className="nc-icon nc-email-85" />
-                          </InputGroupText>
-                        </InputGroupAddon>
-                        <Input placeholder="Email" type="text" required />
-                      </InputGroup>
-                    </Col>
-                  </Row>
-                  <label>Message</label>
-                  <Input
-                    placeholder="Tell us your thoughts and feelings..."
-                    type="textarea"
-                    rows="4"
-                    required
-                  />
-                  <Row>
-                    <Col className="ml-auto mr-auto" md="4">
-                      <Button className="btn-fill" color="danger" size="lg">
-                        Send Message
-                      </Button>
-                    </Col>
-                  </Row>
-                </Form>
+              <Col md="12">
+              <h3 className="mb-3">Location Details:</h3>
+                <div className="contact-row">
+                  <span className="label">
+                    Location:
+                  </span>
+                  <span>
+                    3KM Main Daska Road towards Sialkot,
+                    Near Sialkot-Lahore Motorway Interchange point,
+                    Tehsil Daska, District Sialkot.
+                  </span>
+                </div>
+                <h3 className="mb-3">Contact Details:</h3>
+                <div className="contact-row">
+                  <span className="label">
+                    Email address:
+                  </span>
+                  <span>
+                    khurram@virkgroup.com
+                  </span>
+                </div>
+                <div className="contact-row">
+                  <span className="label">
+                    Mobile Number:
+                  </span>
+                  <span>
+                    0300 8512727
+                  </span>
+                </div>
               </Col>
             </Row>
           </Container>
