@@ -11,6 +11,7 @@ import "assets/demo/demo.css";
 import Index from "views/Index.js";
 import NucleoIcons from "views/NucleoIcons.js";
 import AboutUs from "views/examples/AboutUs.js";
+import ContactUs from "views/examples/ContactUs.js";
 import Payments from "views/examples/Payments.js";
 import LandingPage from "views/examples/LandingPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
@@ -33,7 +34,7 @@ ReactDOM.render(
       />
       <Route
         path="/contact-us"
-        render={props => <ProfilePage {...props} />}
+        render={props => <ContactUs {...props} />}
       />
       <Route
         path="/payments"
