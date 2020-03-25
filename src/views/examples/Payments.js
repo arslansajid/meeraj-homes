@@ -33,6 +33,7 @@ function ProfilePage() {
 
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
+    window.scrollTo(0,0);
     document.body.classList.add("landing-page");
     return function cleanup() {
       document.body.classList.remove("landing-page");
