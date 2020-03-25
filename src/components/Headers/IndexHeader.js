@@ -11,7 +11,7 @@ function IndexHeader() {
   return (
     <>
       <div
-        className="page-header section-dark lightgrey-bg"
+        className="page-header section-dark darkgrey-bg"
         // style={{
         //   backgroundImage:
         //     "url(" + require("assets/img/JCC.jpg") + ")"
@@ -43,7 +43,7 @@ function IndexHeader() {
             backgroundImage: "url(" + require("assets/img/clouds.png") + ")"
           }}
         /> */}
-        <h6 className="category category-absolute">
+        <h4 className="category category-absolute">
           <a
             href="/"
             target="_blank"
@@ -53,10 +53,10 @@ function IndexHeader() {
               className="creative-tim-logo"
               src={require("assets/img/creative-tim-white-slim2.png")}
             /> */}
-            <i className="fa fa-home" style={{fontSize: '1.5em', marginRight: '10px'}} />
+            {/* <i className="fa fa-home" style={{fontSize: '1.5em', marginRight: '10px'}} /> */}
           </a>
-          Finest Living
-        </h6>
+          Finest Living with Sleek and Chick
+        </h4>
       </div>
     </>
   );

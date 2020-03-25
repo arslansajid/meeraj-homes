@@ -27,7 +27,6 @@ const ExamplesNavbar = (props) => {
 
   const scrollToContactForm = () => {
     console.log("navbar formRef", props)
-    // window.scrollTo(0, props.formRef.current.offsetHeight);
     props.formRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -69,20 +68,22 @@ const ExamplesNavbar = (props) => {
               <div className="logo-container left-logo" style={{marginRight: '10px'}}>
                 <img className="logo" src={require("assets/img/logo_png.png")} />
               </div>
-              <div className="text-center">Meraj Housing</div>
+              {/* <div className="text-center">Meraj Housing</div> */}
             </div>
           </NavbarBrand>
-          <div className="logo-container center-logo">
+          {/* <div className="logo-container center-logo">
             <img className="logo" src={require("assets/img/logo_png.png")} />
-          </div>
+          </div> */}
           <div className="d-flex">
+            <Link to="/contact-us">
             <Button
               className="btn-round navbar-toggler"
-              color="danger"
-              onClick={() => scrollToContactForm()}
+              // color="danger"
+              // onClick={() => scrollToContactForm()}
             >
               Get In Touch
             </Button>
+            </Link>
             <button
               aria-expanded={navbarCollapse}
               className={classnames("navbar-toggler navbar-toggler", {
@@ -105,17 +106,19 @@ const ExamplesNavbar = (props) => {
           <div className="logo-container navbar-toggler">
             <img className="logo sidebar-logo" src={require("assets/img/logo_png.png")} />
           </div>
-            {props.location.pathname === '/' &&
-              <NavItem id="get-in-touch-btn">
-                <Button
-                  className="btn-round"
-                  color="danger"
-                  onClick={() => scrollToContactForm()}
-                >
-                  Get In Touch
-                </Button>
+              <NavItem
+              id="get-in-touch-btn"
+              >
+                <Link to="/contact-us">
+                  <Button
+                    className="btn-round"
+                    // color="danger"
+                    // onClick={() => scrollToContactForm()}
+                  >
+                    Get In Touch
+                  </Button>
+                </Link>
               </NavItem>
-            }
             <NavItem>
               <NavLink to="/projects" tag={Link}>
                 <i className="nc-icon nc-bank" /> Projects

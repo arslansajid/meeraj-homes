@@ -14,7 +14,8 @@
     -webkit-transition: all 0.4s;
     padding: 0;
     background: $white-color;
-    box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
+    // box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 10px 6px rgba(0, 0, 0, 0.15);
 
     .navbar-brand {
         font-weight: $font-weight-bold;
@@ -127,7 +128,8 @@
     }
     .btn{
        margin: 14px 3px;
-       font-size: $font-size-small;
+      //  font-size: $font-size-small;
+      font-size: $font-size-extra-small;
        i{
            font-size: 14px;
            position: relative;
@@ -135,7 +137,9 @@
        }
     }
     .btn-round {
-      padding: 5px !important;
+      padding: 2px !important;
+      background-color: #172a50 !important;
+      border: 3px solid #172a50;
     }
     .btn-simple{
         font-size: $font-size-medium;
@@ -165,7 +169,7 @@
       }
     }
     .sidebar-logo {
-      margin-left: 40px;
+      margin-left: 10px;
     }
     .logo-container{
         .logo{
@@ -285,3 +289,12 @@
     }
   }
 }
+
+
+.navbar .logo-container .logo.sidebar-logo {
+  overflow: hidden;
+  // border-radius: 50%;
+  // border: 1px solid #333333;
+  margin-bottom: 30px;
+  width: 100px;
+  float: left; }

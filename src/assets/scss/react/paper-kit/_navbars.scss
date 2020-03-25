@@ -6,3 +6,11 @@
     display: none;
   }
 }
+
+@media screen and (min-width: 991px) {
+  .navbar .btn-round {
+    padding: 8px !important;
+    background-color: #172a50 !important;
+    border: 3px solid #172a50;
+  }
+}

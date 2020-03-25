@@ -194,7 +194,7 @@
 .category-absolute{
     position: absolute;
     text-align: center;
-    top: 100vh;
+    top: 90vh;
     margin-top: -60px;
     padding: 0 15px;
     width: 100%;
@@ -272,6 +272,14 @@
     background-color: #AFAEAA !important;
 }
 
-p,h1,h2,h3,h4,h5 {
+.lightgrey-bg h1,h2,h3,h4,h5,p {
+    color: black !important;
+}
+
+.darkgrey-bg h1,h2,h3,h4,h5,p {
+    color: white !important;
+}
+
+.contact-row span {
     color: white !important;
 }
