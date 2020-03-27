@@ -59,7 +59,18 @@ const ExamplesNavbar = (props) => {
     >
       <Container>
         <div className="navbar-translate">
-          <NavbarBrand
+          <button
+            aria-expanded={navbarCollapse}
+            className={classnames("navbar-toggler navbar-toggler", {
+              toggled: navbarCollapse
+            })}
+            onClick={toggleNavbarCollapse}
+          >
+            <span className="navbar-toggler-bar bar1" />
+            <span className="navbar-toggler-bar bar2" />
+            <span className="navbar-toggler-bar bar3" />
+          </button>
+          {/* <NavbarBrand
             data-placement="bottom"
             to="/"
             tag={Link}
@@ -68,33 +79,16 @@ const ExamplesNavbar = (props) => {
               <div className="logo-container left-logo" style={{marginRight: '10px'}}>
                 <img className="logo" src={require("assets/img/logo_png.png")} />
               </div>
-              {/* <div className="text-center">Meraj Housing</div> */}
             </div>
-          </NavbarBrand>
-          {/* <div className="logo-container center-logo">
-            <img className="logo" src={require("assets/img/logo_png.png")} />
-          </div> */}
-          <div className="d-flex">
+          </NavbarBrand> */}
+          <div className="d-flex mr-3">
             <Link to="/contact-us">
             <Button
               className="btn-round navbar-toggler"
-              // color="danger"
-              // onClick={() => scrollToContactForm()}
             >
               Get In Touch
             </Button>
             </Link>
-            <button
-              aria-expanded={navbarCollapse}
-              className={classnames("navbar-toggler navbar-toggler", {
-                toggled: navbarCollapse
-              })}
-              onClick={toggleNavbarCollapse}
-            >
-              <span className="navbar-toggler-bar bar1" />
-              <span className="navbar-toggler-bar bar2" />
-              <span className="navbar-toggler-bar bar3" />
-            </button>
           </div>
         </div>
         <Collapse
@@ -103,17 +97,17 @@ const ExamplesNavbar = (props) => {
           isOpen={navbarCollapse}
         >
           <Nav navbar>
-          <div className="logo-container navbar-toggler">
-            <img className="logo sidebar-logo" src={require("assets/img/logo_png.png")} />
-          </div>
+            <Link to="/">
+              <div className="logo-container navbar-toggler">
+                <img className="logo sidebar-logo" src={require("assets/img/logo_png.png")} />
+              </div>
+            </Link>
               <NavItem
               id="get-in-touch-btn"
               >
                 <Link to="/contact-us">
                   <Button
                     className="btn-round"
-                    // color="danger"
-                    // onClick={() => scrollToContactForm()}
                   >
                     Get In Touch
                   </Button>
@@ -129,11 +123,6 @@ const ExamplesNavbar = (props) => {
                 <i className="nc-icon nc-book-bookmark" /> About Us
               </NavLink>
             </NavItem>
-            {/* <NavItem>
-              <NavLink to="/contact-us" tag={Link}>
-                <i className="nc-icon nc-layout-11" /> Contact Us
-              </NavLink>
-            </NavItem> */}
             <NavItem>
               <NavLink to="/payments" tag={Link}>
                 <i className="nc-icon nc-book-bookmark" /> Payments
