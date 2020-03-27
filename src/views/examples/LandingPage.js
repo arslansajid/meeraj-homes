@@ -355,7 +355,7 @@ const LandingPage = () => {
             <Row>
               <Col md="6">
                 <h3>Location</h3>
-                <p className="card-description">
+                <p className="location-description">
                   This is the paragraph where you can write more details about
                   your product. Keep you user engaged by providing meaningful
                   information. Remember that by this time, the user is curious,

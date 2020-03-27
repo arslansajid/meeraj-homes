@@ -132,7 +132,6 @@ function createMapOptions(maps, image) {
           stylers: [{color: '#17263c'}]
         }
       ],
-      mapTypeControl: image ? false : true
     };
   }
 

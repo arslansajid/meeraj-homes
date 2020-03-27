@@ -272,11 +272,11 @@
     background-color: #AFAEAA !important;
 }
 
-.lightgrey-bg h1,h2,h3,h4,h5,p {
+.lightgrey-bg * {
     color: black !important;
 }
 
-.darkgrey-bg h1,h2,h3,h4,h5,p {
+.darkgrey-bg * {
     color: white !important;
 }
 
@@ -286,4 +286,10 @@
 
 ul.card-description {
     padding-inline-start: 16px !important;
+    color: white !important;
+}
+
+.location-description {
+    color: black !important;
+    font-weight: 500;
 }
