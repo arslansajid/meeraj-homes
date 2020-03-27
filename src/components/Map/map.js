@@ -31,7 +31,7 @@ const Locations = [
   },
 ]
 
-function createMapOptions(maps) {
+function createMapOptions(maps, image) {
     // next props are exposed at maps
     // "Animation", "ControlPosition", "MapTypeControlStyle", "MapTypeId",
     // "NavigationControlStyle", "ScaleControlStyle", "StrokePosition", "SymbolPath", "ZoomControlStyle",
@@ -39,6 +39,10 @@ function createMapOptions(maps) {
     // "DistanceMatrixElementStatus", "ElevationStatus", "GeocoderLocationType", "GeocoderStatus", "KmlLayerStatus",
     // "MaxZoomStatus", "StreetViewStatus", "TransitMode", "TransitRoutePreference", "TravelMode", "UnitSystem"
     return {
+      zoomControl: image ? false : true, 
+      mapTypeControl: image ? false : true,
+      fullscreenControl: image ? false : true,
+      scaleControl: image ? false : true,
       zoomControlOptions: {
         position: maps.ControlPosition.RIGHT_CENTER,
         style: maps.ZoomControlStyle.SMALL
@@ -47,8 +51,7 @@ function createMapOptions(maps) {
         position: maps.ControlPosition.TOP_RIGHT
       },
     //   mapTypeId: 'satellite',
-      streetViewControl:true,
-    //   styles: [{ stylers: [{ 'saturation': -100 }, { 'gamma': 0.8 }, { 'lightness': 9 }, { 'visibility': 'on' }] }],
+      streetViewControl: image ? false : true,
       styles: [
         {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
         {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
@@ -129,11 +132,12 @@ function createMapOptions(maps) {
           stylers: [{color: '#17263c'}]
         }
       ],
-      mapTypeControl: true
+      mapTypeControl: image ? false : true
     };
   }
 
-const Map = () => {
+const Map = (props) => {
+  const {image} = props;
     const {center, setCenter} = [{ lat: 33.726030, lng: 73.074607 }];
     const handleGoogleMapApi = (google) => {
       var flightPath = new google.maps.Polyline({
@@ -147,12 +151,12 @@ const Map = () => {
       flightPath.setMap(google.map);
     }
     return (
-        <div className="map" style={{ height: '400px', width: '100%', background: "lightgrey" }}>
+        <div className="map" style={{ height: image ? '300px' : '400px', width: '100%', background: "lightgrey", borderRadius: image ? '10px' : 0, overflow: 'hidden' }}>
             <GoogleMapReact
                 bootstrapURLKeys={{ key: 'AIzaSyDai50O1JJN5mgRPVI4qb7kr7SUxDZvpnA' }}
                 defaultCenter={{ lat: 32.22, lng: 74.3152 }}
                 defaultZoom={11}
-                options={createMapOptions}
+                options={(maps) => createMapOptions(maps, image)}
                 yesIWantToUseGoogleMapApiInternals
                 onGoogleApiLoaded={handleGoogleMapApi}
               >
