@@ -138,7 +138,7 @@ const LandingPage = () => {
             </Row>
           </Container>
         </div>
-        <div className="section section-dark text-center darkgrey-bg">
+        {/* <div className="section section-dark text-center darkgrey-bg">
           <Container>
             <h2 className="title">Let's talk about us</h2>
             <Row>
@@ -299,6 +299,56 @@ const LandingPage = () => {
               </Col>
             </Row>
           </Container>
+        </div> */}
+        <div className="section map-container darkgrey-bg">
+          <Container>
+            <Row>
+            <Col md="3">
+            <Map image={true} />
+                <ul className="card-description mt-3">
+                  <li>This is the paragraph where you can write more details about
+                  your product.
+                  </li>
+                  <li>Keep you user engaged by providing meaningful
+                  information.
+                  </li>
+                </ul>
+              </Col>
+              <Col md="3">
+              <Map image={true} />
+                <ul className="card-description mt-3">
+                  <li>This is the paragraph where you can write more details about
+                  your product.
+                  </li>
+                  <li>Keep you user engaged by providing meaningful
+                  information.
+                  </li>
+                </ul>
+              </Col>
+              <Col md="3">
+              <Map image={true} />
+                <ul className="card-description mt-3">
+                  <li>This is the paragraph where you can write more details about
+                  your product.
+                  </li>
+                  <li>Keep you user engaged by providing meaningful
+                  information.
+                  </li>
+                </ul>
+              </Col>
+              <Col md="3">
+                <Map image={true} />
+                <ul className="card-description mt-3">
+                  <li>This is the paragraph where you can write more details about
+                  your product.
+                  </li>
+                  <li>Keep you user engaged by providing meaningful
+                  information.
+                  </li>
+                </ul>
+              </Col>
+            </Row>
+          </Container>
         </div>
         <div className="section map-container lightgrey-bg">
           <Container>
@@ -314,7 +364,7 @@ const LandingPage = () => {
                 </p>
               </Col>
               <Col md="6">
-                <Map />
+                <Map image={false} />
               </Col>
             </Row>
           </Container>
