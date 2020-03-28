@@ -10,8 +10,13 @@
 @media screen and (min-width: 991px) {
   .navbar .btn-round {
     margin-top: 21px;
-    padding: 2px !important;
+    // padding: 2px !important;
+    padding: 2px 7px 2px 7px !important;
     background-color: #172a50 !important;
     border: 3px solid #172a50;
   }
+}
+
+.navbar .btn-round {
+  font-weight: 400 !important;
 }

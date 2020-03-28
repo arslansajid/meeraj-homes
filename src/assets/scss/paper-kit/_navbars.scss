@@ -48,7 +48,7 @@
             opacity: .8;
             font-size: $font-size-small;
             text-transform: uppercase;
-            font-weight: 600;
+            font-weight: 400 !important;
             color: $white-color;
 
             p {
@@ -63,7 +63,6 @@
         .nav-item .nav-link.btn {
             margin: $navbar-margin-a-btn;
             padding: 9px;
-
          }
         .nav-item .nav-link [class^="fa"] {
             font-size: 17px;
@@ -137,7 +136,8 @@
        }
     }
     .btn-round {
-      padding: 2px !important;
+      padding: 2px 7px 2px 7px !important;
+      border-radius: 5px !important;
       background-color: #172a50 !important;
       border: 3px solid #172a50;
     }

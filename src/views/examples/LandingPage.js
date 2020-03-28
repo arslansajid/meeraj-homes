@@ -261,10 +261,11 @@ const LandingPage = () => {
         </div>
         <div className="section map-container lightgrey-bg">
           <Container>
+            <h2 className="title text-center">The Best Location In Town</h2>
             <Row>
             <Col md="3">
             <Map image={true} marker={{lat: 32.3208, lng: 74.2150}} />
-                <ul className="card-description mt-3 mb-5 mb-lg-0">
+                <ul className="card-description mt-3">
                   <li>This is the paragraph where you can write more details about
                   your product.
                   </li>
@@ -272,10 +273,13 @@ const LandingPage = () => {
                   information.
                   </li>
                 </ul>
+                <div className="text-center mt-2 mb-5 mb-lg-0">
+                  <Button>Get Directions</Button>
+                </div>
               </Col>
               <Col md="3">
               <Map image={true} marker={{lat: 32.20, lng: 74.21}} />
-                <ul className="card-description mt-3 mb-5 mb-lg-0">
+                <ul className="card-description mt-3">
                   <li>This is the paragraph where you can write more details about
                   your product.
                   </li>
@@ -283,10 +287,13 @@ const LandingPage = () => {
                   information.
                   </li>
                 </ul>
+                <div className="text-center mt-2 mb-5 mb-lg-0">
+                  <Button>Get Directions</Button>
+                </div>
               </Col>
               <Col md="3">
               <Map image={true} marker={{lat: 32.16, lng: 74.40}} />
-                <ul className="card-description mt-3 mb-5 mb-lg-0">
+                <ul className="card-description mt-3">
                   <li>This is the paragraph where you can write more details about
                   your product.
                   </li>
@@ -294,10 +301,13 @@ const LandingPage = () => {
                   information.
                   </li>
                 </ul>
+                <div className="text-center mt-2 mb-5 mb-lg-0">
+                  <Button>Get Directions</Button>
+                </div>
               </Col>
               <Col md="3">
                 <Map image={true} marker={{lat: 32.2933, lng: 74.3152}} />
-                <ul className="card-description mt-3 mb-5 mb-lg-0">
+                <ul className="card-description mt-3">
                   <li>This is the paragraph where you can write more details about
                   your product.
                   </li>
@@ -305,6 +315,9 @@ const LandingPage = () => {
                   information.
                   </li>
                 </ul>
+                <div className="text-center mt-2 mb-5 mb-lg-0">
+                  <Button>Get Directions</Button>
+                </div>
               </Col>
             </Row>
           </Container>
@@ -333,33 +346,42 @@ const LandingPage = () => {
             <Row>
               <Col md="12">
               <h3 className="mb-3">Location Details:</h3>
-                <div className="contact-row">
-                  <span className="label">
+                <Row className="contact-row">
+                  <Col xs="3" lg="2">
+                  <i className="nc-icon nc-pin-3 mr-1" />
                     Location:
-                  </span>
-                  <span>
+                  </Col>
+                  <Col xs="9" lg="10" className="p-0">
+                  <div>
                     3KM Main Daska Road towards Sialkot,
+                  </div>
+                  <div>
                     Near Sialkot-Lahore Motorway Interchange point,
+                  </div>
+                  <div>
                     Tehsil Daska, District Sialkot.
-                  </span>
-                </div>
+                  </div>
+                  </Col>
+                </Row>
                 <h3 className="mb-3">Contact Details:</h3>
-                <div className="contact-row">
-                  <span className="label">
-                    Email address:
-                  </span>
-                  <span>
+                <Row className="contact-row mb-1">
+                  <Col xs="3" lg="2">
+                    <i className="nc-icon nc-email-85 mr-1" />
+                    Email:
+                  </Col>
+                  <Col xs="auto" lg="10" className="p-0">
                     khurram@virkgroup.com
-                  </span>
-                </div>
-                <div className="contact-row">
-                  <span className="label">
-                    Mobile Number:
-                  </span>
-                  <span>
-                    0300 8512727
-                  </span>
-                </div>
+                  </Col>
+                </Row>
+                <Row className="contact-row">
+                  <Col xs="3" lg="2">
+                    <i className="nc-icon nc-mobile mr-1" />
+                    Mobile:
+                  </Col>
+                  <Col xs="auto" lg="10" className="p-0">
+                  0300 8512727
+                  </Col>
+                </Row>
               </Col>
             </Row>
           </Container>
