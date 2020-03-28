@@ -285,7 +285,7 @@ const LandingPage = () => {
                 </ul>
               </Col>
               <Col md="3">
-              <Map image={true} marker={{lat: 32.20, lng: 74.21}} />
+              <Map image={true} marker={{lat: 32.16, lng: 74.40}} />
                 <ul className="card-description mt-3 mb-5 mb-lg-0">
                   <li>This is the paragraph where you can write more details about
                   your product.

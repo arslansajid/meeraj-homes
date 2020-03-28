@@ -31,6 +31,11 @@ const Locations = [
   },
 ]
 
+const MerajLocation = {
+  label: "Meraj Housing",
+  cordinates: {lat: 32.5401578, lng: 74.370013}
+}
+
 function createMapOptions(maps, image) {
     // next props are exposed at maps
     // "Animation", "ControlPosition", "MapTypeControlStyle", "MapTypeId",
@@ -154,7 +159,7 @@ const Map = (props) => {
             <GoogleMapReact
                 bootstrapURLKeys={{ key: 'AIzaSyDai50O1JJN5mgRPVI4qb7kr7SUxDZvpnA' }}
                 defaultCenter={image ? marker : { lat: 32.22, lng: 74.3152 }}
-                defaultZoom={11}
+                defaultZoom={image ? 13 : 11}
                 options={(maps) => createMapOptions(maps, image)}
                 yesIWantToUseGoogleMapApiInternals
                 onGoogleApiLoaded={handleGoogleMapApi}
@@ -167,7 +172,10 @@ const Map = (props) => {
               {
                 image
                 ?
+                <>
+                {/* <Marker lat={MerajLocation.cordinates.lat} lng={MerajLocation.cordinates.lng} /> */}
                 <Marker lat={marker.lat} lng={marker.lng} />
+                </>
                 :
                 null
               }
