@@ -13,7 +13,7 @@
     transition: all 0.4s;
     -webkit-transition: all 0.4s;
     padding: 0;
-    background: $white-color;
+    background: $black-color;
     // box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
     box-shadow: 0 6px 10px 6px rgba(0, 0, 0, 0.15);
 
@@ -49,7 +49,7 @@
             font-size: $font-size-small;
             text-transform: uppercase;
             font-weight: 600;
-            color: $default-color;
+            color: $white-color;
 
             p {
               margin: 0px 0px;

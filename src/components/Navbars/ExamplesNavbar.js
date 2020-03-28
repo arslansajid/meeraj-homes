@@ -81,7 +81,7 @@ const ExamplesNavbar = (props) => {
           > */}
             <div className={`${showLogo ? "d-block" : "d-none"}`} style={{borderRadius: '2px'}}>
               <div className="logo-container left-logo">
-                <img className="logo" src={require("assets/img/meraj-tree-blue.png")} />
+                <img className="logo" src={require("assets/img/meraj-tree.png")} />
               </div>
             </div>
           {/* </NavbarBrand> */}
