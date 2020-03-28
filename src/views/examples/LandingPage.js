@@ -274,7 +274,12 @@ const LandingPage = () => {
                   </li>
                 </ul>
                 <div className="text-center mt-2 mb-5 mb-lg-0">
-                  <Button>Get Directions</Button>
+                  <a
+                    href={"https://www.google.com/maps/dir/?api=1&destination=Roomy+Isb+Royal+Islamabad+Pakistan"}
+                    target="_blank"
+                  >
+                    <Button>Get Directions</Button>
+                  </a>
                 </div>
               </Col>
               <Col md="3">
@@ -288,7 +293,12 @@ const LandingPage = () => {
                   </li>
                 </ul>
                 <div className="text-center mt-2 mb-5 mb-lg-0">
-                  <Button>Get Directions</Button>
+                  <a
+                    href={"https://www.google.com/maps/dir/?api=1&destination=Roomy+Isb+Royal+Islamabad+Pakistan"}
+                    target="_blank"
+                  >
+                    <Button>Get Directions</Button>
+                  </a>
                 </div>
               </Col>
               <Col md="3">
@@ -302,7 +312,12 @@ const LandingPage = () => {
                   </li>
                 </ul>
                 <div className="text-center mt-2 mb-5 mb-lg-0">
-                  <Button>Get Directions</Button>
+                  <a
+                    href={"https://www.google.com/maps/dir/?api=1&destination=Roomy+Isb+Royal+Islamabad+Pakistan"}
+                    target="_blank"
+                  >
+                    <Button>Get Directions</Button>
+                  </a>
                 </div>
               </Col>
               <Col md="3">
@@ -316,7 +331,12 @@ const LandingPage = () => {
                   </li>
                 </ul>
                 <div className="text-center mt-2 mb-5 mb-lg-0">
-                  <Button>Get Directions</Button>
+                  <a
+                    href={"https://www.google.com/maps/dir/?api=1&destination=Roomy+Isb+Royal+Islamabad+Pakistan"}
+                    target="_blank"
+                  >
+                    <Button>Get Directions</Button>
+                  </a>
                 </div>
               </Col>
             </Row>
