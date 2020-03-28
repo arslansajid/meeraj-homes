@@ -138,174 +138,133 @@ const LandingPage = () => {
             </Row>
           </Container>
         </div>
-        {/* <div className="section section-dark text-center darkgrey-bg">
+        <div className="section section-dark text-center darkgrey-bg">
           <Container>
-            <h2 className="title">Let's talk about us</h2>
+            <h2 className="title">Let's talk about Amenities</h2>
             <Row>
-              <Col md="4">
+              <Col md="2">
                 <Card className="card-profile card-plain">
                   <div className="card-avatar">
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <img
                         alt="..."
-                        src={require("assets/img/faces/clem-onojeghuo-3.jpg")}
+                        src={'https://blueandgreentomorrow.com/wp-content/uploads/2017/12/sustainable-roads-motorways.jpg'}
                       />
                     </a>
                   </div>
                   <CardBody>
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <div className="author">
-                        <CardTitle tag="h4">Arslan Sajid</CardTitle>
-                        <h6 className="card-category">Product Owner</h6>
+                        <CardTitle tag="h4">Roads</CardTitle>
                       </div>
                     </a>
-                    <p className="card-description text-center">
-                      Teamwork is so important that it is virtually impossible
-                      for you to reach the heights of your capabilities or make
-                      the money that you want without becoming very good at it.
-                    </p>
                   </CardBody>
-                  <CardFooter className="text-center">
-                    <Button
-                      className="btn-just-icon btn-neutral"
-                      color="link"
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                    >
-                      <i className="fa fa-twitter" />
-                    </Button>
-                    <Button
-                      className="btn-just-icon btn-neutral ml-1"
-                      color="link"
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                    >
-                      <i className="fa fa-google-plus" />
-                    </Button>
-                    <Button
-                      className="btn-just-icon btn-neutral ml-1"
-                      color="link"
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                    >
-                      <i className="fa fa-linkedin" />
-                    </Button>
-                  </CardFooter>
                 </Card>
               </Col>
-              <Col md="4">
+              <Col md="2">
                 <Card className="card-profile card-plain">
                   <div className="card-avatar">
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <img
                         alt="..."
-                        src={require("assets/img/faces/joe-gardner-2.jpg")}
+                        src={'https://www.zameen.com/blog/wp-content/uploads/2019/04/cover-image-2-6.jpg'}
                       />
                     </a>
                   </div>
                   <CardBody>
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <div className="author">
-                        <CardTitle tag="h4">Shahid Afridi</CardTitle>
-                        <h6 className="card-category">CTO PIA</h6>
+                        <CardTitle tag="h4">Gyms</CardTitle>
                       </div>
                     </a>
-                    <p className="card-description text-center">
-                      A group becomes a team when each member is sure enough of
-                      himself and his contribution to praise the skill of the
-                      others. No one can whistle a symphony. It takes an
-                      orchestra to play it.
-                    </p>
                   </CardBody>
-                  <CardFooter className="text-center">
-                    <Button
-                      className="btn-just-icon btn-neutral"
-                      color="link"
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                    >
-                      <i className="fa fa-twitter" />
-                    </Button>
-                    <Button
-                      className="btn-just-icon btn-neutral ml-1"
-                      color="link"
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                    >
-                      <i className="fa fa-google-plus" />
-                    </Button>
-                    <Button
-                      className="btn-just-icon btn-neutral ml-1"
-                      color="link"
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                    >
-                      <i className="fa fa-linkedin" />
-                    </Button>
-                  </CardFooter>
                 </Card>
               </Col>
-              <Col md="4">
+              <Col md="2">
                 <Card className="card-profile card-plain">
                   <div className="card-avatar">
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <img
                         alt="..."
-                        src={require("assets/img/faces/erik-lucatero-2.jpg")}
+                        src={'https://cdn.civitatis.com/reino-unido/londres/guia/hyde-park-grid-m.jpg'}
                       />
                     </a>
                   </div>
                   <CardBody>
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <div className="author">
-                        <CardTitle tag="h4">Imran Khan</CardTitle>
-                        <h6 className="card-category">CEO BAHRIA TOWN</h6>
+                        <CardTitle tag="h4">Parks</CardTitle>
                       </div>
                     </a>
-                    <p className="card-description text-center">
-                      The strength of the team is each individual member. The
-                      strength of each member is the team. If you can laugh
-                      together, you can work together, silence isn’t golden,
-                      it’s deadly.
-                    </p>
                   </CardBody>
-                  <CardFooter className="text-center">
-                    <Button
-                      className="btn-just-icon btn-neutral"
-                      color="link"
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                    >
-                      <i className="fa fa-twitter" />
-                    </Button>
-                    <Button
-                      className="btn-just-icon btn-neutral ml-1"
-                      color="link"
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                    >
-                      <i className="fa fa-google-plus" />
-                    </Button>
-                    <Button
-                      className="btn-just-icon btn-neutral ml-1"
-                      color="link"
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                    >
-                      <i className="fa fa-linkedin" />
-                    </Button>
-                  </CardFooter>
+                </Card>
+              </Col>
+              <Col md="2">
+                <Card className="card-profile card-plain">
+                  <div className="card-avatar">
+                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <img
+                        alt="..."
+                        src={'https://mk0ehealtheletsj3t14.kinstacdn.com/wp-content/uploads/2009/07/best-hospital-in-south-india.jpg'}
+                      />
+                    </a>
+                  </div>
+                  <CardBody>
+                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <div className="author">
+                        <CardTitle tag="h4">Hospitals</CardTitle>
+                      </div>
+                    </a>
+                  </CardBody>
+                </Card>
+              </Col>
+              <Col md="2">
+                <Card className="card-profile card-plain">
+                  <div className="card-avatar">
+                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <img
+                        alt="..."
+                        src={'https://upload.wikimedia.org/wikipedia/commons/5/5f/Larkmead_School%2C_Abingdon%2C_Oxfordshire.png'}
+                      />
+                    </a>
+                  </div>
+                  <CardBody>
+                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <div className="author">
+                        <CardTitle tag="h4">Schools</CardTitle>
+                      </div>
+                    </a>
+                  </CardBody>
+                </Card>
+              </Col>
+              <Col md="2">
+                <Card className="card-profile card-plain">
+                  <div className="card-avatar">
+                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <img
+                        alt="..."
+                        src={'https://postornot.com/wp-content/uploads/2019/06/Shopping-Center.jpg'}
+                      />
+                    </a>
+                  </div>
+                  <CardBody>
+                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <div className="author">
+                        <CardTitle tag="h4">Malls</CardTitle>
+                      </div>
+                    </a>
+                  </CardBody>
                 </Card>
               </Col>
             </Row>
           </Container>
-        </div> */}
-        <div className="section map-container darkgrey-bg">
+        </div>
+        <div className="section map-container lightgrey-bg">
           <Container>
             <Row>
             <Col md="3">
-            <Map image={true} />
-                <ul className="card-description mt-3">
+            <Map image={true} marker={{lat: 32.3208, lng: 74.2150}} />
+                <ul className="card-description mt-3 mb-5 mb-lg-0">
                   <li>This is the paragraph where you can write more details about
                   your product.
                   </li>
@@ -315,8 +274,8 @@ const LandingPage = () => {
                 </ul>
               </Col>
               <Col md="3">
-              <Map image={true} />
-                <ul className="card-description mt-3">
+              <Map image={true} marker={{lat: 32.20, lng: 74.21}} />
+                <ul className="card-description mt-3 mb-5 mb-lg-0">
                   <li>This is the paragraph where you can write more details about
                   your product.
                   </li>
@@ -326,8 +285,8 @@ const LandingPage = () => {
                 </ul>
               </Col>
               <Col md="3">
-              <Map image={true} />
-                <ul className="card-description mt-3">
+              <Map image={true} marker={{lat: 32.20, lng: 74.21}} />
+                <ul className="card-description mt-3 mb-5 mb-lg-0">
                   <li>This is the paragraph where you can write more details about
                   your product.
                   </li>
@@ -337,8 +296,8 @@ const LandingPage = () => {
                 </ul>
               </Col>
               <Col md="3">
-                <Map image={true} />
-                <ul className="card-description mt-3">
+                <Map image={true} marker={{lat: 32.2933, lng: 74.3152}} />
+                <ul className="card-description mt-3 mb-5 mb-lg-0">
                   <li>This is the paragraph where you can write more details about
                   your product.
                   </li>
@@ -350,7 +309,7 @@ const LandingPage = () => {
             </Row>
           </Container>
         </div>
-        <div className="section map-container lightgrey-bg">
+        <div className="section map-container darkgrey-bg">
           <Container>
             <Row>
               <Col md="6">
@@ -369,7 +328,7 @@ const LandingPage = () => {
             </Row>
           </Container>
         </div>
-        <div className="section landing-section darkgrey-bg" ref={formRef}>
+        <div className="section landing-section lightgrey-bg" ref={formRef}>
           <Container>
             <Row>
               <Col md="12">

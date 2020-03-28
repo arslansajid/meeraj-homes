@@ -6,7 +6,7 @@ body{
     font-family: 'Raleway', 'Montserrat', "Helvetica", Arial, sans-serif;
 }
 a{
-  color: $info-color;
+  color: $blue-color;
 
   &:hover, &:focus{
      color: $info-states-color;
@@ -83,7 +83,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
     color: $primary-color;
 }
 .ct-azure{
-    color: $info-color;
+    color: $blue-color;
 }
 .ct-green{
     color: $success-color;

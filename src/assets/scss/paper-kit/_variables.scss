@@ -45,7 +45,8 @@ $success-color:              #6bd098 !default;
 $success-states-color:       darken($success-color, 10%) !default;
 
 $info-color:                 #51bcda !default;
-$info-states-color:          darken($info-color, 10%) !default;
+$blue-color:                 #172a50 !default;
+$info-states-color:          darken($blue-color, 10%) !default;
 
 $warning-color:              #fbc658 !default;
 $warning-states-color:       darken($warning-color, 10%) !default;
@@ -67,7 +68,7 @@ $brown-states-color:         darken($brown-color, 8%) !default;
 /*      light colors - used for select dropdown         */
 
 $light-blue:                 rgba($primary-color, .2);
-$light-azure:                rgba($info-color, .2);
+$light-azure:                rgba($blue-color, .2);
 $light-green:                rgba($success-color, .2);
 $light-orange:               rgba($warning-color, .2);
 $light-red:                  rgba($danger-color, .2);
@@ -226,7 +227,7 @@ $red-navbar:                rgba(#FF4C40, .98);
 
 $bg-nude:               #FFFCF5 !default;
 $bg-primary:            lighten($primary-color, 7%) !default;
-$bg-info:               lighten($info-color, 7%) !default;
+$bg-info:               lighten($blue-color, 7%) !default;
 $bg-success:            lighten($success-color, 7%) !default;
 $bg-warning:            lighten($warning-color, 7%) !default;
 $bg-danger:             lighten($danger-color, 7%) !default;
@@ -236,7 +237,7 @@ $bg-purple:             lighten($purple-color, 7%) !default;
 $preloader-color:          #D8D1C9 !default;
 
 $filter-blue:         darken($primary-color, 10%);
-$filter-azure:        darken($info-color, 10%);
+$filter-azure:        darken($blue-color, 10%);
 $filter-green:        darken($success-color, 10%);
 $filter-orange:       darken($warning-color, 10%);
 $filter-red:          darken($danger-color, 10%);
@@ -268,7 +269,7 @@ $font-hover-background-light-grey: #5E5E5C !default;
 $header-background:         #B2AFAB !default;
 
 $filter-primary:         darken($primary-color, 10%);
-$filter-info:        darken($info-color, 10%);
+$filter-info:        darken($blue-color, 10%);
 $filter-success:        darken($success-color, 10%);
 $filter-warning:       darken($warning-color, 10%);
 $filter-danger:          darken($danger-color, 10%);

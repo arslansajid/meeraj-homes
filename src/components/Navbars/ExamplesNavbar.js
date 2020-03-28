@@ -18,6 +18,7 @@ import {
 
 const ExamplesNavbar = (props) => {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
+  const [showLogo, setShowLogo] = React.useState(false);
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
 
   const toggleNavbarCollapse = () => {
@@ -37,11 +38,13 @@ const ExamplesNavbar = (props) => {
         document.body.scrollTop > 299
       ) {
         setNavbarColor("");
+        setShowLogo(true)
       } else if (
         document.documentElement.scrollTop < 300 ||
         document.body.scrollTop < 300
       ) {
         setNavbarColor("navbar-transparent");
+        setShowLogo(false)
       }
     };
 
@@ -59,6 +62,7 @@ const ExamplesNavbar = (props) => {
     >
       <Container>
         <div className="navbar-translate">
+          <div className="header-left d-flex">
           <button
             aria-expanded={navbarCollapse}
             className={classnames("navbar-toggler navbar-toggler", {
@@ -74,13 +78,14 @@ const ExamplesNavbar = (props) => {
             data-placement="bottom"
             to="/"
             tag={Link}
-          >
-            <div className="d-flex justify-content-center align-items-center">
-              <div className="logo-container left-logo" style={{marginRight: '10px'}}>
-                <img className="logo" src={require("assets/img/logo_png.png")} />
+          > */}
+            <div className={`${showLogo ? "d-block" : "d-none"}`} style={{borderRadius: '2px'}}>
+              <div className="logo-container left-logo">
+                <img className="logo" src={require("assets/img/meraj-tree-blue.png")} />
               </div>
             </div>
-          </NavbarBrand> */}
+          {/* </NavbarBrand> */}
+          </div>
           <div className="d-flex mr-3">
             <Link to="/contact-us">
             <Button

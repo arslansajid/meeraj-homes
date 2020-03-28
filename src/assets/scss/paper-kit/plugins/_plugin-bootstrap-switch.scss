@@ -86,7 +86,7 @@
  .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-info,
  .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-info {
    color: #fff;
-   background: $info-color;
+   background: $blue-color;
  }
 
  .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success,
@@ -259,7 +259,7 @@
  }
 
  .bootstrap-switch.bootstrap-switch-on .bootstrap-switch-info  {
-   background-color: $info-color;
+   background-color: $blue-color;
  }
  .bootstrap-switch.bootstrap-switch-on .bootstrap-switch-default  {
    background-color: $default-color;

@@ -65,8 +65,8 @@
 .pagination-info > li:first-child > span,
 .pagination-info > li:last-child > a,
 .pagination-info > li:last-child > span{
-    border: 2px solid $info-color;
-    color: $info-color;
+    border: 2px solid $blue-color;
+    color: $blue-color;
 }
 
 .nav-pills-info > li.active > a,
@@ -81,8 +81,8 @@
 .pagination-info > li.active > span:hover,
 .pagination-info > li.active > a:focus,
 .pagination-info > li.active > span:focus{
-   background-color: $info-color !important;
-   border-color: $info-color !important;
+   background-color: $blue-color !important;
+   border-color: $blue-color !important;
    color: $white-color;
 }
 
@@ -190,7 +190,7 @@
         padding-left: 0;
     }
     > li.active a{
-       color: $info-color;
+       color: $blue-color;
     }
 }
 .nav-icons > li{
@@ -215,7 +215,7 @@
     color: $primary-color;
 }
 .nav-azure > li.active a{
-    color: $info-color;
+    color: $blue-color;
 }
 .nav-green > li.active a{
     color: $success-color;
@@ -275,7 +275,7 @@
 }
 .nav-pills-info .nav-item.show .nav-link,
 .nav-pills-info .nav-link.active{
-    background-color: $info-color !important;
+    background-color: $blue-color !important;
 }
 .nav-pills-warning .nav-item.show .nav-link,
 .nav-pills-warning .nav-link.active{

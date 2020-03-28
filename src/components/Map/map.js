@@ -4,7 +4,7 @@ import GoogleMapReact from 'google-map-react';
 const Marker = () => {
     return (
         // <i className="fas fa-2x fa-map-marker-alt map-marker" style={{color: "red"}} />
-        <i className="fa fa-3x fa-map-marker" style={{color: "#0AB6D5"}} />
+        <i className="fa fa-3x fa-map-marker map-marker" />
     )
 }
 
@@ -136,8 +136,7 @@ function createMapOptions(maps, image) {
   }
 
 const Map = (props) => {
-  const {image} = props;
-    const {center, setCenter} = [{ lat: 33.726030, lng: 73.074607 }];
+  const {image, marker} = props;
     const handleGoogleMapApi = (google) => {
       var flightPath = new google.maps.Polyline({
         path: [{ "lat": 32.20, "lng": 74.21 },{ "lat": 32.3208, "lng": 74.2150 },{ "lat": 32.2933, "lng": 74.3152 },{ "lat": 32.16, "lng": 74.40 },{ "lat": 32.20, "lng": 74.21 }],
@@ -146,24 +145,32 @@ const Map = (props) => {
         strokeOpacity: 1,
         strokeWeight: 2
       });
-
-      flightPath.setMap(google.map);
+      if(!image) {
+        flightPath.setMap(google.map);
+      }
     }
     return (
         <div className="map" style={{ height: image ? '300px' : '400px', width: '100%', background: "lightgrey", borderRadius: image ? '10px' : 0, overflow: 'hidden' }}>
             <GoogleMapReact
                 bootstrapURLKeys={{ key: 'AIzaSyDai50O1JJN5mgRPVI4qb7kr7SUxDZvpnA' }}
-                defaultCenter={{ lat: 32.22, lng: 74.3152 }}
+                defaultCenter={image ? marker : { lat: 32.22, lng: 74.3152 }}
                 defaultZoom={11}
                 options={(maps) => createMapOptions(maps, image)}
                 yesIWantToUseGoogleMapApiInternals
                 onGoogleApiLoaded={handleGoogleMapApi}
               >
-              {Locations.map((location, index) => {
+              {!image && Locations.map((location, index) => {
                 return(
                   <Marker key={index} lat={location.cordinates.lat} lng={location.cordinates.lng} />
                 )
               })}
+              {
+                image
+                ?
+                <Marker lat={marker.lat} lng={marker.lng} />
+                :
+                null
+              }
             </GoogleMapReact>
         </div>
     )

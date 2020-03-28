@@ -272,12 +272,20 @@
     background-color: #AFAEAA !important;
 }
 
-.lightgrey-bg * {
-    color: black !important;
+.blue-bg {
+    background-color: #172a50 !important;
+}
+
+.lightgrey-bg *:not(.btn-info) {
+    color: black;
 }
 
 .darkgrey-bg * {
     color: white !important;
+}
+
+.heart {
+    color: red !important;
 }
 
 .contact-row span {
@@ -289,7 +297,6 @@ ul.card-description {
     color: white !important;
 }
 
-.location-description {
-    color: black !important;
-    font-weight: 500;
+.map-marker {
+    color: #0AB6D5 !important;
 }
