@@ -32,19 +32,36 @@ const ExamplesNavbar = (props) => {
   };
 
   React.useEffect(() => {
+    console.log("#########", props)
     const updateNavbarColor = () => {
-      if (
-        document.documentElement.scrollTop > 299 ||
-        document.body.scrollTop > 299
-      ) {
-        setNavbarColor("");
-        setShowLogo(true)
-      } else if (
-        document.documentElement.scrollTop < 300 ||
-        document.body.scrollTop < 300
-      ) {
-        setNavbarColor("navbar-transparent");
-        setShowLogo(false)
+      if(props.notHome) { //this is to control navbar on routes other than home
+        if (
+          document.documentElement.scrollTop > 40 ||
+          document.body.scrollTop > 40
+        ) {
+          setNavbarColor("");
+          setShowLogo(true)
+        } else if (
+          document.documentElement.scrollTop < 40 ||
+          document.body.scrollTop < 40
+        ) {
+          setNavbarColor("navbar-transparent");
+          setShowLogo(false)
+        }
+      } else {
+        if (
+          document.documentElement.scrollTop > 299 ||
+          document.body.scrollTop > 299
+        ) {
+          setNavbarColor("");
+          setShowLogo(true)
+        } else if (
+          document.documentElement.scrollTop < 300 ||
+          document.body.scrollTop < 300
+        ) {
+          setNavbarColor("navbar-transparent");
+          setShowLogo(false)
+        }
       }
     };
 
@@ -80,18 +97,26 @@ const ExamplesNavbar = (props) => {
             tag={Link}
           > */}
             <div className={`${showLogo ? "d-block" : "d-none"}`} style={{borderRadius: '2px'}}>
-              <div className="logo-container left-logo">
-                <img className="logo" src={require("assets/img/meraj-tree.png")} />
-              </div>
+              <Link to="/">
+                <div className="logo-container left-logo">
+                  <img className="logo" src={require("assets/img/meraj-tree.png")} />
+                </div>
+              </Link>
             </div>
           {/* </NavbarBrand> */}
           </div>
           <div className="d-flex mr-3">
-            <Link to="/contact-us">
+            <Link to={props.match.path === "/" ? "/contact-us" : "/"}>
             <Button
               className="btn-round navbar-toggler"
             >
-              Get In Touch
+              {
+                props.match.path === "/contact-us"
+                ?
+                "Home"
+                :
+                "Get In Touch"
+              }
             </Button>
             </Link>
           </div>
@@ -110,11 +135,17 @@ const ExamplesNavbar = (props) => {
               <NavItem
               id="get-in-touch-btn"
               >
-                <Link to="/contact-us">
+                <Link to={props.match.path === "/contact-us" ? "/" : "/contact-us"}>
                   <Button
                     className="btn-round"
                   >
-                    Get In Touch
+                    {
+                      props.match.path === "/contact-us"
+                      ?
+                      "Home"
+                      :
+                      "Get In Touch"
+                    }
                   </Button>
                 </Link>
               </NavItem>

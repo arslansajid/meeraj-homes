@@ -22,6 +22,7 @@ import Swal from 'sweetalert2';
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
+import ContactDetails from 'components/ContactDetails/contact';
 
 function AboutUs() {
   const [activeTab, setActiveTab] = React.useState("1");
@@ -51,13 +52,13 @@ function AboutUs() {
   };
 
   return (
-    <>
-      <ExamplesNavbar />
-      <ProfilePageHeader />
-      <Container className="mb-3">
+    <div className="lightgrey-bg">
+      <ExamplesNavbar notHome={true} />
+      {/* <ProfilePageHeader /> */}
+      <Container className="py-5">
         <Row>
-          <Col className="ml-auto mr-auto" md="8">
-            <h2 className="text-center">Keep in touch?</h2>
+          <Col className="ml-auto mr-auto mt-5" md="8">
+            <h2 className="text-center mt-5">Keep in touch?</h2>
             <Form className="contact-form" onSubmit={e => onFormSubmit(e)}>
               <Row>
                 <Col md="6">
@@ -101,8 +102,9 @@ function AboutUs() {
           </Col>
         </Row>
       </Container>
+      <ContactDetails />
       <DemoFooter />
-    </>
+    </div>
   );
 }
 

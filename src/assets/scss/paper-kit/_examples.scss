@@ -280,6 +280,10 @@
     color: black;
 }
 
+.lightgrey-bg .navbar .nc-icon {
+    color: white !important;
+}
+
 .darkgrey-bg * {
     color: white !important;
 }
@@ -295,4 +299,13 @@ ul.card-description {
 
 .map-marker {
     color: #0AB6D5 !important;
+}
+
+.contact-row .nc-icon {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.contact-row .detail {
+    font-weight: 500;
 }

@@ -17,6 +17,7 @@ import {
   Col
 } from "reactstrap";
 import Map from '../../components/Map/map';
+import ContactDetails from '../../components/ContactDetails/contact';
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
@@ -261,19 +262,11 @@ const LandingPage = () => {
         </div>
         <div className="section map-container lightgrey-bg">
           <Container>
-            <h2 className="title text-center">The Best Location In Town</h2>
+            <h2 className="title text-center">Most Accessible Location In Town</h2>
             <Row>
-            <Col md="3">
-            <Map image={true} marker={{lat: 32.3208, lng: 74.2150}} />
-                <ul className="card-description mt-3">
-                  <li>This is the paragraph where you can write more details about
-                  your product.
-                  </li>
-                  <li>Keep you user engaged by providing meaningful
-                  information.
-                  </li>
-                </ul>
-                <div className="text-center mt-2 mb-5 mb-lg-0">
+            <Col md="5">
+            <Map /* image={true} marker={{lat: 32.3208, lng: 74.2150}} */ />
+                <div className="text-center mt-2 mb-3 mb-lg-0">
                   <a
                     href={"https://www.google.com/maps/dir/?api=1&destination=Roomy+Isb+Royal+Islamabad+Pakistan"}
                     target="_blank"
@@ -282,7 +275,17 @@ const LandingPage = () => {
                   </a>
                 </div>
               </Col>
-              <Col md="3">
+              <Col md="5">
+                <ul className="card-description mt-3">
+                  <li>This is the paragraph where you can write more details about
+                  your product.
+                  </li>
+                  <li>Keep you user engaged by providing meaningful
+                  information.
+                  </li>
+                </ul>
+              </Col>
+              {/* <Col md="3">
               <Map image={true} marker={{lat: 32.20, lng: 74.21}} />
                 <ul className="card-description mt-3">
                   <li>This is the paragraph where you can write more details about
@@ -300,8 +303,8 @@ const LandingPage = () => {
                     <Button>Get Directions</Button>
                   </a>
                 </div>
-              </Col>
-              <Col md="3">
+              </Col> */}
+              {/* <Col md="3">
               <Map image={true} marker={{lat: 32.16, lng: 74.40}} />
                 <ul className="card-description mt-3">
                   <li>This is the paragraph where you can write more details about
@@ -319,8 +322,8 @@ const LandingPage = () => {
                     <Button>Get Directions</Button>
                   </a>
                 </div>
-              </Col>
-              <Col md="3">
+              </Col> */}
+              {/* <Col md="3">
                 <Map image={true} marker={{lat: 32.2933, lng: 74.3152}} />
                 <ul className="card-description mt-3">
                   <li>This is the paragraph where you can write more details about
@@ -338,14 +341,14 @@ const LandingPage = () => {
                     <Button>Get Directions</Button>
                   </a>
                 </div>
-              </Col>
+              </Col> */}
             </Row>
           </Container>
         </div>
         <div className="section map-container darkgrey-bg">
           <Container>
             <Row>
-              <Col md="6">
+              <Col md="8">
                 <h3>Location</h3>
                 <p className="location-description">
                   This is the paragraph where you can write more details about
@@ -355,56 +358,14 @@ const LandingPage = () => {
                   want the user to see more.
                 </p>
               </Col>
-              <Col md="6">
-                <Map image={false} />
+              <Col md="4">
+                {/* <Map image={false} /> */}
               </Col>
             </Row>
           </Container>
         </div>
         <div className="section landing-section lightgrey-bg" ref={formRef}>
-          <Container>
-            <Row>
-              <Col md="12">
-              <h3 className="mb-3">Location Details:</h3>
-                <Row className="contact-row">
-                  <Col xs="3" lg="2">
-                  <i className="nc-icon nc-pin-3 mr-1" />
-                    Location:
-                  </Col>
-                  <Col xs="9" lg="10" className="p-0">
-                  <div>
-                    3KM Main Daska Road towards Sialkot,
-                  </div>
-                  <div>
-                    Near Sialkot-Lahore Motorway Interchange point,
-                  </div>
-                  <div>
-                    Tehsil Daska, District Sialkot.
-                  </div>
-                  </Col>
-                </Row>
-                <h3 className="mb-3">Contact Details:</h3>
-                <Row className="contact-row mb-1">
-                  <Col xs="3" lg="2">
-                    <i className="nc-icon nc-email-85 mr-1" />
-                    Email:
-                  </Col>
-                  <Col xs="auto" lg="10" className="p-0">
-                    khurram@virkgroup.com
-                  </Col>
-                </Row>
-                <Row className="contact-row">
-                  <Col xs="3" lg="2">
-                    <i className="nc-icon nc-mobile mr-1" />
-                    Mobile:
-                  </Col>
-                  <Col xs="auto" lg="10" className="p-0">
-                  0300 8512727
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
-          </Container>
+          <ContactDetails />
         </div>
       </div>
       <DemoFooter />

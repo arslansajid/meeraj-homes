@@ -1,21 +1,4 @@
-/*!
 
-=========================================================
-* Paper Kit React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/meeraj-homes
-
-* Copyright 2019 Meraj Housing (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/meeraj-homes/blob/master/LICENSE.md)
-
-* Coded by Meraj Housing
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components

@@ -5,9 +5,9 @@ import { Row, Container } from "reactstrap";
 
 function DemoFooter() {
   return (
-    <footer className="footer darkgrey-bg">
+    <footer className="footer lightgrey-bg">
       <Container>
-        <Row>
+        <Row className="justify-content-center">
           <nav className="footer-nav">
             <ul>
               <li>
@@ -17,7 +17,7 @@ function DemoFooter() {
                 >
                   {/* Facebook */}
                   <i className="fa fa-2x fa-twitter" />
-                  <p className="d-lg-none">Twitter</p>
+                  <p className="d-none">Twitter</p>
                 </a>
               </li>
               <li>
@@ -27,7 +27,7 @@ function DemoFooter() {
                 >
                   {/* Instagram */}
                   <i className="fa fa-2x fa-facebook-square" />
-                  <p className="d-lg-none">Facebook</p>
+                  <p className="d-none">Facebook</p>
                 </a>
               </li>
               <li>
@@ -37,17 +37,17 @@ function DemoFooter() {
                 >
                   {/* Licenses */}
                   <i className="fa fa-2x fa-instagram" />
-                  <p className="d-lg-none">Instagram</p>
+                  <p className="d-none">Instagram</p>
                 </a>
               </li>
             </ul>
           </nav>
-          <div className="credits ml-auto">
+          {/* <div className="credits ml-auto">
             <span className="copyright">
               © {new Date().getFullYear()}, made with{" "}
               <i className="fa fa-heart heart" /> by Meraj Housing
             </span>
-          </div>
+          </div> */}
         </Row>
       </Container>
     </footer>
