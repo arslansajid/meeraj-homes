@@ -4,6 +4,7 @@ import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 
 const Projects = () => {
+    document.documentElement.classList.remove("nav-open");
     const [tab, selectedTab] = useState(1);
     useEffect(() => {
         console.log("######### Projects Page Rendered...")
