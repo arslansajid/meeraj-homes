@@ -29,6 +29,14 @@ const Locations = [
     label: "Sambrial",
     cordinates: {lat: "32.16", lng: "74.40"}
   },
+  {
+    label: "Lahore",
+    cordinates: {lat: "31.4805", lng: "74.3239"}
+  },
+  {
+    label: "Ugoki",
+    cordinates: {lat: "32.290", lng: "74.27"}
+  }
 ]
 
 const MerajLocation = {
@@ -159,8 +167,8 @@ const Map = (props) => {
         <div className="map" style={{ height: image ? '300px' : '400px', width: '100%', background: "lightgrey", borderRadius: image ? '10px' : 0, overflow: 'hidden' }}>
             <GoogleMapReact
                 bootstrapURLKeys={{ key: 'AIzaSyDai50O1JJN5mgRPVI4qb7kr7SUxDZvpnA' }}
-                defaultCenter={image ? marker : { lat: 32.22, lng: 74.3152 }}
-                defaultZoom={image ? 13 : 11}
+                defaultCenter={image ? marker : { lat: 31.87, lng: 74.3152 }}
+                defaultZoom={image ? 13 : 9}
                 options={(maps) => createMapOptions(maps, image)}
                 yesIWantToUseGoogleMapApiInternals
                 onGoogleApiLoaded={handleGoogleMapApi}

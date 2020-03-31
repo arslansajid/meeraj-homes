@@ -1,5 +1,5 @@
 import React from "react";
-import {Container, Col, Row} from "reactstrap";
+import {Container, Col, Row, Button} from "reactstrap";
 import Map from "../Map/map";
 
  const ContactDetails = () => {
@@ -48,6 +48,14 @@ import Map from "../Map/map";
                     <Map image={true} marker={{lat: 32.356479, lng: 74.398129}} />
                   </Col>
                 </Row>
+                <div className="text-center mt-2 mb-5 mb-lg-0">
+                  <a
+                    href={"https://www.google.com/maps/dir/?api=1&destination=Roomy+Isb+Royal+Islamabad+Pakistan"}
+                    target="_blank"
+                  >
+                    <Button>Get Directions</Button>
+                  </a>
+                </div>
               </Col>
             </Row>
           </Container>
