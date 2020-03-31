@@ -47,81 +47,85 @@ function ProfilePage() {
         <Row>
           <Col md="12">
             <div className="section profile-content">
-              <h2>Payments</h2>
-              <h5 className="heading-grey mt-5 mb-4">
-                Housing Societies
-              </h5>
+              <h3 className="heading-grey title mt-5 mb-4">
+                Property Types
+              </h3>
 
-              <table className="table">
-                <tr>
-                  <th>Project</th>
-                  <th>Installments</th>
-                  <th>Client</th>
-                  <th>Project Description</th>
-                </tr>
-                <tr>
-                  <td>Engineering University Employees Cooperative Housing Society, Lahore</td>
-                  <td>6000</td>
-                  <td>University of Engineering and Technology, Lahore</td>
-                  <td>Detailed Design of Road works and Structures, Bill of Quantities and Specifications</td>
-                </tr>
-                <tr>
-                  <td>Hostels for Oil Field Company</td>
-                  <td>2000</td>
-                  <td>Ikan</td>
-                  <td>Detailed Design of Structures, Bill of Quantities and Specifications.</td>
-                </tr>
-              </table>
+              <div className="mb-3">
+                <h5 className="title">Residential Plots</h5>
+                <Row className="payment-row py-2">
+                  <Col xs="3" md="3" lg="2"><i className="fa fa-cube" /> Area</Col>
+                  <Col xs="9" md="9" lg="8">10 Marla  2250 sqft</Col>
+                </Row>
 
-              <h5 className="heading-grey mt-5 mb-4">
-                Studies
-              </h5>
+                <Row className="payment-row py-2">
+                  <Col xs="3" md="3" lg="2"><i className="nc-icon nc-money-coins" /> Price</Col>
+                  <Col xs="9" md="9" lg="8">123 lac</Col>
+                </Row>
+              </div>
 
-              <table className="table">
-                <tr>
-                  <th>Project</th>
-                  <th>Installments</th>
-                  <th>Client</th>
-                  <th>Project Description</th>
-                </tr>
-                <tr>
-                  <td>Engineering University Employees Cooperative Housing Society, Lahore</td>
-                  <td>5000</td>
-                  <td>University of Engineering and Technology, Lahore</td>
-                  <td>Detailed Design of Road works and Structures, Bill of Quantities and Specifications</td>
-                </tr>
-                <tr>
-                  <td>Hostels for Oil Field Company</td>
-                  <td>25000</td>
-                  <td>Ikan</td>
-                  <td>Detailed Design of Structures, Bill of Quantities and Specifications.</td>
-                </tr>
-              </table>
+              <div className="mb-3">
+                <h5 className="title">Residential Plots</h5>
+                <Row className="payment-row py-2">
+                  <Col xs="3" md="3" lg="2"><i className="fa fa-cube" /> Area</Col>
+                  <Col xs="9" md="9" lg="8">5 Marla   1125 sq ft</Col>
+                </Row>
 
-              <h5 className="heading-grey mt-5 mb-4">
-                Underground Oil Storage Tanks
-              </h5>
+                <Row className="payment-row py-2">
+                  <Col xs="3" md="3" lg="2"><i className="nc-icon nc-money-coins" /> Price</Col>
+                  <Col xs="9" md="9" lg="8">123 lac</Col>
+                </Row>
+              </div>
 
-              <table className="table">
-                <tr>
-                  <th>Project</th>
-                  <th>Installments</th>
-                  <th>Client</th>
-                  <th>Project Description</th>
-                </tr>
-                <tr>
-                  <td>Engineering University Employees Cooperative Housing Society, Lahore</td>
-                  <td>2000</td>
-                  <td>University of Engineering and Technology, Lahore</td>
-                  <td>Detailed Design of Road works and Structures, Bill of Quantities and Specifications</td>
-                </tr>
-                <tr>
-                  <td>Hostels for Oil Field Company</td>
-                  <td>8000</td>
-                  <td>Ikan</td>
-                  <td>Detailed Design of Structures, Bill of Quantities and Specifications.</td>
-                </tr>
-              </table>
+              <div className="mb-3">
+                <h5 className="title">Residential Plots</h5>
+                <Row className="payment-row py-2">
+                  <Col xs="3" md="3" lg="2" ><i className="fa fa-cube" /> Area</Col>
+                  <Col xs="9" md="9" lg="8">20 Marla 4500 sq ft</Col>
+                </Row>
+
+                <Row className="payment-row py-2">
+                  <Col xs="3" md="3" lg="2" ><i className="nc-icon nc-money-coins" /> Price</Col>
+                  <Col xs="9" md="9" lg="8">123 lac</Col>
+                </Row>
+
+                <h5 className="title">Commercial Plots</h5>
+                <Row className="payment-row py-2">
+                  <Col xs="3" md="3" lg="2" ><i className="fa fa-cube" /> Area</Col>
+                  <Col xs="9" md="9" lg="8">10 Marla  2250 sqft</Col>
+                </Row>
+
+                <Row className="payment-row py-2">
+                  <Col xs="3" md="3" lg="2" ><i className="nc-icon nc-money-coins" /> Price</Col>
+                  <Col xs="9" md="9" lg="8">123 lac</Col>
+                </Row>
+              </div>
+
+              <div className="mb-3">
+                <h5 className="title">Commercial Plots</h5>
+                <Row className="payment-row py-2">
+                  <Col xs="3" md="3" lg="2" ><i className="fa fa-cube" /> Area</Col>
+                  <Col xs="9" md="9" lg="8">5 Marla   1125 sq ft</Col>
+                </Row>
+
+                <Row className="payment-row py-2">
+                  <Col xs="3" md="3" lg="2" ><i className="nc-icon nc-money-coins" /> Price</Col>
+                  <Col xs="9" md="9" lg="8">123 lac</Col>
+                </Row>
+              </div>
+
+              <div className="mb-3">
+                <h5 className="title">Commercial Plots</h5>
+                <Row className="payment-row py-2">
+                  <Col xs="3" md="3" lg="2" ><i className="fa fa-cube" /> Area</Col>
+                  <Col xs="9" md="9" lg="8">20 Marla 4500 sq ft</Col>
+                </Row>
+
+                <Row className="payment-row py-2">
+                  <Col xs="3" md="3" lg="2" ><i className="nc-icon nc-money-coins" /> Price</Col>
+                  <Col xs="9" md="9" lg="8">123 lac</Col>
+                </Row>
+              </div>
             </div>
           </Col>
         </Row>
