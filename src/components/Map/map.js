@@ -23,11 +23,11 @@ const Locations = [
   },
   {
     label: "Sialkot City",
-    cordinates: {lat: 32.2933, lng: 74.3152}
+    cordinates: {lat: 32.4945, lng: 74.5229}
   },
   {
     label: "Sambrial",
-    cordinates: {lat: 32.16, lng: 74.40}
+    cordinates: {lat: 32.4783, lng: 74.3521}
   },
   {
     label: "Lahore",
@@ -35,7 +35,7 @@ const Locations = [
   },
   {
     label: "Ugoki",
-    cordinates: {lat: 32.290, lng: 74.27}
+    cordinates: {lat: 32.4770, lng: 74.4496}
   }
 ]
 
