@@ -46,7 +46,8 @@ function createMapOptions(maps, image) {
     return {
       zoomControl: image ? false : true, 
       mapTypeControl: image ? false : true,
-      fullscreenControl: image ? false : true,
+      // fullscreenControl: image ? false : true,
+      fullscreenControl: true,
       scaleControl: image ? false : true,
       zoomControlOptions: {
         position: maps.ControlPosition.RIGHT_CENTER,

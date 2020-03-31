@@ -276,14 +276,43 @@ const LandingPage = () => {
                 </div>
               </Col>
               <Col md="5">
-                <ul className="card-description mt-3">
-                  <li>This is the paragraph where you can write more details about
-                  your product.
-                  </li>
-                  <li>Keep you user engaged by providing meaningful
-                  information.
-                  </li>
-                </ul>
+                <table className="table">
+                  <tr>
+                    <th>Detinations</th>
+                    <th>Distance</th>
+                    <th>Time</th>
+                  </tr>
+                  <tr>
+                    <td>Daska</td>
+                    <td>3 km</td>
+                    <td>5 mins</td>
+                  </tr>
+                  <tr>
+                    <td>Lahore</td>
+                    <td>100 km</td>
+                    <td>41 mins</td>
+                  </tr>
+                  <tr>
+                    <td>Sialkot Airport</td>
+                    <td>22 km</td>
+                    <td>20 mins</td>
+                  </tr>
+                  <tr>
+                    <td>Wazirabad road Sambrial </td>
+                    <td>13 km</td>
+                    <td>12 mins</td>
+                  </tr>
+                  <tr>
+                    <td>Ugoki</td>
+                    <td>18 km</td>
+                    <td>19 mins</td>
+                  </tr>
+                  <tr>
+                    <td>Sialkot</td>
+                    <td>16 km</td>
+                    <td>17 mins</td>
+                  </tr>
+                </table>
               </Col>
               {/* <Col md="3">
               <Map image={true} marker={{lat: 32.20, lng: 74.21}} />
