@@ -283,32 +283,32 @@ const LandingPage = () => {
                     <th>Time</th>
                   </tr>
                   <tr>
-                    <td>Daska</td>
+                    <td><i className="fa fa-1x fa-map-marker map-marker" />Daska</td>
                     <td>3 km</td>
                     <td>5 mins</td>
                   </tr>
                   <tr>
-                    <td>Lahore</td>
+                    <td><i className="fa fa-1x fa-map-marker map-marker" />Lahore</td>
                     <td>100 km</td>
                     <td>41 mins</td>
                   </tr>
                   <tr>
-                    <td>Sialkot Airport</td>
+                    <td><i className="fa fa-1x fa-map-marker map-marker" />Sialkot Airport</td>
                     <td>22 km</td>
                     <td>20 mins</td>
                   </tr>
                   <tr>
-                    <td>Wazirabad road Sambrial </td>
+                    <td><i className="fa fa-1x fa-map-marker map-marker" />Wazirabad road Sambrial </td>
                     <td>13 km</td>
                     <td>12 mins</td>
                   </tr>
                   <tr>
-                    <td>Ugoki</td>
+                    <td><i className="fa fa-1x fa-map-marker map-marker" />Ugoki</td>
                     <td>18 km</td>
                     <td>19 mins</td>
                   </tr>
                   <tr>
-                    <td>Sialkot</td>
+                    <td><i className="fa fa-1x fa-map-marker map-marker" />Sialkot</td>
                     <td>16 km</td>
                     <td>17 mins</td>
                   </tr>
