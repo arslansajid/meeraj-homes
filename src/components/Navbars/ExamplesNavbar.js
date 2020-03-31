@@ -157,7 +157,7 @@ const ExamplesNavbar = (props) => {
             </NavItem>
             <NavItem>
               <NavLink to="/society-maps" tag={Link}>
-                <i className="nc-icon nc-pin-3 mr-2" /> Society Maps
+                <i className="nc-icon nc-pin-3" /> Society Maps
               </NavLink>
             </NavItem>
           </Nav>
