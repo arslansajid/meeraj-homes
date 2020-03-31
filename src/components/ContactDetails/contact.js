@@ -50,7 +50,7 @@ import Map from "../Map/map";
                 </Row>
                 <div className="text-center mt-2 mb-5 mb-lg-0">
                   <a
-                    href={"http://www.google.com/maps/place/32.5401578,74.370013"}
+                    href={"http://www.google.com/maps/place/32.356479,74.398129"}
                     target="_blank"
                   >
                     <Button>Get Directions</Button>

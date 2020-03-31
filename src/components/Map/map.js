@@ -41,7 +41,7 @@ const Locations = [
 
 const MerajLocation = {
   label: "Meraj Housing",
-  cordinates: {lat: 32.5401578, lng: 74.370013}
+  cordinates: {lat: 32.356479, lng: 74.398129}
 }
 
 function createMapOptions(maps, image) {
