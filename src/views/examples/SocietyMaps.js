@@ -19,28 +19,27 @@ import {
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 
-const AboutUs = () => {
+const SocietyMaps = () => {
+
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     window.scrollTo(0,0);
-    document.body.classList.add("landing-page");
+    document.body.classList.add("society-maps-page");
     return function cleanup() {
-      document.body.classList.remove("landing-page");
+      document.body.classList.remove("society-maps-page");
     };
   });
-
   return (
     <>
       <ExamplesNavbar notHome={true} />
       <div className="section">
-        <h1>About Us</h1>
+        <h1>Society Maps</h1>
       </div>
       <DemoFooter />
     </>
   );
 }
 
-export default AboutUs;
+export default SocietyMaps;

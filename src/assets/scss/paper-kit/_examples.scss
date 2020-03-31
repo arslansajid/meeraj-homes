@@ -276,6 +276,11 @@
     background-color: #172a50 !important;
 }
 
+.blue-bg-btn {
+    background-color: #172a50 !important;
+    border: #172a50 !important;;
+}
+
 .lightgrey-bg *:not(.btn) {
     color: black;
 }
@@ -323,11 +328,56 @@ ul.card-description {
     color: black !important;
 }
 
-.payment-row {
-    background: #f5f5f5;
-}
+// .payment-row {
+//     background: #f5f5f5;
+// }
 
 .payment-row i {
     font-weight: 600;
     font-size: 14px;
+}
+
+.payment-row {
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+.plot-title {
+    font-weight: 500;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+//maps styles
+
+.gm-style-mtc div {
+    background: black !important;
+    color: white !important;
+}
+
+.gm-control-active,
+.gm-fullscreen-control {
+    background: black !important;
+}
+
+.tabs-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab {
+    border: 2px solid black;
+    background: transparent !important;
+    color: black !important;
+}
+
+.tab-selected:focus,
+.tab-selected:active {
+    border: 2px solid black !important;
+    background-color: black !important;
+    color: white !important;
+}
+
+.tab-selected {
 }

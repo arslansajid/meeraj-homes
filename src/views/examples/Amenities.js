@@ -22,25 +22,32 @@ import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 
-const AboutUs = () => {
+const Amenities = () => {
+  const [activeTab, setActiveTab] = React.useState("1");
+
+  const toggle = tab => {
+    if (activeTab !== tab) {
+      setActiveTab(tab);
+    }
+  };
+
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     window.scrollTo(0,0);
-    document.body.classList.add("landing-page");
+    document.body.classList.add("amenities-page");
     return function cleanup() {
-      document.body.classList.remove("landing-page");
+      document.body.classList.remove("amenities-page");
     };
   });
-
   return (
     <>
       <ExamplesNavbar notHome={true} />
       <div className="section">
-        <h1>About Us</h1>
+        <h1>Amenities</h1>
       </div>
       <DemoFooter />
     </>
   );
 }
 
-export default AboutUs;
+export default Amenities;

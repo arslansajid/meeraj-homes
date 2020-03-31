@@ -277,8 +277,9 @@ const LandingPage = () => {
               </Col>
               <Col md="5">
                 <table className="table">
+                  <tbody>
                   <tr>
-                    <th>Detinations</th>
+                    <th>Destinations</th>
                     <th>Distance</th>
                     <th>Time</th>
                   </tr>
@@ -312,6 +313,7 @@ const LandingPage = () => {
                     <td>16 km</td>
                     <td>17 mins</td>
                   </tr>
+                  </tbody>
                 </table>
               </Col>
               {/* <Col md="3">

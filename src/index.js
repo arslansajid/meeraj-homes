@@ -10,11 +10,13 @@ import "assets/demo/demo.css";
 // pages
 import Index from "views/Index.js";
 import NucleoIcons from "views/NucleoIcons.js";
+import Amenities from "views/examples/Amenities.js";
+import SocietyMaps from "views/examples/SocietyMaps.js";
 import AboutUs from "views/examples/AboutUs.js";
 import ContactUs from "views/examples/ContactUs.js";
 import Payments from "views/examples/Payments.js";
 import LandingPage from "views/examples/LandingPage.js";
-import ProfilePage from "views/examples/ProfilePage.js";
+import Projects from "views/examples/Projects";
 import RegisterPage from "views/examples/RegisterPage.js";
 // others
 
@@ -23,11 +25,14 @@ ReactDOM.render(
     <Switch>
       <Route
         path="/projects"
-        render={props => <RegisterPage {...props} />}
+        render={props => <Projects {...props} />}
       />
-      {/* <Route
-        path="/projects"
-        render={props => <Index {...props} />} /> */}
+      <Route
+        path="/amenities"
+        render={props => <Amenities {...props} />} />
+        <Route
+        path="/society-maps"
+        render={props => <SocietyMaps {...props} />} />
       <Route
         path="/about-us"
         render={props => <AboutUs {...props} />}

@@ -40,19 +40,18 @@ function ProfilePage() {
     };
   });
   return (
-    <>
-      <ExamplesNavbar />
-      <ProfilePageHeader />
-      <Container>
+    <div className="lightgrey-bg">
+      <ExamplesNavbar notHome={true} />
+      {/* <ProfilePageHeader /> */}
+      <Container className="py-5">
         <Row>
           <Col md="12">
-            <div className="section profile-content">
               <h3 className="heading-grey title mt-5 mb-4">
                 Property Types
               </h3>
 
               <div className="mb-3">
-                <h5 className="title">Residential Plots</h5>
+                <div className="plot-title">Residential Plots</div>
                 <Row className="payment-row py-2">
                   <Col xs="3" md="3" lg="2"><i className="fa fa-cube" /> Area</Col>
                   <Col xs="9" md="9" lg="8">10 Marla  2250 sqft</Col>
@@ -65,7 +64,7 @@ function ProfilePage() {
               </div>
 
               <div className="mb-3">
-                <h5 className="title">Residential Plots</h5>
+                <div className="plot-title">Residential Plots</div>
                 <Row className="payment-row py-2">
                   <Col xs="3" md="3" lg="2"><i className="fa fa-cube" /> Area</Col>
                   <Col xs="9" md="9" lg="8">5 Marla   1125 sq ft</Col>
@@ -78,7 +77,7 @@ function ProfilePage() {
               </div>
 
               <div className="mb-3">
-                <h5 className="title">Residential Plots</h5>
+                <div className="plot-title">Residential Plots</div>
                 <Row className="payment-row py-2">
                   <Col xs="3" md="3" lg="2" ><i className="fa fa-cube" /> Area</Col>
                   <Col xs="9" md="9" lg="8">20 Marla 4500 sq ft</Col>
@@ -89,7 +88,7 @@ function ProfilePage() {
                   <Col xs="9" md="9" lg="8">123 lac</Col>
                 </Row>
 
-                <h5 className="title">Commercial Plots</h5>
+                <div className="plot-title">Commercial Plots</div>
                 <Row className="payment-row py-2">
                   <Col xs="3" md="3" lg="2" ><i className="fa fa-cube" /> Area</Col>
                   <Col xs="9" md="9" lg="8">10 Marla  2250 sqft</Col>
@@ -102,7 +101,7 @@ function ProfilePage() {
               </div>
 
               <div className="mb-3">
-                <h5 className="title">Commercial Plots</h5>
+                <div className="plot-title">Commercial Plots</div>
                 <Row className="payment-row py-2">
                   <Col xs="3" md="3" lg="2" ><i className="fa fa-cube" /> Area</Col>
                   <Col xs="9" md="9" lg="8">5 Marla   1125 sq ft</Col>
@@ -115,7 +114,7 @@ function ProfilePage() {
               </div>
 
               <div className="mb-3">
-                <h5 className="title">Commercial Plots</h5>
+                <div className="plot-title">Commercial Plots</div>
                 <Row className="payment-row py-2">
                   <Col xs="3" md="3" lg="2" ><i className="fa fa-cube" /> Area</Col>
                   <Col xs="9" md="9" lg="8">20 Marla 4500 sq ft</Col>
@@ -126,12 +125,11 @@ function ProfilePage() {
                   <Col xs="9" md="9" lg="8">123 lac</Col>
                 </Row>
               </div>
-            </div>
           </Col>
         </Row>
       </Container>
       <DemoFooter />
-    </>
+    </div>
   );
 }
 

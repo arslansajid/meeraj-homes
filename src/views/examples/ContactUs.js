@@ -58,7 +58,7 @@ function AboutUs() {
       <Container className="py-5">
         <Row>
           <Col className="ml-auto mr-auto mt-5" md="8">
-            <h2 className="text-center mt-5">Keep in touch?</h2>
+            <h2 className="text-center title mt-5">Keep in touch?</h2>
             <Form className="contact-form" onSubmit={e => onFormSubmit(e)}>
               <Row>
                 <Col md="6">
@@ -91,12 +91,12 @@ function AboutUs() {
                 rows="4"
                 required
               />
-              <Row>
-                <Col className="ml-auto mr-auto" md="4">
-                  <Button className="btn-fill" color="danger" size="lg">
+              <Row className="justify-content-center">
+                {/* <Col className="ml-auto mr-auto" md="4"> */}
+                  <Button className="btn-fill blue-bg-btn" size="md">
                     Send Message
                       </Button>
-                </Col>
+                {/* </Col> */}
               </Row>
             </Form>
           </Col>

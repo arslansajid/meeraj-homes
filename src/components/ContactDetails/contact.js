@@ -44,7 +44,7 @@ import Map from "../Map/map";
                   </Col>
                 </Row>
                 <Row className="contact-row justify-content-center">
-                  <Col lg="8" auto className="mt-4">
+                  <Col lg="8" className="mt-4">
                     <Map image={true} marker={{lat: 32.356479, lng: 74.398129}} />
                   </Col>
                 </Row>

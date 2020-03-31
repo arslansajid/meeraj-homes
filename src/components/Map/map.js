@@ -45,6 +45,7 @@ const MerajLocation = {
 }
 
 function createMapOptions(maps, image) {
+  // { streetViewControl: true, disableDefaultUI: false, mapTypeControl: true, styles: [ ], }
     // next props are exposed at maps
     // "Animation", "ControlPosition", "MapTypeControlStyle", "MapTypeId",
     // "NavigationControlStyle", "ScaleControlStyle", "StrokePosition", "SymbolPath", "ZoomControlStyle",
@@ -144,6 +145,11 @@ function createMapOptions(maps, image) {
           featureType: 'water',
           elementType: 'labels.text.stroke',
           stylers: [{color: '#17263c'}]
+        },
+        {
+          featureType: 'poi',
+          elementType: 'labels',
+          stylers: [{ visibility: 'on' }]
         }
       ],
     };

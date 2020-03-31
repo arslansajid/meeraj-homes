@@ -17,7 +17,7 @@ import {
 } from "reactstrap";
 
 const ExamplesNavbar = (props) => {
-  const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
+  const [navbarColor, setNavbarColor] = React.useState(props.notHome ? "" : "navbar-transparent");
   const [showLogo, setShowLogo] = React.useState(false);
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
 
@@ -34,21 +34,7 @@ const ExamplesNavbar = (props) => {
   React.useEffect(() => {
     console.log("#########", props)
     const updateNavbarColor = () => {
-      if(props.notHome) { //this is to control navbar on routes other than home
-        if (
-          document.documentElement.scrollTop > 40 ||
-          document.body.scrollTop > 40
-        ) {
-          setNavbarColor("");
-          setShowLogo(true)
-        } else if (
-          document.documentElement.scrollTop < 40 ||
-          document.body.scrollTop < 40
-        ) {
-          setNavbarColor("navbar-transparent");
-          setShowLogo(false)
-        }
-      } else {
+      if(!props.notHome) { //this is to control navbar on routes other than home
         if (
           document.documentElement.scrollTop > 299 ||
           document.body.scrollTop > 299
@@ -96,7 +82,7 @@ const ExamplesNavbar = (props) => {
             to="/"
             tag={Link}
           > */}
-            <div className={`${showLogo ? "d-block" : "d-none"}`} style={{borderRadius: '2px'}}>
+            <div className={`${showLogo || props.notHome ? "d-block" : "d-none"}`} style={{borderRadius: '2px'}}>
               <Link to="/">
                 <div className="logo-container left-logo">
                   <img className="logo" src={require("assets/img/logo25_25.png")} />
@@ -150,6 +136,11 @@ const ExamplesNavbar = (props) => {
                 </Link>
               </NavItem>
             <NavItem>
+              <NavLink to="/amenities" tag={Link}>
+                <i className="nc-icon nc-tv-2" /> Amenities
+              </NavLink>
+            </NavItem>
+            <NavItem>
               <NavLink to="/projects" tag={Link}>
                 <i className="nc-icon nc-bank" /> Projects
               </NavLink>
@@ -161,7 +152,12 @@ const ExamplesNavbar = (props) => {
             </NavItem>
             <NavItem>
               <NavLink to="/payments" tag={Link}>
-                <i className="nc-icon nc-book-bookmark" /> Payments
+                <i className="nc-icon nc-money-coins" /> Payments
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink to="/society-maps" tag={Link}>
+                <i className="nc-icon nc-pin-3 mr-2" /> Society Maps
               </NavLink>
             </NavItem>
           </Nav>

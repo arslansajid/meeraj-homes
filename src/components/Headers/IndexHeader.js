@@ -56,7 +56,7 @@ function IndexHeader() {
             {/* <i className="fa fa-home" style={{fontSize: '1.5em', marginRight: '10px'}} /> */}
           </a>
           {/* Finest Living with Sleek and Chick */}
-          A Gateway To Better Living
+          FINEST LIVING
         </h4>
       </div>
     </>
