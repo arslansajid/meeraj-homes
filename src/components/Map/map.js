@@ -167,8 +167,8 @@ const Map = (props) => {
         <div className="map" style={{ height: image ? '300px' : '400px', width: '100%', background: "lightgrey", borderRadius: image ? '10px' : 0, overflow: 'hidden' }}>
             <GoogleMapReact
                 bootstrapURLKeys={{ key: 'AIzaSyDai50O1JJN5mgRPVI4qb7kr7SUxDZvpnA' }}
-                defaultCenter={image ? marker : { lat: 32.20, lng: 74.40 }}
-                defaultZoom={image ? 13 : 9}
+                defaultCenter={image ? marker : { lat: 32.32, lng: 74.40 }}
+                defaultZoom={image ? 13 : 10}
                 options={(maps) => createMapOptions(maps, image)}
                 yesIWantToUseGoogleMapApiInternals
                 onGoogleApiLoaded={handleGoogleMapApi}
