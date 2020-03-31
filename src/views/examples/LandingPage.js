@@ -268,7 +268,7 @@ const LandingPage = () => {
             <Map /* image={true} marker={{lat: 32.3208, lng: 74.2150}} */ />
                 <div className="text-center mt-2 mb-3 mb-lg-0">
                   <a
-                    href={"https://www.google.com/maps/dir/?api=1&destination=Roomy+Isb+Royal+Islamabad+Pakistan"}
+                    href={"http://www.google.com/maps/place/32.5401578,74.370013"}
                     target="_blank"
                   >
                     <Button>Get Directions</Button>
