@@ -30,11 +30,11 @@ const Projects = () => {
                 <Row className="d-lg-flex d-none">
                     <Col className="mt-5" md="12">
                         <div className="tabs-container">
-                            <Button onClick={() => switchTab(1)} className={tab === 1 ? "tab-selected" : "tab"}>MERAJ RESIDENTIAL PLOTS</Button>
-                            <Button onClick={() => switchTab(2)} className={tab === 2 ? "tab-selected" : "tab"}>MERAJ AVENUE COMMERCIAL</Button>
-                            <Button onClick={() => switchTab(3)} className={tab === 3 ? "tab-selected" : "tab"}>MERAJ HOMES</Button>
-                            <Button onClick={() => switchTab(4)} className={tab === 4 ? "tab-selected" : "tab"}>MERAJ PARK APPARTMENTS</Button>
-                            <Button onClick={() => switchTab(5)} className={tab === 5 ? "tab-selected" : "tab"}>MERAJ OVERSEAS BLOCK</Button>
+                            <Button onClick={() => switchTab(1)} className={tab === 1 ? "tab-selected blue-bg-btn" : "tab"}>MERAJ RESIDENTIAL PLOTS</Button>
+                            <Button onClick={() => switchTab(2)} className={tab === 2 ? "tab-selected blue-bg-btn" : "tab"}>MERAJ AVENUE COMMERCIAL</Button>
+                            <Button onClick={() => switchTab(3)} className={tab === 3 ? "tab-selected blue-bg-btn" : "tab"}>MERAJ HOMES</Button>
+                            <Button onClick={() => switchTab(4)} className={tab === 4 ? "tab-selected blue-bg-btn" : "tab"}>MERAJ PARK APPARTMENTS</Button>
+                            <Button onClick={() => switchTab(5)} className={tab === 5 ? "tab-selected blue-bg-btn" : "tab"}>MERAJ OVERSEAS BLOCK</Button>
                         </div>
                         <h3 className="title">
                             Projects {tab}
