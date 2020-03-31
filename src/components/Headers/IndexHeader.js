@@ -23,7 +23,7 @@ function IndexHeader() {
             <div className="title-brand">
               {/* <h1 className="presentation-title">Meraj Housing</h1> */}
               <div className="landing-logo-container">
-                <img className="logo" src={require('../../assets/img/logo_png.png')} />
+                <img className="logo" src={require('../../assets/img/logo_transparent.png')} />
               </div>
               {/* <div className="fog-low">
                 <img alt="..." src={require("assets/img/fog-low.png")} />

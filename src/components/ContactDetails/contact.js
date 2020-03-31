@@ -1,5 +1,6 @@
 import React from "react";
 import {Container, Col, Row} from "reactstrap";
+import Map from "../Map/map";
 
  const ContactDetails = () => {
     return (
@@ -40,6 +41,11 @@ import {Container, Col, Row} from "reactstrap";
                   </Col>
                   <Col xs="11" lg="11" md="11" className="p-0 detail">
                   +92 300 8512727
+                  </Col>
+                </Row>
+                <Row className="contact-row justify-content-center">
+                  <Col lg="8" auto className="mt-4">
+                    <Map image={true} marker={{lat: 32.356479, lng: 74.398129}} />
                   </Col>
                 </Row>
               </Col>
