@@ -1,41 +1,41 @@
 import React, { useEffect } from 'react';
 import GoogleMapReact from 'google-map-react';
 
-const Marker = () => {
+const Marker = (props) => {
     return (
         // <i className="fas fa-2x fa-map-marker-alt map-marker" style={{color: "red"}} />
-        <i className="fa fa-3x fa-map-marker map-marker" />
+        <i onClick={() => window.alert(props.label)} className="fa fa-2x fa-map-marker map-marker" />
     )
 }
 
 const Locations = [
   {
     label: "Daska",
-    cordinates: {lat: "32.20", lng: "74.21"}
+    cordinates: {lat: 32.3363, lng: 74.3675}
   },
   {
     label: "Sialkot Airport",
-    cordinates: {lat: "32.3208", lng: "74.2150"}
+    cordinates: {lat: 32.537400, lng: 74.358300}
   },
   {
     label: "Daska Pasrur road interchange",
-    cordinates: {lat: "32.20", lng: "74.21"}
+    cordinates: {lat: 32.20, lng: 74.21}
   },
   {
     label: "Sialkot City",
-    cordinates: {lat: "32.2933", lng: "74.3152"}
+    cordinates: {lat: 32.2933, lng: 74.3152}
   },
   {
     label: "Sambrial",
-    cordinates: {lat: "32.16", lng: "74.40"}
+    cordinates: {lat: 32.16, lng: 74.40}
   },
   {
     label: "Lahore",
-    cordinates: {lat: "31.4805", lng: "74.3239"}
+    cordinates: {lat: 31.5204, lng: 74.3587}
   },
   {
     label: "Ugoki",
-    cordinates: {lat: "32.290", lng: "74.27"}
+    cordinates: {lat: 32.290, lng: 74.27}
   }
 ]
 
@@ -159,23 +159,24 @@ const Map = (props) => {
         strokeOpacity: 1,
         strokeWeight: 2
       });
-      if(!image) {
-        flightPath.setMap(google.map);
-      }
+      // if(!image) {
+      //   flightPath.setMap(google.map);
+      // }
     }
     return (
         <div className="map" style={{ height: image ? '300px' : '400px', width: '100%', background: "lightgrey", borderRadius: image ? '10px' : 0, overflow: 'hidden' }}>
             <GoogleMapReact
                 bootstrapURLKeys={{ key: 'AIzaSyDai50O1JJN5mgRPVI4qb7kr7SUxDZvpnA' }}
-                defaultCenter={image ? marker : { lat: 31.87, lng: 74.3152 }}
+                defaultCenter={image ? marker : { lat: 32.20, lng: 74.40 }}
                 defaultZoom={image ? 13 : 9}
                 options={(maps) => createMapOptions(maps, image)}
                 yesIWantToUseGoogleMapApiInternals
                 onGoogleApiLoaded={handleGoogleMapApi}
+                resetBoundsOnResize={true}
               >
               {!image && Locations.map((location, index) => {
                 return(
-                  <Marker key={index} lat={location.cordinates.lat} lng={location.cordinates.lng} />
+                  <Marker key={index} label={location.label} lat={location.cordinates.lat} lng={location.cordinates.lng} />
                 )
               })}
               {
