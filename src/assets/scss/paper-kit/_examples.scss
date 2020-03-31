@@ -381,3 +381,10 @@ ul.card-description {
 
 .tab-selected {
 }
+
+
+:focus,
+:active {
+  outline: none !important;
+  box-shadow: unset !important;
+}
