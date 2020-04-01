@@ -14,6 +14,10 @@ import {
   Nav,
   Container,
   Button,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
 } from "reactstrap";
 
 const ExamplesNavbar = (props) => {
@@ -34,7 +38,7 @@ const ExamplesNavbar = (props) => {
   React.useEffect(() => {
     console.log("#########", props)
     const updateNavbarColor = () => {
-      if(!props.notHome) { //this is to control navbar on routes other than home
+      if (!props.notHome) { //this is to control navbar on routes other than home
         if (
           document.documentElement.scrollTop > 299 ||
           document.body.scrollTop > 299
@@ -66,44 +70,44 @@ const ExamplesNavbar = (props) => {
       <Container>
         <div className="navbar-translate">
           <div className="header-left d-flex">
-          <button
-            aria-expanded={navbarCollapse}
-            className={classnames("navbar-toggler navbar-toggler", {
-              toggled: navbarCollapse
-            })}
-            onClick={toggleNavbarCollapse}
-          >
-            <span className="navbar-toggler-bar bar1" />
-            <span className="navbar-toggler-bar bar2" />
-            <span className="navbar-toggler-bar bar3" />
-          </button>
-          {/* <NavbarBrand
+            <button
+              aria-expanded={navbarCollapse}
+              className={classnames("navbar-toggler navbar-toggler", {
+                toggled: navbarCollapse
+              })}
+              onClick={toggleNavbarCollapse}
+            >
+              <span className="navbar-toggler-bar bar1" />
+              <span className="navbar-toggler-bar bar2" />
+              <span className="navbar-toggler-bar bar3" />
+            </button>
+            {/* <NavbarBrand
             data-placement="bottom"
             to="/"
             tag={Link}
           > */}
-            <div className={`${showLogo || props.notHome ? "d-block" : "d-none"}`} style={{borderRadius: '2px'}}>
+            <div className={`${showLogo || props.notHome ? "d-block" : "d-none"}`} style={{ borderRadius: '2px' }}>
               <Link to="/">
                 <div className="logo-container left-logo">
                   <img className="logo" src={require("assets/img/white25.png")} />
                 </div>
               </Link>
             </div>
-          {/* </NavbarBrand> */}
+            {/* </NavbarBrand> */}
           </div>
           <div className="d-flex mr-3">
             <Link to={props.match.path === "/" ? "/contact-us" : "/"}>
-            <Button
-              className="btn-round navbar-toggler"
-            >
-              {
-                props.match.path === "/contact-us"
-                ?
-                "Home"
-                :
-                "Get In Touch"
-              }
-            </Button>
+              <Button
+                className="btn-round navbar-toggler"
+              >
+                {
+                  props.match.path === "/contact-us"
+                    ?
+                    "Home"
+                    :
+                    "Get In Touch"
+                }
+              </Button>
             </Link>
           </div>
         </div>
@@ -118,33 +122,86 @@ const ExamplesNavbar = (props) => {
                 <img className="logo sidebar-logo" src={require("assets/img/white25.png")} />
               </div>
             </Link>
-              <NavItem
+            <NavItem
               id="get-in-touch-btn"
-              >
-                <Link to={props.match.path === "/contact-us" ? "/" : "/contact-us"}>
-                  <Button
-                    className="btn-round"
-                  >
-                    {
-                      props.match.path === "/contact-us"
+            >
+              <Link to={props.match.path === "/contact-us" ? "/" : "/contact-us"}>
+                <Button
+                  className="btn-round"
+                >
+                  {
+                    props.match.path === "/contact-us"
                       ?
                       "Home"
                       :
                       "Get In Touch"
-                    }
-                  </Button>
-                </Link>
-              </NavItem>
+                  }
+                </Button>
+              </Link>
+            </NavItem>
             <NavItem>
               <NavLink to="/amenities" tag={Link}>
                 <i className="nc-icon nc-tv-2" /> Amenities
               </NavLink>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLink to="/projects" tag={Link}>
                 <i className="nc-icon nc-bank" /> Projects
               </NavLink>
-            </NavItem>
+            </NavItem> */}
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle
+                aria-expanded={false}
+                aria-haspopup={true}
+                caret
+                color="default"
+                data-toggle="dropdown"
+                href="#pablo"
+                id="dropdownMenuButton"
+                nav
+                onClick={e => e.preventDefault()}
+                role="button"
+              >
+                <i className="nc-icon nc-bank" /> Projects
+              </DropdownToggle>
+              <DropdownMenu
+                aria-labelledby="dropdownMenuButton"
+                className="dropdown-info"
+              >
+                <DropdownItem
+                  href="#pablo"
+                  onClick={e => e.preventDefault()}
+                >
+                  MERAJ RESIDENTIAL PLOTS
+                </DropdownItem>
+                <DropdownItem
+                  href="#pablo"
+                  onClick={e => e.preventDefault()}
+                >
+                  MERAJ AVENUE COMMERCIAL
+                </DropdownItem>
+                <DropdownItem
+                  href="#pablo"
+                  onClick={e => e.preventDefault()}
+                >
+                  MERAJ HOMES
+                </DropdownItem>
+                {/* <DropdownItem divider /> */}
+                <DropdownItem
+                  href="#pablo"
+                  onClick={e => e.preventDefault()}
+                >
+                  MERAJ PARK APPARTMENTS
+                </DropdownItem>
+                {/* <DropdownItem divider /> */}
+                <DropdownItem
+                  href="#pablo"
+                  onClick={e => e.preventDefault()}
+                >
+                  MERAJ OVERSEAS BLOCK
+                </DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
             <NavItem>
               <NavLink to="/about-us" tag={Link}>
                 <i className="nc-icon nc-book-bookmark" /> About Us
