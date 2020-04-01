@@ -85,7 +85,7 @@ const ExamplesNavbar = (props) => {
             <div className={`${showLogo || props.notHome ? "d-block" : "d-none"}`} style={{borderRadius: '2px'}}>
               <Link to="/">
                 <div className="logo-container left-logo">
-                  <img className="logo" src={require("assets/img/logo25_25.png")} />
+                  <img className="logo" src={require("assets/img/white25.png")} />
                 </div>
               </Link>
             </div>
@@ -115,7 +115,7 @@ const ExamplesNavbar = (props) => {
           <Nav navbar>
             <Link to="/">
               <div className="logo-container navbar-toggler">
-                <img className="logo sidebar-logo" src={require("assets/img/logo25_25.png")} />
+                <img className="logo sidebar-logo" src={require("assets/img/white25.png")} />
               </div>
             </Link>
               <NavItem
