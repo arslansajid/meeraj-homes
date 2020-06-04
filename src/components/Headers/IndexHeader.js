@@ -11,11 +11,11 @@ function IndexHeader() {
   return (
     <>
       <div
-        className="page-header section-dark darkgrey-bg"
-        // style={{
-        //   backgroundImage:
-        //     "url(" + require("assets/img/JCC.jpg") + ")"
-        // }}
+        className="page-header"
+        style={{
+          backgroundImage: "url(" + require("assets/img/bg.png") + ")",
+          backgroundColor: "#5D5855",
+        }}
       >
         <div className="filter" />
         <div className="content-center">
@@ -23,7 +23,7 @@ function IndexHeader() {
             <div className="title-brand">
               {/* <h1 className="presentation-title">Meraj Housing</h1> */}
               <div className="landing-logo-container">
-                <img className="logo" src={require('../../assets/img/logo_transparent.png')} />
+                <img className="logo" src={require('../../assets/img/logo@2x.png')} />
               </div>
               {/* <div className="fog-low">
                 <img alt="..." src={require("assets/img/fog-low.png")} />
@@ -48,15 +48,7 @@ function IndexHeader() {
             href="/"
             target="_blank"
           >
-            {/* <img
-              alt="..."
-              className="creative-tim-logo"
-              src={require("assets/img/creative-tim-white-slim2.png")}
-            /> */}
-            {/* <i className="fa fa-home" style={{fontSize: '1.5em', marginRight: '10px'}} /> */}
           </a>
-          {/* Finest Living with Sleek and Chick */}
-          FINEST LIVING
         </h4>
       </div>
     </>
