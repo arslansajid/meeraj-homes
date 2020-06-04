@@ -21,7 +21,8 @@ import {
 } from "reactstrap";
 
 const ExamplesNavbar = (props) => {
-  const [navbarColor, setNavbarColor] = React.useState(props.notHome ? "" : "navbar-transparent");
+  // const [navbarColor, setNavbarColor] = React.useState(props.notHome ? "" : "navbar-transparent");
+  const [navbarColor, setNavbarColor] = React.useState("");
   const [showLogo, setShowLogo] = React.useState(false);
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
 
@@ -35,39 +36,39 @@ const ExamplesNavbar = (props) => {
     props.formRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
-  React.useEffect(() => {
-    console.log("#########", props)
-    const updateNavbarColor = () => {
-      if (!props.notHome) { //this is to control navbar on routes other than home
-        if (
-          document.documentElement.scrollTop > 299 ||
-          document.body.scrollTop > 299
-        ) {
-          setNavbarColor("");
-          setShowLogo(true)
-        } else if (
-          document.documentElement.scrollTop < 300 ||
-          document.body.scrollTop < 300
-        ) {
-          setNavbarColor("navbar-transparent");
-          setShowLogo(false)
-        }
-      }
-    };
+  // React.useEffect(() => {
+  //   console.log("#########", props)
+  //   const updateNavbarColor = () => {
+  //     if (!props.notHome) { //this is to control navbar on routes other than home
+  //       if (
+  //         document.documentElement.scrollTop > 299 ||
+  //         document.body.scrollTop > 299
+  //       ) {
+  //         setNavbarColor("");
+  //         setShowLogo(true)
+  //       } else if (
+  //         document.documentElement.scrollTop < 300 ||
+  //         document.body.scrollTop < 300
+  //       ) {
+  //         setNavbarColor("navbar-transparent");
+  //         setShowLogo(false)
+  //       }
+  //     }
+  //   };
 
-    window.addEventListener("scroll", updateNavbarColor);
+  //   window.addEventListener("scroll", updateNavbarColor);
 
-    return function cleanup() {
-      window.removeEventListener("scroll", updateNavbarColor);
-    };
-  });
+  //   return function cleanup() {
+  //     window.removeEventListener("scroll", updateNavbarColor);
+  //   };
+  // });
   return (
     <Navbar
       className={classnames("fixed-top", navbarColor)}
       color-on-scroll="300"
       expand="lg"
     >
-      <Container>
+      <Container fluid>
         <div className="navbar-translate">
           <div className="header-left d-flex">
             <button
@@ -86,10 +87,11 @@ const ExamplesNavbar = (props) => {
             to="/"
             tag={Link}
           > */}
-            <div className={`${showLogo || props.notHome ? "d-block" : "d-none"}`} style={{ borderRadius: '2px' }}>
+            {/* <div className={`${showLogo || props.notHome ? "d-block" : "d-none"}`} style={{ borderRadius: '2px' }}> */}
+            <div>
               <Link to="/">
                 <div className="logo-container left-logo">
-                  <img className="logo" src={require("assets/img/white25.png")} />
+                  <img className="logo" src={require("assets/img/navlogo@2x.png")} />
                 </div>
               </Link>
             </div>
@@ -141,15 +143,15 @@ const ExamplesNavbar = (props) => {
             </NavItem>
             <NavItem>
               <NavLink to="/amenities" tag={Link}>
-                <i className="nc-icon nc-tv-2" /> Amenities
+                Amenities
               </NavLink>
             </NavItem>
-            {/* <NavItem>
+            <NavItem>
               <NavLink to="/projects" tag={Link}>
-                <i className="nc-icon nc-bank" /> Projects
+                Projects
               </NavLink>
-            </NavItem> */}
-            <UncontrolledDropdown nav inNavbar>
+            </NavItem>
+            {/* <UncontrolledDropdown nav inNavbar>
               <DropdownToggle
                 aria-expanded={false}
                 aria-haspopup={true}
@@ -186,14 +188,14 @@ const ExamplesNavbar = (props) => {
                 >
                   MERAJ HOMES
                 </DropdownItem>
-                {/* <DropdownItem divider /> */}
+                
                 <DropdownItem
                   href="#pablo"
                   onClick={e => e.preventDefault()}
                 >
                   MERAJ PARK APPARTMENTS
                 </DropdownItem>
-                {/* <DropdownItem divider /> */}
+                
                 <DropdownItem
                   href="#pablo"
                   onClick={e => e.preventDefault()}
@@ -201,20 +203,20 @@ const ExamplesNavbar = (props) => {
                   MERAJ OVERSEAS BLOCK
                 </DropdownItem>
               </DropdownMenu>
-            </UncontrolledDropdown>
+            </UncontrolledDropdown> */}
             <NavItem>
               <NavLink to="/about-us" tag={Link}>
-                <i className="nc-icon nc-book-bookmark" /> About Us
+                About Us
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink to="/payments" tag={Link}>
-                <i className="nc-icon nc-money-coins" /> Payments
+                Payments
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink to="/society-maps" tag={Link}>
-                <i className="nc-icon nc-pin-3" /> Society Maps
+                Society Maps
               </NavLink>
             </NavItem>
           </Nav>
