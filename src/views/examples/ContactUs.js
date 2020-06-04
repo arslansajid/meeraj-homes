@@ -20,7 +20,7 @@ import Swal from 'sweetalert2';
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
+
 import DemoFooter from "components/Footers/DemoFooter.js";
 import ContactDetails from 'components/ContactDetails/contact';
 

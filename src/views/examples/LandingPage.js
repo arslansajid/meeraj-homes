@@ -21,7 +21,6 @@ import ContactDetails from '../../components/ContactDetails/contact';
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 import IndexHeader from "components/Headers/IndexHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 
@@ -39,7 +38,6 @@ const LandingPage = () => {
   return (
     <>
       <ExamplesNavbar formRef={formRef} />
-      {/* <LandingPageHeader /> */}
       <IndexHeader />
       <div className="main">
         <div className="section text-center lightgrey-bg">

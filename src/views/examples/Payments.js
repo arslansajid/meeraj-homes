@@ -19,7 +19,7 @@ import {
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
+
 import DemoFooter from "components/Footers/DemoFooter.js";
 
 function ProfilePage() {

@@ -8,8 +8,6 @@ import "assets/css/bootstrap.min.css";
 import "assets/scss/paper-kit.scss";
 import "assets/demo/demo.css";
 // pages
-import Index from "views/Index.js";
-import NucleoIcons from "views/NucleoIcons.js";
 import Amenities from "views/examples/Amenities.js";
 import SocietyMaps from "views/examples/SocietyMaps.js";
 import AboutUs from "views/examples/AboutUs.js";
@@ -17,7 +15,6 @@ import ContactUs from "views/examples/ContactUs.js";
 import Payments from "views/examples/Payments.js";
 import LandingPage from "views/examples/LandingPage.js";
 import Projects from "views/examples/Projects";
-import RegisterPage from "views/examples/RegisterPage.js";
 // others
 
 ReactDOM.render(
