@@ -40,6 +40,11 @@ const LandingPage = () => {
       <ExamplesNavbar formRef={formRef} />
       <IndexHeader />
       <div className="main">
+        <div className="entrance-gate-section">
+          <div className="entrance-gate">
+            <img className="entrance-gate-image" src={require("../../assets/img/entrance@2x.png")} />
+          </div>
+        </div>
         <div className="section text-center lightgrey-bg">
           <Container>
             <Row>
@@ -262,8 +267,8 @@ const LandingPage = () => {
           <Container>
             <h2 className="title text-center">Most Accessible Location In Town</h2>
             <Row>
-            <Col md="5">
-            <Map /* image={true} marker={{lat: 32.3208, lng: 74.2150}} */ />
+              <Col md="5">
+                <Map /* image={true} marker={{lat: 32.3208, lng: 74.2150}} */ />
                 <div className="text-center mt-2 mb-3 mb-lg-0">
                   <a
                     href={"http://www.google.com/maps/place/32.356479,74.398129"}
@@ -276,41 +281,41 @@ const LandingPage = () => {
               <Col md="5">
                 <table className="table">
                   <tbody>
-                  <tr>
-                    <th>Destinations</th>
-                    <th>Distance</th>
-                    <th>Time</th>
-                  </tr>
-                  <tr>
-                    <td><i className="fa fa-1x fa-map-marker map-marker" />Daska</td>
-                    <td>3 km</td>
-                    <td>5 mins</td>
-                  </tr>
-                  <tr>
-                    <td><i className="fa fa-1x fa-map-marker map-marker" />Lahore</td>
-                    <td>100 km</td>
-                    <td>41 mins</td>
-                  </tr>
-                  <tr>
-                    <td><i className="fa fa-1x fa-map-marker map-marker" />Sialkot Airport</td>
-                    <td>22 km</td>
-                    <td>20 mins</td>
-                  </tr>
-                  <tr>
-                    <td><i className="fa fa-1x fa-map-marker map-marker" />Wazirabad road Sambrial </td>
-                    <td>13 km</td>
-                    <td>12 mins</td>
-                  </tr>
-                  <tr>
-                    <td><i className="fa fa-1x fa-map-marker map-marker" />Ugoki</td>
-                    <td>18 km</td>
-                    <td>19 mins</td>
-                  </tr>
-                  <tr>
-                    <td><i className="fa fa-1x fa-map-marker map-marker" />Sialkot</td>
-                    <td>16 km</td>
-                    <td>17 mins</td>
-                  </tr>
+                    <tr>
+                      <th>Destinations</th>
+                      <th>Distance</th>
+                      <th>Time</th>
+                    </tr>
+                    <tr>
+                      <td><i className="fa fa-1x fa-map-marker map-marker" />Daska</td>
+                      <td>3 km</td>
+                      <td>5 mins</td>
+                    </tr>
+                    <tr>
+                      <td><i className="fa fa-1x fa-map-marker map-marker" />Lahore</td>
+                      <td>100 km</td>
+                      <td>41 mins</td>
+                    </tr>
+                    <tr>
+                      <td><i className="fa fa-1x fa-map-marker map-marker" />Sialkot Airport</td>
+                      <td>22 km</td>
+                      <td>20 mins</td>
+                    </tr>
+                    <tr>
+                      <td><i className="fa fa-1x fa-map-marker map-marker" />Wazirabad road Sambrial </td>
+                      <td>13 km</td>
+                      <td>12 mins</td>
+                    </tr>
+                    <tr>
+                      <td><i className="fa fa-1x fa-map-marker map-marker" />Ugoki</td>
+                      <td>18 km</td>
+                      <td>19 mins</td>
+                    </tr>
+                    <tr>
+                      <td><i className="fa fa-1x fa-map-marker map-marker" />Sialkot</td>
+                      <td>16 km</td>
+                      <td>17 mins</td>
+                    </tr>
                   </tbody>
                 </table>
               </Col>
