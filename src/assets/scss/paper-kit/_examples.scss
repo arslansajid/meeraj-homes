@@ -421,3 +421,61 @@ ul.card-description {
     height: 100%;
     object-fit: contain;
 }
+
+.entrance-heading {
+    margin-top: 50px;
+    font-size: 4em;
+    text-align: center;
+}
+
+.location-importance-section {
+    background: #9D948B;
+    padding: 40px 0 40px 0;
+    color: white;
+}
+
+.location-importance-section .image-container {
+    background: black;
+    position: absolute;
+    padding: 30px 30px 30px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.location-importance-section .image-container img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.location-section {
+    padding: 40px 0 40px 0;
+    color: white;
+}
+
+.location-section .importance {
+    background: #B5A194;
+    color: white;
+    padding: 70px 40px 70px 40px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.location-section .importance .paper {
+    position: absolute;
+    background: #E8E5E0;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    color: black;
+    padding: 20px
+}
+
+.location-section ul {
+    padding-inline-start: 18px !important;
+}

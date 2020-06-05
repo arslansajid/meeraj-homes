@@ -44,6 +44,67 @@ const LandingPage = () => {
           <div className="entrance-gate">
             <img className="entrance-gate-image" src={require("../../assets/img/entrance@2x.png")} />
           </div>
+          <div className="entrance-heading">
+            THE MAGNIFICENT MERAJ
+          </div>
+        </div>
+        <div className="location-importance-section">
+          <Container>
+            <Row>
+              <Col lg={6}>
+              <div style={{position: "relative"}}>
+                <div className="image-container">
+                  <img src={require("../../assets/img/entrance2@2x.png")} />
+                </div>
+              </div>
+              </Col>
+              <Col lg={6}>
+                <h3>Live at the heart of the district</h3>
+                <br />
+                <div>
+                  Sialkot’s first society located at the most ideal location of the district. Meraj housing aims to provide our city with a modern state of the art society with world-class amenities at the heart of the district, Sialkot <br />
+                  <br />
+                  The geographical location of the society makes it the most ideal place to live. Located just 250 feet away from the newly laid motorway. The society is well connected to all nearby premium locations in the shortest time possible adding convenience to the life of residents <br />
+                  <br />
+                  We have designed the exteriors keeping in mind the need for a modern society in our city, thus adding value to the dignity of our city. Our infrastructure is inspired by the modern minimalist trend highlighting sleek and clean exteriors executed by a team of renowned designers and architects. Modern infrastructure coupled with beautiful landscaped parks will provide residents with all the comforts of an enriched peaceful lifestyle. <br />
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+        <div className="location-section">
+          <Container>
+            <Row>
+              <Col lg={6}>
+                <div className="importance">
+                  <div className="text-center">Importance of location</div>
+                  <div>
+                  The most centrally connected society: <br /> <br />
+                  <ul>
+                    <li>
+                      Meraj housing society is ideally situated 250 feet away from the newly laid motorway M11, interconnecting the entire district to the nearby cities very conveniently
+                    </li>
+                    <br/>
+                    <li>
+                      The geographical location of the society coupled with modern facilitates Provides the best connectivity and an enriching experience for our residents to enjoy
+                    </li>
+                    <br/>
+                    <li>
+                      Travelling avoiding the crowded city highways is a great stress reliever in todays time Meraj housing will standout amongst all other societies in the city because of its prestigious location. The prime location will be highly favorable for the residents for hassle free travelling. Our society will give easy access to all nearby cities, landmarks and attractions making life convenient for our residents
+                    </li>
+                  </ul>
+                  </div>
+                </div>
+              </Col>
+              <Col lg={6}>
+                <div className="importance">
+                  <div className="paper">
+                    <h3>Travel Time to Premium Locations from MERAJ HOUSING through MOTORWAY M11</h3>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+          </Container>
         </div>
         <div className="section text-center lightgrey-bg">
           <Container>
