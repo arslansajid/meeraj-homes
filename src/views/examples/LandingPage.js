@@ -2,16 +2,6 @@ import React, { useRef, useEffect } from "react";
 
 // reactstrap components
 import {
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardTitle,
-  Form,
-  Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
   Container,
   Row,
   Col
@@ -20,9 +10,13 @@ import Map from '../../components/Map/map';
 import ContactDetails from '../../components/ContactDetails/contact';
 
 // core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import IndexHeader from "components/Headers/IndexHeader.js";
-import DemoFooter from "components/Footers/DemoFooter.js";
+import ExamplesNavbar from "../../components/Navbars/ExamplesNavbar";
+import IndexHeader from "../../components/Headers/IndexHeader";
+import DemoFooter from "../../components/Footers/DemoFooter";
+
+
+//third party carousel
+import Slider from "react-slick";
 
 const LandingPage = () => {
   document.documentElement.classList.remove("nav-open");
@@ -48,17 +42,18 @@ const LandingPage = () => {
             THE MAGNIFICENT MERAJ
           </div>
         </div>
+        <div className="d-none d-lg-block d-md-block" style={{ position: "relative" }}>
+          <div className="image-container">
+            <img src={require("../../assets/img/entrance2@2x.png")} />
+          </div>
+        </div>
         <div className="location-importance-section">
           <Container>
             <Row>
-              <Col lg={6}>
-              <div style={{position: "relative"}}>
-                <div className="image-container">
-                  <img src={require("../../assets/img/entrance2@2x.png")} />
-                </div>
-              </div>
+              <Col lg={6} md={6}>
+                
               </Col>
-              <Col lg={6}>
+              <Col lg={6} md={6} sm={12}>
                 <h3>Live at the heart of the district</h3>
                 <br />
                 <div>
@@ -77,270 +72,30 @@ const LandingPage = () => {
             <Row>
               <Col lg={6}>
                 <div className="importance">
-                  <div className="text-center">Importance of location</div>
-                  <div>
-                  The most centrally connected society: <br /> <br />
-                  <ul>
-                    <li>
-                      Meraj housing society is ideally situated 250 feet away from the newly laid motorway M11, interconnecting the entire district to the nearby cities very conveniently
+                  <h3 className="title text-center heading">Importance of location</h3>
+                  <div className="important-points">
+                    The most centrally connected society: <br /> <br />
+                    <ul>
+                      <li>
+                        Meraj housing society is ideally situated 250 feet away from the newly laid motorway M11, interconnecting the entire district to the nearby cities very conveniently
                     </li>
-                    <br/>
-                    <li>
-                      The geographical location of the society coupled with modern facilitates Provides the best connectivity and an enriching experience for our residents to enjoy
+                      <br />
+                      <li>
+                        The geographical location of the society coupled with modern facilitates Provides the best connectivity and an enriching experience for our residents to enjoy
                     </li>
-                    <br/>
-                    <li>
-                      Travelling avoiding the crowded city highways is a great stress reliever in todays time Meraj housing will standout amongst all other societies in the city because of its prestigious location. The prime location will be highly favorable for the residents for hassle free travelling. Our society will give easy access to all nearby cities, landmarks and attractions making life convenient for our residents
+                      <br />
+                      <li>
+                        Travelling avoiding the crowded city highways is a great stress reliever in todays time Meraj housing will standout amongst all other societies in the city because of its prestigious location. The prime location will be highly favorable for the residents for hassle free travelling. Our society will give easy access to all nearby cities, landmarks and attractions making life convenient for our residents
                     </li>
-                  </ul>
+                    </ul>
                   </div>
                 </div>
               </Col>
               <Col lg={6}>
                 <div className="importance">
                   <div className="paper">
-                    <h3>Travel Time to Premium Locations from MERAJ HOUSING through MOTORWAY M11</h3>
-                  </div>
-                </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-        <div className="section text-center lightgrey-bg">
-          <Container>
-            <Row>
-              <Col className="ml-auto mr-auto" md="8">
-                <h2 className="title">Let's talk product</h2>
-                <h5 className="description">
-                  This is the paragraph where you can write more details about
-                  your product. Keep you user engaged by providing meaningful
-                  information. Remember that by this time, the user is curious,
-                  otherwise he wouldn't scroll to get here. Add a button if you
-                  want the user to see more.
-                </h5>
-                <br />
-                <Button
-                  className="btn-round"
-                  color="info"
-                  href="#pablo"
-                  onClick={e => e.preventDefault()}
-                >
-                  See Details
-                </Button>
-              </Col>
-            </Row>
-            <br />
-            <br />
-            <Row>
-              <Col md="3">
-                <div className="info">
-                  <div className="icon icon-info">
-                    <i className="nc-icon nc-album-2" />
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">Beautiful Interior</h4>
-                    <p className="description">
-                      Spend your time generating new ideas. You don't have to
-                      think of implementing.
-                    </p>
-                    <Button className="btn-link" color="info" href="#pablo">
-                      See more
-                    </Button>
-                  </div>
-                </div>
-              </Col>
-              <Col md="3">
-                <div className="info">
-                  <div className="icon icon-info">
-                    <i className="nc-icon nc-bulb-63" />
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">New Ideas</h4>
-                    <p>
-                      Larger, yet dramatically thinner. More powerful, but
-                      remarkably power efficient.
-                    </p>
-                    <Button className="btn-link" color="info" href="#pablo">
-                      See more
-                    </Button>
-                  </div>
-                </div>
-              </Col>
-              <Col md="3">
-                <div className="info">
-                  <div className="icon icon-info">
-                    <i className="nc-icon nc-chart-bar-32" />
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">Statistics</h4>
-                    <p>
-                      Choose from a veriety of many colors resembling sugar
-                      paper pastels.
-                    </p>
-                    <Button className="btn-link" color="info" href="#pablo">
-                      See more
-                    </Button>
-                  </div>
-                </div>
-              </Col>
-              <Col md="3">
-                <div className="info">
-                  <div className="icon icon-info">
-                    <i className="nc-icon nc-sun-fog-29" />
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">Delightful design</h4>
-                    <p>
-                      Find unique and handmade delightful designs related items
-                      directly from our sellers.
-                    </p>
-                    <Button className="btn-link" color="info" href="#pablo">
-                      See more
-                    </Button>
-                  </div>
-                </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-        <div className="section section-dark text-center darkgrey-bg">
-          <Container>
-            <h2 className="title">Let's talk about Amenities</h2>
-            <Row>
-              <Col md="2">
-                <Card className="card-profile card-plain">
-                  <div className="card-avatar">
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
-                      <img
-                        alt="..."
-                        src={'https://blueandgreentomorrow.com/wp-content/uploads/2017/12/sustainable-roads-motorways.jpg'}
-                      />
-                    </a>
-                  </div>
-                  <CardBody>
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
-                      <div className="author">
-                        <CardTitle tag="h4">Roads</CardTitle>
-                      </div>
-                    </a>
-                  </CardBody>
-                </Card>
-              </Col>
-              <Col md="2">
-                <Card className="card-profile card-plain">
-                  <div className="card-avatar">
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
-                      <img
-                        alt="..."
-                        src={'https://www.zameen.com/blog/wp-content/uploads/2019/04/cover-image-2-6.jpg'}
-                      />
-                    </a>
-                  </div>
-                  <CardBody>
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
-                      <div className="author">
-                        <CardTitle tag="h4">Gyms</CardTitle>
-                      </div>
-                    </a>
-                  </CardBody>
-                </Card>
-              </Col>
-              <Col md="2">
-                <Card className="card-profile card-plain">
-                  <div className="card-avatar">
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
-                      <img
-                        alt="..."
-                        src={'https://cdn.civitatis.com/reino-unido/londres/guia/hyde-park-grid-m.jpg'}
-                      />
-                    </a>
-                  </div>
-                  <CardBody>
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
-                      <div className="author">
-                        <CardTitle tag="h4">Parks</CardTitle>
-                      </div>
-                    </a>
-                  </CardBody>
-                </Card>
-              </Col>
-              <Col md="2">
-                <Card className="card-profile card-plain">
-                  <div className="card-avatar">
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
-                      <img
-                        alt="..."
-                        src={'https://mk0ehealtheletsj3t14.kinstacdn.com/wp-content/uploads/2009/07/best-hospital-in-south-india.jpg'}
-                      />
-                    </a>
-                  </div>
-                  <CardBody>
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
-                      <div className="author">
-                        <CardTitle tag="h4">Hospitals</CardTitle>
-                      </div>
-                    </a>
-                  </CardBody>
-                </Card>
-              </Col>
-              <Col md="2">
-                <Card className="card-profile card-plain">
-                  <div className="card-avatar">
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
-                      <img
-                        alt="..."
-                        src={'https://upload.wikimedia.org/wikipedia/commons/5/5f/Larkmead_School%2C_Abingdon%2C_Oxfordshire.png'}
-                      />
-                    </a>
-                  </div>
-                  <CardBody>
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
-                      <div className="author">
-                        <CardTitle tag="h4">Schools</CardTitle>
-                      </div>
-                    </a>
-                  </CardBody>
-                </Card>
-              </Col>
-              <Col md="2">
-                <Card className="card-profile card-plain">
-                  <div className="card-avatar">
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
-                      <img
-                        alt="..."
-                        src={'https://postornot.com/wp-content/uploads/2019/06/Shopping-Center.jpg'}
-                      />
-                    </a>
-                  </div>
-                  <CardBody>
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
-                      <div className="author">
-                        <CardTitle tag="h4">Malls</CardTitle>
-                      </div>
-                    </a>
-                  </CardBody>
-                </Card>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-        <div className="section map-container lightgrey-bg">
-          <Container>
-            <h2 className="title text-center">Most Accessible Location In Town</h2>
-            <Row>
-              <Col md="5">
-                <Map /* image={true} marker={{lat: 32.3208, lng: 74.2150}} */ />
-                <div className="text-center mt-2 mb-3 mb-lg-0">
-                  <a
-                    href={"http://www.google.com/maps/place/32.356479,74.398129"}
-                    target="_blank"
-                  >
-                    <Button>Get Directions</Button>
-                  </a>
-                </div>
-              </Col>
-              <Col md="5">
-                <table className="table">
+                    <h4 className="title">Travel Time to Premium Locations from MERAJ HOUSING through MOTORWAY M11</h4>
+                    <table className="table">
                   <tbody>
                     <tr>
                       <th>Destinations</th>
@@ -348,119 +103,285 @@ const LandingPage = () => {
                       <th>Time</th>
                     </tr>
                     <tr>
-                      <td><i className="fa fa-1x fa-map-marker map-marker" />Daska</td>
+                      <td><img className="map-marker" src={require("assets/img/footer/map.png")} />Daska</td>
                       <td>3 km</td>
                       <td>5 mins</td>
                     </tr>
                     <tr>
-                      <td><i className="fa fa-1x fa-map-marker map-marker" />Lahore</td>
+                      <td><img className="map-marker" src={require("assets/img/footer/map.png")} />Lahore</td>
                       <td>100 km</td>
                       <td>41 mins</td>
                     </tr>
                     <tr>
-                      <td><i className="fa fa-1x fa-map-marker map-marker" />Sialkot Airport</td>
+                      <td><img className="map-marker" src={require("assets/img/footer/map.png")} />Sialkot Airport</td>
                       <td>22 km</td>
                       <td>20 mins</td>
                     </tr>
                     <tr>
-                      <td><i className="fa fa-1x fa-map-marker map-marker" />Wazirabad road Sambrial </td>
+                      <td><img className="map-marker" src={require("assets/img/footer/map.png")} />Wazirabad road Sambrial </td>
                       <td>13 km</td>
                       <td>12 mins</td>
                     </tr>
                     <tr>
-                      <td><i className="fa fa-1x fa-map-marker map-marker" />Ugoki</td>
+                      <td><img className="map-marker" src={require("assets/img/footer/map.png")} />Ugoki</td>
                       <td>18 km</td>
                       <td>19 mins</td>
                     </tr>
                     <tr>
-                      <td><i className="fa fa-1x fa-map-marker map-marker" />Sialkot</td>
+                      <td><img className="map-marker" src={require("assets/img/footer/map.png")} />Sialkot</td>
                       <td>16 km</td>
                       <td>17 mins</td>
                     </tr>
                   </tbody>
                 </table>
+                    <img className="map-location-image" src={require("assets/img/location.png")} alt="map-location" />
+                  </div>
+                </div>
               </Col>
-              {/* <Col md="3">
-              <Map image={true} marker={{lat: 32.20, lng: 74.21}} />
-                <ul className="card-description mt-3">
-                  <li>This is the paragraph where you can write more details about
-                  your product.
-                  </li>
-                  <li>Keep you user engaged by providing meaningful
-                  information.
-                  </li>
-                </ul>
-                <div className="text-center mt-2 mb-5 mb-lg-0">
-                  <a
-                    href={"https://www.google.com/maps/dir/?api=1&destination=Roomy+Isb+Royal+Islamabad+Pakistan"}
-                    target="_blank"
-                  >
-                    <Button>Get Directions</Button>
-                  </a>
-                </div>
-              </Col> */}
-              {/* <Col md="3">
-              <Map image={true} marker={{lat: 32.16, lng: 74.40}} />
-                <ul className="card-description mt-3">
-                  <li>This is the paragraph where you can write more details about
-                  your product.
-                  </li>
-                  <li>Keep you user engaged by providing meaningful
-                  information.
-                  </li>
-                </ul>
-                <div className="text-center mt-2 mb-5 mb-lg-0">
-                  <a
-                    href={"https://www.google.com/maps/dir/?api=1&destination=Roomy+Isb+Royal+Islamabad+Pakistan"}
-                    target="_blank"
-                  >
-                    <Button>Get Directions</Button>
-                  </a>
-                </div>
-              </Col> */}
-              {/* <Col md="3">
-                <Map image={true} marker={{lat: 32.2933, lng: 74.3152}} />
-                <ul className="card-description mt-3">
-                  <li>This is the paragraph where you can write more details about
-                  your product.
-                  </li>
-                  <li>Keep you user engaged by providing meaningful
-                  information.
-                  </li>
-                </ul>
-                <div className="text-center mt-2 mb-5 mb-lg-0">
-                  <a
-                    href={"https://www.google.com/maps/dir/?api=1&destination=Roomy+Isb+Royal+Islamabad+Pakistan"}
-                    target="_blank"
-                  >
-                    <Button>Get Directions</Button>
-                  </a>
-                </div>
-              </Col> */}
             </Row>
           </Container>
         </div>
-        <div className="section map-container darkgrey-bg">
+        <div
+          style={{
+            backgroundImage: "url(" + require("assets/img/gate@2x.png") + ")",
+          }}
+          className="bg-image">
+          <div className="meeraj-gate-text">
+            <div className="large">MERAJ HOUSING</div>
+            <div className="small">ENTRANCE WAY</div>
+          </div>
+        </div>
+
+        <div className="gallery-section">
+          <Slider
+            className="center carousel-slider"
+            // centerMode={true}
+            slidesToShow={1}
+            slidesToScroll={1}
+            speed={1000}
+            autoplay={true}
+            cssEase="linear"
+            pauseOnHover={false}
+            arrows={false}
+          >
+            <div>
+              <img src={require("assets/img/gallery@2x.png")} />
+            </div>
+            <div>
+              <img src={require("assets/img/gallery@2x.png")} />
+            </div>
+            <div>
+              <img src={require("assets/img/gallery@2x.png")} />
+            </div>
+          </Slider>
+        </div>
+
+        <div className="amenities-section">
+          <h2 className="title text-center">AMENITIES</h2>
           <Container>
             <Row>
-              <Col md="8">
-                <h3>Location</h3>
-                <p className="location-description">
-                  This is the paragraph where you can write more details about
-                  your product. Keep you user engaged by providing meaningful
-                  information. Remember that by this time, the user is curious,
-                  otherwise he wouldn't scroll to get here. Add a button if you
-                  want the user to see more.
-                </p>
+              <Col lg={4} md={6} sm={12}>
+                <div className="amenities-container">
+                  <img className="amenity-image" src={require("assets/img/amenities/mosque.png")} />
+                  <div className="text-center amenity-text">
+                    Grand Air Conditioned Mosque
+                  </div>
+                </div>
               </Col>
-              <Col md="4">
-                {/* <Map image={false} /> */}
+              <Col lg={4} md={6} sm={12}>
+                <div className="amenities-container">
+                  <img className="amenity-image" src={require("assets/img/amenities/landscape.png")} />
+                  <div className="text-center amenity-text">
+                    Beautiful Landscape Parks
+                  </div>
+                </div>
+
+              </Col>
+              <Col lg={4} md={6} sm={12}>
+                <div className="amenities-container">
+                  <img className="amenity-image" src={require("assets/img/amenities/kids-play.png")} />
+                  <div className="text-center amenity-text">
+                    Open Play Area For Kids
+                  </div>
+                </div>
+
+              </Col>
+              <Col lg={4} md={6} sm={12}>
+                <div className="amenities-container">
+                  <img className="amenity-image" src={require("assets/img/amenities/commercial.png")} />
+                  <div className="text-center amenity-text">
+                    Commercial Zone for Daily Needs
+                  </div>
+                </div>
+
+              </Col>
+              <Col lg={4} md={6} sm={12}>
+                <div className="amenities-container">
+                  <img className="amenity-image" src={require("assets/img/amenities/security.png")} />
+                  <div className="text-center amenity-text">
+                    Flawlessly Integrated Security System
+                  </div>
+                </div>
+
+              </Col>
+              <Col lg={4} md={6} sm={12}>
+                <div className="amenities-container">
+                  <img className="amenity-image" src={require("assets/img/amenities/CCTV.png")} />
+                  <div className="text-center amenity-text">
+                    CCTV Surveillance Cameras
+                  </div>
+                </div>
+
+              </Col>
+              <Col lg={4} md={6} sm={12}>
+                <div className="amenities-container">
+                  <img className="amenity-image" src={require("assets/img/amenities/park.png")} />
+                  <div className="text-center amenity-text">
+                    World Class Retail Park
+                  </div>
+                </div>
+
+              </Col>
+              <Col lg={4} md={6} sm={12}>
+                <div className="amenities-container">
+                  <img className="amenity-image" src={require("assets/img/amenities/wifi.png")} />
+                  <div className="text-center amenity-text">
+                    Retail Park With Free WIFI Connectivity
+                  </div>
+                </div>
+
+              </Col>
+              <Col lg={4} md={6} sm={12}>
+                <div className="amenities-container">
+                  <img className="amenity-image" src={require("assets/img/amenities/integrated.png")} />
+                  <div className="text-center amenity-text">
+                    Flawlessly Integrated Security System
+                  </div>
+                </div>
+
               </Col>
             </Row>
           </Container>
         </div>
-        <div className="section landing-section lightgrey-bg" ref={formRef}>
-          <ContactDetails />
+
+        <div className="park-features-section">
+          <Container>
+            <Row>
+              <Col className="d-none d-lg-block" lg={6}>
+                <div style={{position: "relative"}} className="left-border h-100">
+                  <div className="coming-soon-container">
+                    <h3 className="title text-center coming-soon-intro">
+                      Introducing City's First World Class Retail Park
+                    </h3>
+                    <h2 className="title text-center coming-soon-text">
+                      COMING SOON
+                    </h2>
+                  </div>
+                </div>
+              </Col>
+              <Col lg={6}>
+                <img className="park-parking-image" src={require("assets/img/parking@2x.png")}></img>
+              </Col>
+              <Col lg={12}>
+                <div className="feature-text">
+                  Bringing world-class retail park to the city of daska.
+                  The retail park will give a boom to the business sector of the city and will also be an amazing recreational spot for families to enjoy.
+                  Residents of meraj housing will enjoy close proximity to the retail park providing them an ultimate shopping experience like never before.
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col className="right-border content-center">
+                <img className="feature-image" src={require("assets/img/park-features/cafe.png")} />
+                <div className="text-center">International chains of restaurants and cafes</div>
+              </Col>
+              <Col className="right-border content-center">
+                <img className="feature-image" src={require("assets/img/park-features/shopping.png")} />
+                <div className="text-center">
+                  New Shopping brands
+                </div>
+              </Col>
+              <Col className="right-border content-center">
+                <img className="feature-image" src={require("assets/img/park-features/kids.png")} />
+                <div className="text-center">
+                  Entertainment for kids
+                </div>
+              </Col>
+              <Col className="right-border content-center">
+                <img className="feature-image" src={require("assets/img/park-features/parking.png")} />
+                <div className="text-center">
+                  large open parking space
+                </div>
+              </Col>
+              <Col className="content-center">
+                <img className="feature-image" src={require("assets/img/park-features/wifi.png")} />
+                <div className="text-center">
+                  High Speed Free Wifi Connectivity
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+
+        <div className="">
+          <div
+            style={{
+              backgroundImage: "url(" + require("assets/img/bg.png") + ")",
+            }}
+            className="bg-image">
+            <div className="payment-section">
+              <h3>PROJECT DETAILS</h3>
+              <h2 className="title">3 YEARS EASY PAYMENT PLAN</h2>
+              <Container>
+                <Row>
+                  <Col lg={3} md={6} sm={12}>
+                    <div style={{background: '#B5A194'}} className="plot-card content-center">
+                      <img className="plot-image" src={require("assets/img/plots/5.png")} />
+                      <h4 className="title">5 MARLA</h4>
+                      <h5 className="mb-5">RESIDENTIAL PLOTS</h5>
+                      <div className="learn-more content-center">
+                        LEARN MORE
+                    </div>
+                    </div>
+                  </Col>
+                  <Col lg={3} md={6} sm={12}>
+                    <div style={{background: '#E8E5E0'}} className="plot-card content-center">
+                      <img className="plot-image" src={require("assets/img/plots/10.png")} />
+                      <h4 className="title">10 MARLA</h4>
+                      <h5 className="mb-5">RESIDENTIAL PLOTS</h5>
+                      <div className="learn-more content-center">
+                        LEARN MORE
+                    </div>
+                    </div>
+                  </Col>
+                  <Col lg={3} md={6} sm={12}>
+                    <div style={{background: '#9D948B'}} className="plot-card content-center">
+                      <img className="plot-image" src={require("assets/img/plots/1.png")} />
+                      <h4 className="title">1 KANAL</h4>
+                      <h5 className="mb-5">RESIDENTIAL PLOTS</h5>
+                      <div className="learn-more content-center">
+                        LEARN MORE
+                    </div>
+                    </div>
+                  </Col>
+                  <Col lg={3} md={6} sm={12}>
+                    <div style={{background: '#F5F5F5'}} className="plot-card content-center">
+                      <img className="plot-image" src={require("assets/img/plots/commercial.png")} />
+                      <h4 className="title">COMMERCIAL PLOTS</h4>
+                      <h5 className="mb-5">RESIDENTIAL PLOTS</h5>
+                      <div className="learn-more content-center">
+                        LEARN MORE
+                    </div>
+                    </div>
+                  </Col>
+                </Row>
+              </Container>
+            </div>
+          </div>
+        </div>
+
+        <div className="footer-logo-section content-center">
+          <img className="footer-image" src={require("assets/img/logo@2x.png")} />
         </div>
       </div>
       <DemoFooter />
