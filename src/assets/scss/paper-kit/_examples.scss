@@ -577,19 +577,19 @@ ul.card-description {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 30px
+    padding: 20px
 }
 
 .amenity-image {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 
 .amenity-text {
     color: black;
-    font-size: 1.5em;
+    font-size: 1.25em;
     line-height: "36px";
 }
 
@@ -667,7 +667,7 @@ ul.card-description {
 
 @media (max-width: 768px) {
     .content-center{
-        margin: 30px 0 0px 0; 
+        // margin: 30px 0 0px 0; 
     }
   }
 

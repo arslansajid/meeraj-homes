@@ -8,7 +8,7 @@
 }
 .footer-card {
     padding: 30px 0 0px 0;
-    min-height: 250px;
+    min-height: 200px;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -19,6 +19,9 @@
 @media (max-width: 768px) {
     .footer .border-right {
         border-right: unset !important;
+    }
+    .footer-card {
+        min-height: 100px;
     }
   }
 
