@@ -324,6 +324,10 @@ ul.card-description {
     border: unset;
 }
 
+.table td {
+    font-weight: 500;
+}
+
 .table tr:nth-child(even) {
     background-color: #9D948B;
     color: white !important;
@@ -335,10 +339,6 @@ ul.card-description {
     object-fit: contain;
     margin-right: 15px;
 }
-
-// .payment-row {
-//     background: #f5f5f5;
-// }
 
 .payment-row i {
     font-weight: 600;
