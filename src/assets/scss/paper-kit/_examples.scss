@@ -742,3 +742,25 @@ ul.card-description {
 .light-bg .detail {
     color: white !important;
 }
+
+
+//project map page styles
+
+.map-legend {
+    // box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.project-map {
+    width: 100%;
+    height: 600px;
+    object-fit: contain;
+    margin-bottom: 30px;
+}
+
+.print-btn {
+    // max-height: 40px;
+    border-radius: 0;
+}

@@ -34,10 +34,32 @@ const SocietyMaps = () => {
   return (
     <>
       <ExamplesNavbar notHome={true} />
-      <div className="section">
-        <h1>Society Maps</h1>
-      </div>
-      <DemoFooter />
+      <div className="section project-map">
+        <Container>
+          <Row>
+            <Col lg={12}>
+              <div className="d-flex justify-content-between align-items-center">
+              <h1 className="title my-3 text-center">PROJECT MAP</h1>
+              <Button className="print-btn" size="lg">
+                <img src={require("assets/img/print@2x.png")} className="mr-3" />
+                PRINT MAP
+              </Button>
+              </div>
+            </Col>
+            <Col lg={12}>
+              <img className="project-map" src={require("assets/img/map.png")} />
+            </Col>
+          </Row>
+        </Container>
+        <div className="content-center">
+          <img src={require("assets/img/map-legend@2x.png")} className="d-lg-none d-md-none d-block" />
+        </div>
+        <DemoFooter />
+        </div>
+        <div className="map-legend d-none d-lg-block">
+          <img src={require("assets/img/map-legend@2x.png")} className="" />
+        </div>
+      {/* <DemoFooter /> */}
     </>
   );
 }
