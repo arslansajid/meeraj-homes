@@ -704,3 +704,41 @@ ul.card-description {
     height: 300px;
     object-fit: cover;
 }
+
+
+//about us page styles
+
+.about-us {
+    .title {
+        color: #5D5855;
+    }
+    .detail {
+        color: #5D5855;
+        font-size: 1.25em;
+    }
+    .dark-bg {
+        background: #5D5855;
+        padding: 40px;
+    }
+    .light-bg {
+        background: #B5A194;
+        padding: 40px;
+        color: white;
+    }
+    .about-image {
+        min-height: 400px;
+        width: 100%;
+        height: 100%;
+        background-position: center center;
+        background-size: cover;
+    }
+}
+
+.dark-bg .detail {
+    color: white !important;
+
+}
+
+.light-bg .detail {
+    color: white !important;
+}
