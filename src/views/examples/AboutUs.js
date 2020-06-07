@@ -39,7 +39,7 @@ const AboutUs = () => {
         <Container>
           <Row>
             <Col lg={12}>
-              <h1 className="title my-3">ABOUT US</h1>
+              <h1 className="title">ABOUT US</h1>
               <div className="detail">
                 Meraj Housing society is a project owned by the Directors of Virk Group of Industries,
                 which has developed its name in the filed of manufacturing and customer service since 1995.

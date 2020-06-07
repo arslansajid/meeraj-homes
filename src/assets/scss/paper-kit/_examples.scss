@@ -2,7 +2,6 @@
     margin-bottom: 0;
 }
 .page-header{
-    background-color: #B2AFAB;
     background-position: center center;
     background-size: cover;
     min-height: 100vh;
@@ -70,12 +69,15 @@
 }
 .contact-form{
     margin-top: 30px;
+    padding: 30px;
+    background: #B5A194;
 }
 .contact-form label{
     margin-top: 15px;
 }
 .contact-form .btn{
     margin-top: 30px;
+    min-width: 250px;
 }
 
 .navbar-relative{
@@ -763,4 +765,15 @@ ul.card-description {
 .print-btn {
     // max-height: 40px;
     border-radius: 0;
+}
+
+//contact us page styles
+
+.contact-us {
+    .title {
+        color: #5D5855 !important;
+    }
+    .color-white {
+        color: white !important;
+    }
 }

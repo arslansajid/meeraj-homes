@@ -35,7 +35,7 @@ function AboutUs() {
 
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
     document.body.classList.add("landing-page");
     return function cleanup() {
       document.body.classList.remove("landing-page");
@@ -52,57 +52,73 @@ function AboutUs() {
   };
 
   return (
-    <div className="lightgrey-bg">
-      <ExamplesNavbar notHome={true} />
-      {/* <ProfilePageHeader /> */}
-      <Container className="py-5">
-        <Row>
-          <Col className="ml-auto mr-auto mt-5" md="8">
-            <h2 className="text-center title mt-5">Keep in touch?</h2>
-            <Form className="contact-form" onSubmit={e => onFormSubmit(e)}>
-              <Row>
-                <Col md="6">
-                  <label>Name</label>
-                  <InputGroup>
-                    <InputGroupAddon addonType="prepend">
-                      <InputGroupText>
-                        <i className="nc-icon nc-single-02" />
-                      </InputGroupText>
-                    </InputGroupAddon>
-                    <Input placeholder="Name" type="text" required />
-                  </InputGroup>
-                </Col>
-                <Col md="6">
-                  <label>Email</label>
-                  <InputGroup>
-                    <InputGroupAddon addonType="prepend">
-                      <InputGroupText>
-                        <i className="nc-icon nc-email-85" />
-                      </InputGroupText>
-                    </InputGroupAddon>
-                    <Input placeholder="Email" type="text" required />
-                  </InputGroup>
-                </Col>
-              </Row>
-              <label>Message</label>
-              <Input
-                placeholder="Tell us your thoughts and feelings..."
-                type="textarea"
-                rows="4"
-                required
-              />
-              <Row className="justify-content-center">
-                {/* <Col className="ml-auto mr-auto" md="4"> */}
-                  <Button className="btn-fill blue-bg-btn" size="md">
+    <div className="contact-us section">
+      <div style={{
+        backgroundImage: "url(" + require("assets/img/bg.png") + ")"
+      }}
+        className="page-header"
+      >
+        <ExamplesNavbar notHome={true} />
+        <Container>
+          <Row>
+            <Col className="ml-auto mr-auto" lg={12}>
+              <h1 className="title my-3">CONTACT US</h1>
+            </Col>
+            <Col className="ml-auto mr-auto mt-2" md="12">
+              <Form className="contact-form" onSubmit={e => onFormSubmit(e)}>
+                <h2 className="text-center title color-white mb-5">GET IN TOUCH WITH US</h2>
+                <Row>
+                  <Col md="4">
+                    <InputGroup>
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          {/* <i className="nc-icon nc-single-02" /> */}
+                          <i className="fa fa-user" />
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input placeholder="Name" type="text" required />
+                    </InputGroup>
+                  </Col>
+                  <Col md="4">
+                    <InputGroup>
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          {/* <i className="nc-icon nc-email-85" /> */}
+                          <i className="fa fa-envelope" />
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input placeholder="Email" type="text" required />
+                    </InputGroup>
+                  </Col>
+                  <Col md="4">
+                    <InputGroup>
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          {/* <i className="nc-icon nc-android-85" /> */}
+                          <i className="fa fa-phone" />
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input placeholder="Contact" type="text" required />
+                    </InputGroup>
+                  </Col>
+                </Row>
+                <Input
+                  placeholder="Tell us your thoughts and feelings..."
+                  type="textarea"
+                  rows="8"
+                  required
+                  className="my-3"
+                />
+                <Row className="justify-content-center">
+                  <Button className="" size="md">
                     Send Message
-                      </Button>
-                {/* </Col> */}
-              </Row>
-            </Form>
-          </Col>
-        </Row>
-      </Container>
-      <ContactDetails />
+                    </Button>
+                </Row>
+              </Form>
+            </Col>
+          </Row>
+        </Container>
+      </div>
       <DemoFooter />
     </div>
   );
