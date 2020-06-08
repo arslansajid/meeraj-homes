@@ -44,29 +44,21 @@ function Gallery() {
       thumbnail: require("assets/img/gate@2x.png"),
     },
     {
-      original: 'https://picsum.photos/id/1019/1000/600/',
-      thumbnail: 'https://picsum.photos/id/1019/250/150/',
+      original: require("assets/img/gate@2x.png"),
+      thumbnail: require("assets/img/gate@2x.png"),
     },
     {
       original: require("assets/img/gate@2x.png"),
       thumbnail: require("assets/img/gate@2x.png"),
     },
     {
-      original: 'https://picsum.photos/id/1015/1000/600/',
-      thumbnail: 'https://picsum.photos/id/1015/250/150/',
-    },
-    {
-      original: 'https://picsum.photos/id/1019/1000/600/',
-      thumbnail: 'https://picsum.photos/id/1019/250/150/',
-    },
-    {
       original: require("assets/img/gate@2x.png"),
       thumbnail: require("assets/img/gate@2x.png"),
     },
-    {
-      original: 'https://picsum.photos/id/1015/1000/600/',
-      thumbnail: 'https://picsum.photos/id/1015/250/150/',
-    },
+    // {
+    //   original: 'https://picsum.photos/id/1015/1000/600/',
+    //   thumbnail: 'https://picsum.photos/id/1015/250/150/',
+    // },
     {
       original: require("assets/img/gate@2x.png"),
       thumbnail: require("assets/img/gate@2x.png"),
@@ -76,12 +68,19 @@ function Gallery() {
   return (
     <>
       <ExamplesNavbar />
-      <div className="gallery">
-      <ImageGallery
-        items={images}
-        autoPlay={true}
-        showPlayButton={false}
-      />
+      <div style={{marginTop: 50}} className="gallery">
+        <Container>
+          <Row>
+            <Col className="ml-auto mr-auto my-5" lg={10}>
+              <ImageGallery
+                items={images}
+                autoPlay={true}
+                showPlayButton={false}
+              />
+            </Col>
+          </Row>
+        </Container>
+
       </div>
     </>
   );
