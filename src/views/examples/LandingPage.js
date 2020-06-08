@@ -8,6 +8,7 @@ import {
 } from "reactstrap";
 import Map from '../../components/Map/map';
 import ContactDetails from '../../components/ContactDetails/contact';
+import ImageGallery from 'react-image-gallery';
 
 // core components
 import ExamplesNavbar from "../../components/Navbars/ExamplesNavbar";
@@ -28,6 +29,17 @@ const LandingPage = () => {
   });
 
   const formRef = useRef(null);
+
+  const images = [
+    {
+      original: require("assets/img/gate@2x.png"),
+      thumbnail: require("assets/img/gate@2x.png"),
+    },
+    {
+      original: require("assets/img/gate@2x.png"),
+      thumbnail: require("assets/img/gate@2x.png"),
+    },
+  ]
 
   return (
     <>
@@ -153,7 +165,16 @@ const LandingPage = () => {
         </div>
 
         <div className="gallery-section">
-          <Slider
+        <ImageGallery
+                items={images}
+                autoPlay={true}
+                showPlayButton={false}
+                showBullets={false}
+                showThumbnails={false}
+                showFullscreenButton={false}
+                showNav={false}
+              />
+          {/* <Slider
             className="center carousel-slider"
             // centerMode={true}
             slidesToShow={1}
@@ -173,7 +194,7 @@ const LandingPage = () => {
             <div>
               <img src={require("assets/img/gallery@2x.png")} />
             </div>
-          </Slider>
+          </Slider> */}
         </div>
 
         <div className="amenities-section">
