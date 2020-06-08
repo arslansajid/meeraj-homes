@@ -124,7 +124,7 @@ const ExamplesNavbar = (props) => {
                 <img className="logo sidebar-logo" src={require("assets/img/white25.png")} />
               </div>
             </Link>
-            <NavItem
+            {/* <NavItem
               id="get-in-touch-btn"
             >
               <Link to={props.match.path === "/contact-us" ? "/" : "/contact-us"}>
@@ -140,6 +140,21 @@ const ExamplesNavbar = (props) => {
                   }
                 </Button>
               </Link>
+            </NavItem> */}
+            <NavItem>
+              <NavLink to="/" tag={Link}>
+                Home
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink to="/about-us" tag={Link}>
+                About Us
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink to="/projects" tag={Link}>
+                Project Details
+              </NavLink>
             </NavItem>
             <NavItem>
               <NavLink to="/amenities" tag={Link}>
@@ -147,76 +162,28 @@ const ExamplesNavbar = (props) => {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/projects" tag={Link}>
-                Projects
-              </NavLink>
-            </NavItem>
-            {/* <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle
-                aria-expanded={false}
-                aria-haspopup={true}
-                caret
-                color="default"
-                data-toggle="dropdown"
-                href="#pablo"
-                id="dropdownMenuButton"
-                nav
-                onClick={e => e.preventDefault()}
-                role="button"
-              >
-                <i className="nc-icon nc-bank" /> Projects
-              </DropdownToggle>
-              <DropdownMenu
-                aria-labelledby="dropdownMenuButton"
-                className="dropdown-info"
-              >
-                <DropdownItem
-                  href="#pablo"
-                  onClick={e => e.preventDefault()}
-                >
-                  MERAJ RESIDENTIAL PLOTS
-                </DropdownItem>
-                <DropdownItem
-                  href="#pablo"
-                  onClick={e => e.preventDefault()}
-                >
-                  MERAJ AVENUE COMMERCIAL
-                </DropdownItem>
-                <DropdownItem
-                  href="#pablo"
-                  onClick={e => e.preventDefault()}
-                >
-                  MERAJ HOMES
-                </DropdownItem>
-                
-                <DropdownItem
-                  href="#pablo"
-                  onClick={e => e.preventDefault()}
-                >
-                  MERAJ PARK APPARTMENTS
-                </DropdownItem>
-                
-                <DropdownItem
-                  href="#pablo"
-                  onClick={e => e.preventDefault()}
-                >
-                  MERAJ OVERSEAS BLOCK
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown> */}
-            <NavItem>
-              <NavLink to="/about-us" tag={Link}>
-                About Us
-              </NavLink>
-            </NavItem>
-            <NavItem>
               <NavLink to="/payments" tag={Link}>
-                Payments
+                Payment Plan
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink to="/society-maps" tag={Link}>
-                Society Maps
+                Project Maps
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink to="/gallery" tag={Link}>
+                Gallery
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink to="/public-notice" tag={Link}>
+                Public Notices
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink to="/contact-us" tag={Link}>
+                Contact Us
               </NavLink>
             </NavItem>
           </Nav>
