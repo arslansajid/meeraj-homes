@@ -40,91 +40,71 @@ function ProfilePage() {
     };
   });
   return (
-    <div className="lightgrey-bg">
+    <div className="">
       <ExamplesNavbar notHome={true} />
-      {/* <ProfilePageHeader /> */}
-      <Container className="py-5">
+      <Container>
         <Row>
-          <Col md="12">
-              <h3 className="heading-grey title mt-5 mb-4">
-                Property Types
-              </h3>
-
-              <div className="mb-3">
-                <div className="plot-title">Residential Plots</div>
-                <Row className="payment-row py-2">
-                  <Col xs="3" md="3" lg="2"><i className="fa fa-cube" /> Area</Col>
-                  <Col xs="9" md="9" lg="8">10 Marla  2250 sqft</Col>
-                </Row>
-
-                <Row className="payment-row py-2">
-                  <Col xs="3" md="3" lg="2"><i className="nc-icon nc-money-coins" /> Price</Col>
-                  <Col xs="9" md="9" lg="8">123 lac</Col>
-                </Row>
+          <Col lg={12}>
+            <div className="monthly-payment-container">
+              <div className="entrance-heading py-3">
+                MONTHLY PAYMENT PLAN
               </div>
-
-              <div className="mb-3">
-                <div className="plot-title">Residential Plots</div>
-                <Row className="payment-row py-2">
-                  <Col xs="3" md="3" lg="2"><i className="fa fa-cube" /> Area</Col>
-                  <Col xs="9" md="9" lg="8">5 Marla   1125 sq ft</Col>
-                </Row>
-
-                <Row className="payment-row py-2">
-                  <Col xs="3" md="3" lg="2"><i className="nc-icon nc-money-coins" /> Price</Col>
-                  <Col xs="9" md="9" lg="8">123 lac</Col>
-                </Row>
-              </div>
-
-              <div className="mb-3">
-                <div className="plot-title">Residential Plots</div>
-                <Row className="payment-row py-2">
-                  <Col xs="3" md="3" lg="2" ><i className="fa fa-cube" /> Area</Col>
-                  <Col xs="9" md="9" lg="8">20 Marla 4500 sq ft</Col>
-                </Row>
-
-                <Row className="payment-row py-2">
-                  <Col xs="3" md="3" lg="2" ><i className="nc-icon nc-money-coins" /> Price</Col>
-                  <Col xs="9" md="9" lg="8">123 lac</Col>
-                </Row>
-
-                <div className="plot-title">Commercial Plots</div>
-                <Row className="payment-row py-2">
-                  <Col xs="3" md="3" lg="2" ><i className="fa fa-cube" /> Area</Col>
-                  <Col xs="9" md="9" lg="8">10 Marla  2250 sqft</Col>
-                </Row>
-
-                <Row className="payment-row py-2">
-                  <Col xs="3" md="3" lg="2" ><i className="nc-icon nc-money-coins" /> Price</Col>
-                  <Col xs="9" md="9" lg="8">123 lac</Col>
-                </Row>
-              </div>
-
-              <div className="mb-3">
-                <div className="plot-title">Commercial Plots</div>
-                <Row className="payment-row py-2">
-                  <Col xs="3" md="3" lg="2" ><i className="fa fa-cube" /> Area</Col>
-                  <Col xs="9" md="9" lg="8">5 Marla   1125 sq ft</Col>
-                </Row>
-
-                <Row className="payment-row py-2">
-                  <Col xs="3" md="3" lg="2" ><i className="nc-icon nc-money-coins" /> Price</Col>
-                  <Col xs="9" md="9" lg="8">123 lac</Col>
-                </Row>
-              </div>
-
-              <div className="mb-3">
-                <div className="plot-title">Commercial Plots</div>
-                <Row className="payment-row py-2">
-                  <Col xs="3" md="3" lg="2" ><i className="fa fa-cube" /> Area</Col>
-                  <Col xs="9" md="9" lg="8">20 Marla 4500 sq ft</Col>
-                </Row>
-
-                <Row className="payment-row py-2">
-                  <Col xs="3" md="3" lg="2" ><i className="nc-icon nc-money-coins" /> Price</Col>
-                  <Col xs="9" md="9" lg="8">123 lac</Col>
-                </Row>
-              </div>
+              <div className="p-3">
+              <table className="monthly-payemnt-table w-100">
+                  <tbody>
+                    <tr>
+                      <th>Plot SIze</th>
+                      <th>5 Marla <br/>(25 x 45)</th>
+                      <th>10 Marla <br/>(37.5 x 60)</th>
+                      <th>1 Kanal <br/>(50 x 90)</th>
+                      <th>Commercial Plot <br/>(50 x 90)</th>
+                    </tr>
+                    <tr>
+                      <td>Daska</td>
+                      <td>3 km</td>
+                      <td>5 mins</td>
+                      <td>3 km</td>
+                      <td>5 mins</td>
+                    </tr>
+                    <tr>
+                      <td>Lahore</td>
+                      <td>100 km</td>
+                      <td>41 mins</td>
+                      <td>3 km</td>
+                      <td>5 mins</td>
+                    </tr>
+                    <tr>
+                      <td>Sialkot Airport</td>
+                      <td>22 km</td>
+                      <td>20 mins</td>
+                      <td>3 km</td>
+                      <td>5 mins</td>
+                    </tr>
+                    <tr>
+                      <td>Wazirabad road Sambrial </td>
+                      <td>13 km</td>
+                      <td>12 mins</td>
+                      <td>3 km</td>
+                      <td>5 mins</td>
+                    </tr>
+                    <tr>
+                      <td>Ugoki</td>
+                      <td>18 km</td>
+                      <td>19 mins</td>
+                      <td>3 km</td>
+                      <td>5 mins</td>
+                    </tr>
+                    <tr>
+                      <td>Sialkot</td>
+                      <td>16 km</td>
+                      <td>17 mins</td>
+                      <td>3 km</td>
+                      <td>5 mins</td>
+                    </tr>
+                  </tbody>
+                </table>
+                </div>
+            </div>
           </Col>
         </Row>
       </Container>
