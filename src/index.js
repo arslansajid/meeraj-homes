@@ -9,6 +9,7 @@ import "assets/scss/paper-kit.scss";
 import "assets/demo/demo.css";
 import "../node_modules/slick-carousel/slick/slick.css";
 import "../node_modules/slick-carousel/slick/slick-theme.css";
+import "../node_modules/react-image-gallery/styles/css/image-gallery.css";
 // pages
 import Amenities from "views/examples/Amenities.js";
 import SocietyMaps from "views/examples/SocietyMaps.js";
@@ -17,6 +18,7 @@ import ContactUs from "views/examples/ContactUs.js";
 import Payments from "views/examples/Payments.js";
 import LandingPage from "views/examples/LandingPage.js";
 import Projects from "views/examples/Projects";
+import Gallery from "views/examples/Gallery";
 // others
 
 ReactDOM.render(
@@ -43,6 +45,10 @@ ReactDOM.render(
       <Route
         path="/payments"
         render={props => <Payments {...props} />}
+      />
+      <Route
+        path="/gallery"
+        render={props => <Gallery {...props} />}
       />
       <Route
         path="/"

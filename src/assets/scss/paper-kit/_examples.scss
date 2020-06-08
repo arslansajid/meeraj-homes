@@ -1,6 +1,16 @@
 .landing-alert{
     margin-bottom: 0;
 }
+
+.page-bg {
+    background-position: center center;
+    background-size: cover;
+    // min-height: 100vh;
+    max-height: 999px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
 .page-header{
     background-position: center center;
     background-size: cover;
@@ -660,6 +670,10 @@ ul.card-description {
     border-right: 1px solid #5D5855;
 }
 
+.bottom-border {
+    border-bottom: 1px solid #5D5855;
+}
+
 .payment-section {
     padding: 100px 0px 100px 0px;
     color: black;
@@ -782,4 +796,27 @@ ul.card-description {
     .color-white {
         color: white !important;
     }
+}
+
+//amenities
+.amenities {
+    .title {
+        color: #5D5855 !important;
+    }
+    .amenities-container {
+        // margin: 20px;
+    }
+    .amenity-gradient {
+        margin: 20px 0 20px 0;
+        min-height: 200px;
+        background: #5D5855;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #D3CBB8, #5D5855);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #D3CBB8, #5D5855); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+    }
+}
+
+.image-gallery-left-nav .image-gallery-svg, .image-gallery-right-nav .image-gallery-svg {
+    height: 60px !important;
+    width: 60px !important;
 }

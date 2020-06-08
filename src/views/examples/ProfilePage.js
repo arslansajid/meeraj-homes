@@ -41,7 +41,6 @@ function ProfilePage() {
   return (
     <>
       <ExamplesNavbar />
-      <ProfilePageHeader />
       <div className="section profile-content">
         <h1>Contact Us</h1>
       </div>

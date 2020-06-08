@@ -56,7 +56,7 @@ function AboutUs() {
       <div style={{
         backgroundImage: "url(" + require("assets/img/bg.png") + ")"
       }}
-        className=""
+        className="page-bg"
       >
         <ExamplesNavbar notHome={true} />
         <Container>
