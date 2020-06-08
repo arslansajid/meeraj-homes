@@ -56,7 +56,7 @@ function AboutUs() {
       <div style={{
         backgroundImage: "url(" + require("assets/img/bg.png") + ")"
       }}
-        className="page-header"
+        className=""
       >
         <ExamplesNavbar notHome={true} />
         <Container>
@@ -66,9 +66,9 @@ function AboutUs() {
             </Col>
             <Col className="ml-auto mr-auto mt-2" md="12">
               <Form className="contact-form" onSubmit={e => onFormSubmit(e)}>
-                <h2 className="text-center title color-white mb-5">GET IN TOUCH WITH US</h2>
+                <h2 className="text-center title color-white mb-4">GET IN TOUCH WITH US</h2>
                 <Row>
-                  <Col md="4">
+                  <Col className="my-2" md="4">
                     <InputGroup>
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
@@ -79,7 +79,7 @@ function AboutUs() {
                       <Input placeholder="Name" type="text" required />
                     </InputGroup>
                   </Col>
-                  <Col md="4">
+                  <Col className="my-2" md="4">
                     <InputGroup>
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
@@ -90,7 +90,7 @@ function AboutUs() {
                       <Input placeholder="Email" type="text" required />
                     </InputGroup>
                   </Col>
-                  <Col md="4">
+                  <Col className="my-2" md="4">
                     <InputGroup>
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
@@ -107,7 +107,7 @@ function AboutUs() {
                   type="textarea"
                   rows="8"
                   required
-                  className="my-3"
+                  className="my-2"
                 />
                 <Row className="justify-content-center">
                   <Button className="" size="md">
