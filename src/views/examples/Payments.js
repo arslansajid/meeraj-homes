@@ -60,47 +60,41 @@ function ProfilePage() {
                       <th>Commercial Plot <br/>(50 x 90)</th>
                     </tr>
                     <tr>
-                      <td>Daska</td>
-                      <td>3 km</td>
-                      <td>5 mins</td>
-                      <td>3 km</td>
-                      <td>5 mins</td>
-                    </tr>
-                    <tr>
-                      <td>Lahore</td>
-                      <td>100 km</td>
-                      <td>41 mins</td>
-                      <td>3 km</td>
-                      <td>5 mins</td>
-                    </tr>
-                    <tr>
-                      <td>Sialkot Airport</td>
-                      <td>22 km</td>
-                      <td>20 mins</td>
-                      <td>3 km</td>
-                      <td>5 mins</td>
-                    </tr>
-                    <tr>
-                      <td>Wazirabad road Sambrial </td>
-                      <td>13 km</td>
-                      <td>12 mins</td>
-                      <td>3 km</td>
-                      <td>5 mins</td>
-                    </tr>
-                    <tr>
-                      <td>Ugoki</td>
-                      <td>18 km</td>
+                      <td>5% <br/>Booking Fee</td>
+                      <td>162,500</td>
                       <td>19 mins</td>
-                      <td>3 km</td>
-                      <td>5 mins</td>
+                      <td>300,000</td>
+                      <td>60,50,000</td>
                     </tr>
                     <tr>
-                      <td>Sialkot</td>
-                      <td>16 km</td>
-                      <td>17 mins</td>
-                      <td>3 km</td>
-                      <td>5 mins</td>
+                      <td>10% <br/>On confirmation after 30 days</td>
+                      <td>162,500</td>
+                      <td>300,000</td>
+                      <td>162,500</td>
+                      <td>32,50,000</td>
                     </tr>
+                    <tr>
+                      <td>10% <br/>On Allocation after 36 days</td>
+                      <td>162,500</td>
+                      <td>300,000</td>
+                      <td>162,500</td>
+                      <td>32,50,000</td>
+                    </tr>
+                    <tr>
+                      <td>36 Monthly  <br/>Installments</td>
+                      <td>162,500</td>
+                      <td>300,000</td>
+                      <td>162,500</td>
+                      <td>32,50,000</td>
+                    </tr>
+                    <tr>
+                      <td>Total Price</td>
+                      <td>1162,500</td>
+                      <td>300,000</td>
+                      <td>162,500</td>
+                      <td>32,50,000</td>
+                    </tr>
+                    
                   </tbody>
                 </table>
                 </div>
