@@ -825,6 +825,7 @@ ul.card-description {
 .monthly-payment-container {
     background: #E8E5E0;
     padding: 15;
+    overflow: scroll;
 }
 
 .monthly-payemnt-table {
@@ -841,7 +842,6 @@ ul.card-description {
 .monthly-payemnt-table td {
     padding: 15px;
     font-weight: 500;
-    // font-size: 1em;
   }
 
 .monthly-payemnt-table  th, td {
