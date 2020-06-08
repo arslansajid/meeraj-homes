@@ -674,6 +674,10 @@ ul.card-description {
     border-bottom: 1px solid #5D5855;
 }
 
+.top-border {
+    border-top: 1px solid #5D5855;
+}
+
 .payment-section {
     padding: 100px 0px 100px 0px;
     color: black;
@@ -815,6 +819,66 @@ ul.card-description {
         
     }
 }
+
+//payment page styles
+
+.monthly-payment-container {
+    background: #E8E5E0;
+    padding: 15;
+}
+
+.monthly-payemnt-table {
+    text-align: center;
+}
+
+.monthly-payemnt-table th {
+    background: black;
+    color: white;
+    padding: 25px;
+    font-size: 1.25em;
+}
+
+.monthly-payemnt-table td {
+    padding: 15px;
+    font-weight: 500;
+    // font-size: 1em;
+  }
+
+.monthly-payemnt-table  th, td {
+    border: 2px solid white;
+    border-collapse: collapse;
+  }
+
+.monthly-payemnt-table tr {
+    background: #9D948B;
+    color: white;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.monthly-payemnt-table tr:nth-child(even) {
+    background-color: #5D5855;
+    color: white !important;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+  table tr:first-child th {
+    border-top: 0;
+  }
+  table tr:last-child td {
+    border-bottom: 0;
+  }
+  table tr td:first-child,
+  table tr th:first-child {
+    border-left: 0;
+  }
+  table tr td:last-child,
+  table tr th:last-child {
+    border-right: 0;
+  }
+//gallery page styles
 
 .image-gallery-left-nav .image-gallery-svg, .image-gallery-right-nav .image-gallery-svg {
     height: 60px !important;

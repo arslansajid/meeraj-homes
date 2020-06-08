@@ -171,6 +171,24 @@ const Amenities = () => {
               </div>
             </Col>
           </Row>
+          <Row>
+          <Col className="ml-auto mr-auto my-3" lg={6}>
+            <div className="top-border">
+              <div className="amenities-container">
+                <img className="amenity-image" src={require("assets/img/amenities/security.png")} />
+                <div className="text-center amenity-text">
+                  Retail Park With Free WIFI Connectivity
+                  </div>
+                <div className="text-center amenity-text">
+                  Our society will have upgraded
+                  technology, fiber optics cable, one wire
+                  solution for telephone Internet and
+                  entertainment facilitate
+                  </div>
+              </div>
+              </div>
+            </Col>
+          </Row>
         </Container>
     </div>
     </>

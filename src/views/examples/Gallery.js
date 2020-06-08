@@ -22,13 +22,6 @@ import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import ImageGallery from 'react-image-gallery';
 
 function Gallery() {
-  const [activeTab, setActiveTab] = React.useState("1");
-
-  const toggle = tab => {
-    if (activeTab !== tab) {
-      setActiveTab(tab);
-    }
-  };
 
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
