@@ -57,7 +57,7 @@ const Amenities = () => {
             <Row>
               <Col lg={6} className="right-border">
                 <div className="amenities-container">
-                  <img className="amenity-image" src={require("assets/img/amenities/wifi.png")} />
+                  <img className="amenity-image" src={require("assets/img/amenities/gate.png")} />
                   <div className="text-center amenity-text">
                     Retail Park With Free WIFI Connectivity
                   </div>
@@ -79,7 +79,7 @@ const Amenities = () => {
                     Our society will have upgraded
                     technology, fiber optics cable, one wire
                     solution for telephone Internet and
-                    entertainment facilitate
+                    entertainment facilitates
                   </div>
                 </div>
               </Col>
@@ -90,9 +90,9 @@ const Amenities = () => {
           <Container>
             <Row>
               <Col lg={4}>
-              <div className="amenities-container">
-                  <img className="amenity-image" src={require("assets/img/amenities/park.png")} />
-                  <div className="text-center amenity-text">
+                <div className="amenities-container">
+                  <img className="amenity-image" src={require("assets/img/amenities/park-white.png")} />
+                  <div className="text-center amenity-text text-white">
                     Retail Park
                   </div>
                 </div>
@@ -119,10 +119,11 @@ const Amenities = () => {
                   Retail Park With Free WIFI Connectivity
                   </div>
                 <div className="text-center amenity-text">
-                  Meraj housing is a completely walled and
-                  gated community with effective security
-                  system ensuring a secure environment for
-                  our residents
+                  A state of the art, beautifully built
+                  mosque with modern exteriors, well
+                  equipped with air conditioners so the
+                  residents can preform Salah and thank
+                  Allah peacefully for all his blessings.
                   </div>
               </div>
             </Col>
@@ -133,10 +134,12 @@ const Amenities = () => {
                   Retail Park With Free WIFI Connectivity
                   </div>
                 <div className="text-center amenity-text">
-                  Our society will have upgraded
-                  technology, fiber optics cable, one wire
-                  solution for telephone Internet and
-                  entertainment facilitate
+                  To ensure a green and serene environment
+                  parks will be our main highlight. Our
+                  society will consist of three open parks,
+                  beautifully landscaped and designed for
+                  our residents to enjoy and soak in the
+                  beauty of nature.
                   </div>
               </div>
             </Col>
@@ -149,10 +152,13 @@ const Amenities = () => {
                   Retail Park With Free WIFI Connectivity
                   </div>
                 <div className="text-center amenity-text">
-                  Meraj housing is a completely walled and
-                  gated community with effective security
-                  system ensuring a secure environment for
-                  our residents
+                  The vast commercial zone is designed to
+                  house retail shops catering to all daily and
+                  specialized needs of the residents. The
+                  residents can enjoy grocery shopping,
+                  meat, vegetables and bakery shops at the
+                  convenience of their footsteps in the
+                  society.
                   </div>
               </div>
             </Col>
@@ -163,34 +169,37 @@ const Amenities = () => {
                   Retail Park With Free WIFI Connectivity
                   </div>
                 <div className="text-center amenity-text">
-                  Our society will have upgraded
-                  technology, fiber optics cable, one wire
-                  solution for telephone Internet and
-                  entertainment facilitate
+                  Comprehensive security system to ensure
+                  secure living for the residents. Our
+                  security department is equipped with
+                  highly trained guards who will be
+                  constantly patrolling the vicinity along
+                  with electronic security system, which will
+                  include 24-hour video surveillance system,
+                  keyless entry to the society
                   </div>
               </div>
             </Col>
           </Row>
           <Row>
-          <Col className="ml-auto mr-auto my-3" lg={6}>
-            <div className="top-border">
-              <div className="amenities-container">
-                <img className="amenity-image" src={require("assets/img/amenities/security.png")} />
-                <div className="text-center amenity-text">
-                  Retail Park With Free WIFI Connectivity
+            <Col className="ml-auto mr-auto my-3" lg={6}>
+              <div className="top-border">
+                <div className="amenities-container">
+                  <img className="amenity-image" src={require("assets/img/amenities/garbage.png")} />
+                  <div className="text-center amenity-text">
+                    Retail Park With Free WIFI Connectivity
                   </div>
-                <div className="text-center amenity-text">
-                  Our society will have upgraded
-                  technology, fiber optics cable, one wire
-                  solution for telephone Internet and
-                  entertainment facilitate
+                  <div className="text-center amenity-text">
+                    Efficient garbage disposal team to
+                    maintain the beauty of our society and
+                    keep the environment clean for residents.
                   </div>
-              </div>
+                </div>
               </div>
             </Col>
           </Row>
         </Container>
-    </div>
+      </div>
     </>
   );
 }
