@@ -6,9 +6,9 @@ import {
   Row,
   Col
 } from "reactstrap";
-import Map from '../../components/Map/map';
-import ContactDetails from '../../components/ContactDetails/contact';
-import ImageGallery from 'react-image-gallery';
+// import Map from '../../components/Map/map';
+// import ContactDetails from '../../components/ContactDetails/contact';
+// import ImageGallery from 'react-image-gallery';
 
 // core components
 import ExamplesNavbar from "../../components/Navbars/ExamplesNavbar";
@@ -17,10 +17,21 @@ import DemoFooter from "../../components/Footers/DemoFooter";
 import ItemsCarousel from 'react-items-carousel';
 
 //third party carousel
-import Slider from "react-slick";
+// import Slider from "react-slick";
 
 const LandingPage = () => {
   const [activeItemIndex, setactiveItemIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setactiveItemIndex(activeItemIndex => activeItemIndex + 1);
+    }, 2500); //2.5sec
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("profile-page");
@@ -167,9 +178,9 @@ const LandingPage = () => {
 
         <div className="gallery-section">
           <ItemsCarousel
-            leftChevron={<button>{'<'}</button>}
-            rightChevron={<button>{'>'}</button>}
-            infiniteLoop={false}
+            // leftChevron={<button>{'<'}</button>}
+            // rightChevron={<button>{'>'}</button>}
+            infiniteLoop={true}
             gutter={window.innerWidth * 0.025}
             activePosition={'center'}
             chevronWidth={60}
