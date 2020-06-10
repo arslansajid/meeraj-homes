@@ -429,7 +429,13 @@ ul.card-description {
 
 @media (max-width: 768px) {
     .entrance-gate-section {
-        padding: 20px;
+        padding: 10px;
+    }
+    .entrance-gate {
+        padding: 10px !important;
+    }
+    .entrance-heading {
+        font-size: 2.25em !important;
     }
   }
 
@@ -557,11 +563,21 @@ ul.card-description {
     position: absolute;
     top: 140px;
     right: 0;
-    min-width: 650;
-    height: 130;
     padding: 17px 117px 17px 117px;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    .meeraj-gate-text {
+        background: black;
+        color: white;
+        position: absolute;
+        top: 140px;
+        right: 0;
+        padding: 15px 30px 15px 30px;
+        text-align: center;
+    }
+  }
 
 .meeraj-gate-text .large {
     font-size: 2em;
