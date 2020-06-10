@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 // reactstrap components
 import {
@@ -14,12 +14,13 @@ import ImageGallery from 'react-image-gallery';
 import ExamplesNavbar from "../../components/Navbars/ExamplesNavbar";
 import IndexHeader from "../../components/Headers/IndexHeader";
 import DemoFooter from "../../components/Footers/DemoFooter";
-
+import ItemsCarousel from 'react-items-carousel';
 
 //third party carousel
 import Slider from "react-slick";
 
 const LandingPage = () => {
+  const [activeItemIndex, setactiveItemIndex] = useState(0)
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("profile-page");
@@ -63,7 +64,7 @@ const LandingPage = () => {
           <Container>
             <Row>
               <Col lg={6} md={6}>
-                
+
               </Col>
               <Col lg={6} md={6} sm={12}>
                 <h3>Live at the heart of the district</h3>
@@ -108,44 +109,44 @@ const LandingPage = () => {
                   <div className="paper">
                     <h4 className="title">Travel Time to Premium Locations from MERAJ HOUSING through MOTORWAY M11</h4>
                     <table className="table">
-                  <tbody>
-                    <tr>
-                      <th>Destinations</th>
-                      <th>Distance</th>
-                      <th>Time</th>
-                    </tr>
-                    <tr>
-                      <td><img className="map-marker" src={require("assets/img/footer/map.png")} />Daska</td>
-                      <td>3 km</td>
-                      <td>5 mins</td>
-                    </tr>
-                    <tr>
-                      <td><img className="map-marker" src={require("assets/img/footer/map.png")} />Lahore</td>
-                      <td>100 km</td>
-                      <td>41 mins</td>
-                    </tr>
-                    <tr>
-                      <td><img className="map-marker" src={require("assets/img/footer/map.png")} />Sialkot Airport</td>
-                      <td>22 km</td>
-                      <td>20 mins</td>
-                    </tr>
-                    <tr>
-                      <td><img className="map-marker" src={require("assets/img/footer/map.png")} />Wazirabad road Sambrial </td>
-                      <td>13 km</td>
-                      <td>12 mins</td>
-                    </tr>
-                    <tr>
-                      <td><img className="map-marker" src={require("assets/img/footer/map.png")} />Ugoki</td>
-                      <td>18 km</td>
-                      <td>19 mins</td>
-                    </tr>
-                    <tr>
-                      <td><img className="map-marker" src={require("assets/img/footer/map.png")} />Sialkot</td>
-                      <td>16 km</td>
-                      <td>17 mins</td>
-                    </tr>
-                  </tbody>
-                </table>
+                      <tbody>
+                        <tr>
+                          <th>Destinations</th>
+                          <th>Distance</th>
+                          <th>Time</th>
+                        </tr>
+                        <tr>
+                          <td><img className="map-marker" src={require("assets/img/footer/map.png")} />Daska</td>
+                          <td>3 km</td>
+                          <td>5 mins</td>
+                        </tr>
+                        <tr>
+                          <td><img className="map-marker" src={require("assets/img/footer/map.png")} />Lahore</td>
+                          <td>100 km</td>
+                          <td>41 mins</td>
+                        </tr>
+                        <tr>
+                          <td><img className="map-marker" src={require("assets/img/footer/map.png")} />Sialkot Airport</td>
+                          <td>22 km</td>
+                          <td>20 mins</td>
+                        </tr>
+                        <tr>
+                          <td><img className="map-marker" src={require("assets/img/footer/map.png")} />Wazirabad road Sambrial </td>
+                          <td>13 km</td>
+                          <td>12 mins</td>
+                        </tr>
+                        <tr>
+                          <td><img className="map-marker" src={require("assets/img/footer/map.png")} />Ugoki</td>
+                          <td>18 km</td>
+                          <td>19 mins</td>
+                        </tr>
+                        <tr>
+                          <td><img className="map-marker" src={require("assets/img/footer/map.png")} />Sialkot</td>
+                          <td>16 km</td>
+                          <td>17 mins</td>
+                        </tr>
+                      </tbody>
+                    </table>
                     <img className="map-location-image" src={require("assets/img/location.png")} alt="map-location" />
                   </div>
                 </div>
@@ -165,15 +166,45 @@ const LandingPage = () => {
         </div>
 
         <div className="gallery-section">
-        <ImageGallery
-                items={images}
-                autoPlay={true}
-                showPlayButton={false}
-                showBullets={false}
-                showThumbnails={false}
-                showFullscreenButton={false}
-                showNav={false}
+          <ItemsCarousel
+            leftChevron={<button>{'<'}</button>}
+            rightChevron={<button>{'>'}</button>}
+            infiniteLoop={false}
+            gutter={window.innerWidth * 0.025}
+            activePosition={'center'}
+            chevronWidth={60}
+            disableSwipe={false}
+            alwaysShowChevrons={false}
+            numberOfCards={1}
+            slidesToScroll={1}
+            outsideChevron={false}
+            showSlither={true}
+            firstAndLastGutter={true}
+            activeItemIndex={activeItemIndex}
+            requestToChangeActive={value => setactiveItemIndex(value)}
+          >
+            {Array.from(new Array(10)).map((_, i) =>
+              <div
+                key={i}
+                style={{
+                  height: '70vh',
+                  backgroundImage: "url(" + require("assets/img/gate@2x.png") + ")",
+                  backgroundPosition: 'center center',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundSize: 'cover',
+                }}
               />
+            )}
+          </ItemsCarousel>
+          {/* <ImageGallery
+            items={images}
+            autoPlay={true}
+            showPlayButton={false}
+            showBullets={false}
+            showThumbnails={false}
+            showFullscreenButton={false}
+            showNav={false}
+          /> */}
           {/* <Slider
             className="center carousel-slider"
             // centerMode={true}
@@ -289,7 +320,7 @@ const LandingPage = () => {
           <Container>
             <Row>
               <Col className="d-none d-lg-block" lg={6}>
-                <div style={{position: "relative"}} className="left-border h-100">
+                <div style={{ position: "relative" }} className="left-border h-100">
                   <div className="coming-soon-container">
                     <h3 className="title text-center coming-soon-intro">
                       Introducing City's First World Class Retail Park
@@ -356,7 +387,7 @@ const LandingPage = () => {
               <Container>
                 <Row>
                   <Col lg={3} md={6} sm={12}>
-                    <div style={{background: '#B5A194'}} className="plot-card content-center">
+                    <div style={{ background: '#B5A194' }} className="plot-card content-center">
                       <img className="plot-image" src={require("assets/img/plots/5.png")} />
                       <h4 className="title">5 MARLA</h4>
                       <h5 className="mb-5">RESIDENTIAL PLOTS</h5>
@@ -366,7 +397,7 @@ const LandingPage = () => {
                     </div>
                   </Col>
                   <Col lg={3} md={6} sm={12}>
-                    <div style={{background: '#E8E5E0'}} className="plot-card content-center">
+                    <div style={{ background: '#E8E5E0' }} className="plot-card content-center">
                       <img className="plot-image" src={require("assets/img/plots/10.png")} />
                       <h4 className="title">10 MARLA</h4>
                       <h5 className="mb-5">RESIDENTIAL PLOTS</h5>
@@ -376,7 +407,7 @@ const LandingPage = () => {
                     </div>
                   </Col>
                   <Col lg={3} md={6} sm={12}>
-                    <div style={{background: '#9D948B'}} className="plot-card content-center">
+                    <div style={{ background: '#9D948B' }} className="plot-card content-center">
                       <img className="plot-image" src={require("assets/img/plots/1.png")} />
                       <h4 className="title">1 KANAL</h4>
                       <h5 className="mb-5">RESIDENTIAL PLOTS</h5>
@@ -386,7 +417,7 @@ const LandingPage = () => {
                     </div>
                   </Col>
                   <Col lg={3} md={6} sm={12}>
-                    <div style={{background: '#F5F5F5'}} className="plot-card content-center">
+                    <div style={{ background: '#F5F5F5' }} className="plot-card content-center">
                       <img className="plot-image" src={require("assets/img/plots/commercial.png")} />
                       <h4 className="title">COMMERCIAL PLOTS</h4>
                       <h5 className="mb-5">RESIDENTIAL PLOTS</h5>
