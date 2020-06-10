@@ -188,7 +188,7 @@ const LandingPage = () => {
                 key={i}
                 style={{
                   height: '70vh',
-                  backgroundImage: "url(" + require("assets/img/gate@2x.png") + ")",
+                  backgroundImage: "url(" + require("assets/img/gallery@2x.png") + ")",
                   backgroundPosition: 'center center',
                   backgroundRepeat: 'no-repeat',
                   backgroundSize: 'cover',
