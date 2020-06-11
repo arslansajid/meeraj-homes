@@ -21,6 +21,7 @@ import {
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 
 import DemoFooter from "components/Footers/DemoFooter.js";
+import { Link } from "react-router-dom";
 
 function ProfilePage() {
   const [activeTab, setActiveTab] = React.useState("1");
@@ -41,44 +42,52 @@ function ProfilePage() {
   });
 
   const CardContent = (props) => {
-    const { title, price, image } = props;
+    const { title, size, price, image } = props;
     return (
       <>
         <div className="payment-plan-card">
           <div className="content-center">
+            <h4 className="">{title}</h4>
+            <h4 className="">{size}</h4>
             <img className="plot-image" src={require(`assets/img/plots/${image}.png`)} />
-            <h4 className="title">{title}</h4>
-            <h5 className="">RESIDENTIAL PLOTS</h5>
-            <h3 className="title py-2 bottom-border">{price}</h3>
+
+            <h3 className="py-2 bottom-border">{price}</h3>
           </div>
           <Row noGutters>
             <Col lg={6} className="">
               <div className="right-border p-3 text-center">
                 5% <br />Booking Fee
-                      </div>
+              </div>
             </Col>
             <Col lg={6}>
               <div className="p-3 text-center">
-                5% <br />Booking Fee
-                      </div>
+                12 Quarterly
+                Installments
+              </div>
             </Col>
             <Col lg={6} className="">
               <div className="right-border top-border p-3 text-center">
-                5% <br />Booking Fee
-                      </div>
+                10% On <br />
+                Confirmation <br />
+                After 30 Days
+              </div>
             </Col>
             <Col lg={6}>
               <div className="top-border p-3 text-center">
-                5% <br />Booking Fee
-                      </div>
+                10% On <br />
+                Allocation <br />
+                After 60 Days
+              </div>
             </Col>
           </Row>
           <Row noGutters className="pt-3">
             <Col lg={6} className="w-100 px-2">
-              <Button className="w-100">View</Button>
+              <Link to="/view-society">
+                <Button className="w-100">View</Button>
+              </Link>
             </Col>
             <Col lg={6} className="w-100 px-2">
-              <Button className="w-100">View</Button>
+              <Button className="w-100">Print</Button>
             </Col>
           </Row>
         </div>
@@ -87,6 +96,7 @@ function ProfilePage() {
   }
 
   return (
+    <>
     <div className="payments section">
       <div style={{
         backgroundImage: "url(" + require("assets/img/bg.png") + ")"
@@ -98,18 +108,19 @@ function ProfilePage() {
           <Row>
             <Col className="ml-auto mr-auto" lg={12}>
               <div className="content-center">
-                <h1 className="title my-3 text-center bottom-border">RESIDENTIAL PLOTS</h1>
+                <h2 className="title my-3 text-center bottom-border">RESIDENTIAL PLOTS</h2>
               </div>
               <h3 className="title my-3 text-center">3 YEARS EASY INSTALLMENT PLAN</h3>
             </Col>
             <Col lg={12}>
-              <h1 className="title my-3 text-center">QUARTERLY PAYMENT PLAN</h1>
+              <h2 className="title my-4 text-center">QUARTERLY PAYMENT PLAN</h2>
               <Row className="my-3">
                 <Col lg={4}>
                   <CardContent
                     title={"5 MARLA"}
                     price={"Rs. 3,250,000"}
                     image={5}
+                    size={"(25 x 45)"}
                   />
                 </Col>
                 <Col lg={4}>
@@ -117,6 +128,7 @@ function ProfilePage() {
                     title={"10 MARLA"}
                     price={"Rs. 6,000,000"}
                     image={10}
+                    size={"(37.5 x 60)"}
                   />
                 </Col>
                 <Col lg={4}>
@@ -124,6 +136,7 @@ function ProfilePage() {
                     title={"1 KANAL"}
                     price={"Rs. 12,000,000"}
                     image={1}
+                    size={"(50 x 90)"}
                   />
                 </Col>
               </Row>
@@ -183,14 +196,15 @@ function ProfilePage() {
             </Col>
             <Col lg={12}>
               <div className="content-center">
-                <h1 className="title my-3 text-center">MONTHLY PAYMENT PLAN</h1>
+                <h1 className="title my-4 text-center">MONTHLY PAYMENT PLAN</h1>
               </div>
               <Row className="my-3">
                 <Col lg={4}>
                   <CardContent
-                  title={"5 MARLA"}
-                  price={"Rs. 3,250,000"}
-                  image={5}
+                    title={"5 MARLA"}
+                    price={"Rs. 3,250,000"}
+                    image={5}
+                    size={"(25 x 45)"}
                   />
                 </Col>
                 <Col lg={4}>
@@ -198,6 +212,7 @@ function ProfilePage() {
                     title={"10 MARLA"}
                     price={"Rs. 6,000,000"}
                     image={10}
+                    size={"(37.5 x 60)"}
                   />
                 </Col>
                 <Col lg={4}>
@@ -205,6 +220,7 @@ function ProfilePage() {
                     title={"1 KANAL"}
                     price={"Rs. 12,000,000"}
                     image={1}
+                    size={"(50 x 90)"}
                   />
                 </Col>
               </Row>
@@ -212,8 +228,9 @@ function ProfilePage() {
           </Row>
         </Container>
       </div>
-      <DemoFooter />
     </div>
+    <DemoFooter />
+    </>
   );
 }
 
