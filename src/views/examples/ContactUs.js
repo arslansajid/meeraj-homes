@@ -52,6 +52,7 @@ function AboutUs() {
   };
 
   return (
+    <>
     <div className="contact-us section">
       <div style={{
         backgroundImage: "url(" + require("assets/img/bg.png") + ")"
@@ -119,8 +120,9 @@ function AboutUs() {
           </Row>
         </Container>
       </div>
-      <DemoFooter />
     </div>
+    <DemoFooter />
+    </>
   );
 }
 
