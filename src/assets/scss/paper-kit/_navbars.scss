@@ -44,9 +44,16 @@
         .nav-item .nav-link {
             line-height: 1.6;
             margin: $navbar-margin-a;
-            padding: $navbar-padding-a;
-            opacity: .8;
-            font-size: $font-size-small;
+            // padding: $navbar-padding-a;
+            // opacity: .8;
+            // font-size: $font-size-small;
+            // text-transform: uppercase;
+            // font-weight: 400 !important;
+            // color: $white-color;
+
+            padding: 10px ;
+            opacity: 1;
+            font-size: 16;
             text-transform: uppercase;
             font-weight: 400 !important;
             color: $white-color;
@@ -297,4 +304,5 @@
   // border: 1px solid #333333;
   margin-bottom: 30px;
   width: 100px;
-  float: left; }
+  float: left;
+}

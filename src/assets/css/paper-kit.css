@@ -1980,8 +1980,8 @@ textarea.form-control {
 
 /*           Font Smoothing      */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, a, .td-name, td, button, input, select, textarea {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+  /* -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; */
   font-family: "Montserrat", "Helvetica", Arial, sans-serif;
   font-weight: 300; }
 
@@ -2125,7 +2125,7 @@ blockquote small {
 body {
   color: #66615b;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   font-family: 'Montserrat', "Helvetica", Arial, sans-serif; }
 
 a {
@@ -3032,10 +3032,10 @@ License - nucleoapp.com/license/
     background: #66615B !important; }
   .navbar .navbar-nav .nav-item .nav-link {
     line-height: 1.6;
-    margin: 15px 3px;
-    padding: 10px 15px;
-    opacity: .8;
-    font-size: 12px;
+    margin: 10px 5px;
+    padding: 10px 10px;
+    opacity: 1;
+    font-size: 14px;
     text-transform: uppercase;
     font-weight: 600;
     color: #66615B; }

@@ -346,8 +346,8 @@ ul.card-description {
   }
 
 .table .map-marker {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     object-fit: contain;
     margin-right: 15px;
 }
@@ -400,14 +400,15 @@ ul.card-description {
 }
 
 .left-logo {
-    width: 270px;
+    width: 25vw;
     height: 53px;
+    max-width: 250px;
 }
 
 .left-logo .logo {
     width: 100% !important;
-    // height: 100%;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
     // padding-top: 8px;
 }
 
@@ -464,7 +465,7 @@ ul.card-description {
     background: #9D948B;
     padding: 40px 0 40px 0;
     color: white;
-    min-height: 600px;
+    min-height: 500px;
 }
 
 .image-container {
@@ -475,7 +476,7 @@ ul.card-description {
     top: 20px;
     width: 45%;
     height: 100%;
-    min-height: 550px;
+    min-height: 500px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 
 }
@@ -516,7 +517,7 @@ ul.card-description {
     top: 20px;
     left: 20px;
     width: 100%;
-    height: 105%;
+    height: 100%;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
     color: black;
     padding: 20px;
@@ -602,7 +603,6 @@ ul.card-description {
 .amenities-section {
     background: #9D948B;
     color: black;
-    font-weight: 500;
     padding: 50px 0 50px 0px; 
 }
 
@@ -624,7 +624,6 @@ ul.card-description {
 .amenity-text {
     color: black;
     font-size: 1.25em;
-    line-height: "36px";
 }
 
 .park-features-section {
@@ -718,9 +717,13 @@ ul.card-description {
     text-align: center;
     padding-top: 30px;
     margin-top: 30px;
+    min-height: 385px;
+    position: relative;
 }
 
 .plot-card .learn-more {
+    position: absolute;
+    bottom: 0;
     background: #5D5855;
     color: white;
     text-align: center;
@@ -819,6 +822,13 @@ ul.card-description {
 }
 
 //amenities
+
+.amenities.section {
+    color: #5D5855 !important;
+}
+.amenities.section .amenity-text {
+    color: #5D5855 !important;
+}
 .amenities {
     .title {
         color: #5D5855 !important;
@@ -837,10 +847,13 @@ ul.card-description {
 }
 
 //payment page styles
+.payments.section .title {
+    color: #5D5855 !important;
+}
 .payment-plan-card {
     width: 100%;
     min-height: 300px;
-    padding: 10px;
+    padding: 20px 10px;
     background: #f5f5f5;
     border: 3px solid #b5a194;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
@@ -937,7 +950,69 @@ ul.card-description {
   }
 //gallery page styles
 
-.image-gallery-left-nav .image-gallery-svg, .image-gallery-right-nav .image-gallery-svg {
-    height: 60px !important;
-    width: 60px !important;
+// .image-gallery-left-nav .image-gallery-svg, .image-gallery-right-nav .image-gallery-svg {
+//     height: 60px !important;
+//     width: 60px !important;
+// }
+
+.carousel.inactive {
+    // filter: brightness(0.6),
+    opacity: 0.5;
+}
+
+.carousel.active {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.view-society .flyer-container {
+    position: relative;
+}
+
+.view-society .overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(181, 161, 148, 0.8);
+    overflow: hidden;
+    min-height: 100%;
+}
+
+.flyer {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .flyer-container{
+        padding-bottom: 30px; 
+    }
+  }
+
+.view-society .overlay-button {
+    color: #B5A194;
+    width: 120px;
+    height: 56px;
+    padding: 0;
+    font-size: 0.875rem;
+    min-width: 0;
+    min-height: 36px;
+    font-weight: 500;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    background-color: white;
+    border-color: #B5A194;
+    // width: auto;
+    height: 48px;
+    padding: 0 16px;
+    min-width: 48px;
+    min-height: auto;
+    border-radius: 24px;
+    z-index: 99;
+    opacity: 1;
 }

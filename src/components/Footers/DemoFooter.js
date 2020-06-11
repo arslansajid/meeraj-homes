@@ -6,7 +6,9 @@ import { Col, Row, Container } from "reactstrap";
 function DemoFooter() {
   return (
     <footer className="footer">
-      <h3 className="title text-center">CONTACT US</h3>
+      <h2 className="title text-center">
+        CONTACT US
+      </h2>
       <Container fluid>
         <Row className="">
           <Col lg={4} md={6} sm={12}>
