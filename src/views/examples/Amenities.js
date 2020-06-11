@@ -58,9 +58,9 @@ const Amenities = () => {
               <Col lg={6} className="right-border">
                 <div className="amenities-container">
                   <img className="amenity-image" src={require("assets/img/amenities/gate.png")} />
-                  <div className="text-center amenity-text">
-                    Retail Park With Free WIFI Connectivity
-                  </div>
+                  <h3 className="text-center mb-3">
+                    Modern Gated Community
+                  </h3>
                   <div className="text-center amenity-text">
                     Meraj housing is a completely walled and
                     gated community with effective security
@@ -72,9 +72,9 @@ const Amenities = () => {
               <Col lg={6}>
                 <div className="amenities-container">
                   <img className="amenity-image" src={require("assets/img/amenities/integrated.png")} />
-                  <div className="text-center amenity-text">
-                    Retail Park With Free WIFI Connectivity
-                  </div>
+                  <h3 className="text-center mb-3">
+                    Upgraded Modern Society
+                  </h3>
                   <div className="text-center amenity-text">
                     Our society will have upgraded
                     technology, fiber optics cable, one wire
@@ -92,9 +92,9 @@ const Amenities = () => {
               <Col lg={4}>
                 <div className="amenities-container">
                   <img className="amenity-image" src={require("assets/img/amenities/park-white.png")} />
-                  <div className="text-center amenity-text text-white">
+                  <h3 className="text-center text-white">
                     Retail Park
-                  </div>
+                  </h3>
                 </div>
               </Col>
               <Col lg={8} className="content-center text-white">
@@ -115,9 +115,9 @@ const Amenities = () => {
             <Col lg={6} className="right-border">
               <div className="amenities-container bottom-border">
                 <img className="amenity-image" src={require("assets/img/amenities/mosque.png")} />
-                <div className="text-center amenity-text">
-                  Retail Park With Free WIFI Connectivity
-                  </div>
+                <h3 className="text-center mb-3">
+                  Mosque
+                </h3>
                 <div className="text-center amenity-text">
                   A state of the art, beautifully built
                   mosque with modern exteriors, well
@@ -130,9 +130,9 @@ const Amenities = () => {
             <Col lg={6}>
               <div className="amenities-container bottom-border">
                 <img className="amenity-image" src={require("assets/img/amenities/landscape.png")} />
-                <div className="text-center amenity-text">
-                  Retail Park With Free WIFI Connectivity
-                  </div>
+                <h3 className="text-center mb-3">
+                  Lush Green Landscaped Parks
+                </h3>
                 <div className="text-center amenity-text">
                   To ensure a green and serene environment
                   parks will be our main highlight. Our
@@ -148,9 +148,9 @@ const Amenities = () => {
             <Col lg={6} className="right-border">
               <div className="amenities-container">
                 <img className="amenity-image" src={require("assets/img/amenities/commercial.png")} />
-                <div className="text-center amenity-text">
-                  Retail Park With Free WIFI Connectivity
-                  </div>
+                <h3 className="text-center mb-3">
+                  Commercial Zone
+                </h3>
                 <div className="text-center amenity-text">
                   The vast commercial zone is designed to
                   house retail shops catering to all daily and
@@ -165,9 +165,9 @@ const Amenities = () => {
             <Col lg={6}>
               <div className="amenities-container">
                 <img className="amenity-image" src={require("assets/img/amenities/security.png")} />
-                <div className="text-center amenity-text">
-                  Retail Park With Free WIFI Connectivity
-                  </div>
+                <h3 className="text-center mb-3">
+                  Effective Security System
+                </h3>
                 <div className="text-center amenity-text">
                   Comprehensive security system to ensure
                   secure living for the residents. Our
@@ -186,9 +186,9 @@ const Amenities = () => {
               <div className="top-border">
                 <div className="amenities-container">
                   <img className="amenity-image" src={require("assets/img/amenities/garbage.png")} />
-                  <div className="text-center amenity-text">
-                    Retail Park With Free WIFI Connectivity
-                  </div>
+                  <h3 className="text-center mb-3">
+                    Garbage Disposal
+                  </h3>
                   <div className="text-center amenity-text">
                     Efficient garbage disposal team to
                     maintain the beauty of our society and
