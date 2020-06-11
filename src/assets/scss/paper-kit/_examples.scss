@@ -853,7 +853,6 @@ ul.card-description {
 .payment-plan-card {
     width: 100%;
     min-height: 300px;
-    padding: 20px 10px;
     background: #f5f5f5;
     border: 3px solid #b5a194;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
@@ -864,6 +863,14 @@ ul.card-description {
         object-fit: contain;
         margin-bottom: 20px;
     }
+}
+
+.payment-plan-print {
+    padding: 20px 10px 0 10px;
+}
+
+.payment-plan-buttons-container {
+    padding-bottom: 20px;
 }
 
 .payment-plan-card button {

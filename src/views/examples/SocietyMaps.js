@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, {useRef} from "react";
 
 // reactstrap components
 import {
@@ -20,8 +20,10 @@ import {
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
+import ReactToPrint from 'react-to-print';
 
 const SocietyMaps = () => {
+  const componentRef = useRef();
 
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
@@ -40,14 +42,22 @@ const SocietyMaps = () => {
             <Col lg={12}>
               <div className="d-flex justify-content-between align-items-center">
               <h1 className="title my-3 text-center">PROJECT MAP</h1>
-              <Button className="print-btn" size="lg">
-                <img src={require("assets/img/print@2x.png")} className="mr-3" />
-                PRINT MAP
-              </Button>
+              <ReactToPrint
+                trigger={() => (
+                  <Button className="print-btn" size="lg">
+                    {/* <img src={require("assets/img/print@2x.png")} className="mr-3" /> */}
+                    PRINT MAP
+                  </Button>
+                )}
+                content={() => componentRef.current}
+              />
+              
               </div>
             </Col>
             <Col lg={12}>
-              <img className="project-map" src={require("assets/img/map.png")} />
+              <div ref={componentRef}>
+                <img className="project-map" src={require("assets/img/map.png")} />
+              </div>
             </Col>
           </Row>
         </Container>

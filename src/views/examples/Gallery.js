@@ -37,16 +37,16 @@ function Gallery() {
       thumbnail: require("assets/img/gate@2x.png"),
     },
     {
-      original: require("assets/img/gate@2x.png"),
-      thumbnail: require("assets/img/gate@2x.png"),
+      original: require("assets/img/entrance@2x.png"),
+      thumbnail: require("assets/img/entrance@2x.png"),
     },
     {
       original: require("assets/img/gate@2x.png"),
       thumbnail: require("assets/img/gate@2x.png"),
     },
     {
-      original: require("assets/img/gate@2x.png"),
-      thumbnail: require("assets/img/gate@2x.png"),
+      original: require("assets/img/entrance@2x.png"),
+      thumbnail: require("assets/img/entrance@2x.png"),
     },
     // {
     //   original: 'https://picsum.photos/id/1015/1000/600/',

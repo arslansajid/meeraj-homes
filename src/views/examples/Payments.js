@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, {useRef} from "react";
 
 // reactstrap components
 import {
@@ -19,9 +19,9 @@ import {
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-
 import DemoFooter from "components/Footers/DemoFooter.js";
 import { Link } from "react-router-dom";
+import ReactToPrint from 'react-to-print';
 
 function ProfilePage() {
   const [activeTab, setActiveTab] = React.useState("1");
@@ -43,9 +43,12 @@ function ProfilePage() {
 
   const CardContent = (props) => {
     const { title, size, price, image } = props;
+    const componentRef = useRef();
     return (
       <>
-        <div className="payment-plan-card">
+        <div
+          className="payment-plan-card">
+          <div className="payment-plan-print" ref={componentRef}>
           <div className="content-center">
             <h4 className="">{title}</h4>
             <h4 className="">{size}</h4>
@@ -80,14 +83,19 @@ function ProfilePage() {
               </div>
             </Col>
           </Row>
+          </div>
+          {/* className="payment-plan-buttons-container" */}
           <Row noGutters className="pt-3">
-            <Col lg={6} className="w-100 px-2">
+            <Col lg={6} className="w-100 px-2 payment-plan-buttons-container">
               <Link to="/view-society">
                 <Button className="w-100">View</Button>
               </Link>
             </Col>
-            <Col lg={6} className="w-100 px-2">
-              <Button className="w-100">Print</Button>
+            <Col lg={6} className="w-100 px-2 payment-plan-buttons-container">
+              <ReactToPrint
+                trigger={() => <Button className="w-100">Print</Button>}
+                content={() => componentRef.current}
+              />
             </Col>
           </Row>
         </div>
