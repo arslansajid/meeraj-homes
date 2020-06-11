@@ -59,23 +59,67 @@ function Gallery() {
   ];
 
   return (
-    <>
+    <div className="gallery">
       <ExamplesNavbar />
-      <div style={{marginTop: 50}} className="gallery">
-        <Container>
-          <Row>
-            <Col className="ml-auto mr-auto my-5" lg={10}>
-              <ImageGallery
-                items={images}
-                autoPlay={true}
-                showPlayButton={false}
-              />
+        <ImageGallery
+          items={images}
+          autoPlay={true}
+          showPlayButton={false}
+          showThumbnails={false}
+          showFullscreenButton={false}
+          showNav={false}
+        />
+        <Container className="my-5">
+          <Row className="my-3">
+            <Col lg={6} md={6} sm={12}>
+            <div
+                className="w-100 h-100 flyer-container"
+              >
+                <img className="flyer" src={require("assets/img/gallery/2.png")} />
+              </div>
+            </Col>
+            <Col lg={6} md={6} sm={12}>
+            <div
+                className="w-100 h-100 flyer-container"
+              >
+                <img className="flyer" src={require("assets/img/gallery/1.png")} />
+              </div>
+            </Col>
+          </Row>
+          <Row className="my-3">
+          <Col lg={6} md={6} sm={12}>
+            <div
+                className="w-100 h-100 flyer-container"
+              >
+                <img className="flyer" src={require("assets/img/gallery/3.png")} />
+              </div>
+            </Col>
+            <Col lg={6} md={6} sm={12}>
+            <div
+                className="w-100 h-100 flyer-container"
+              >
+                <img className="flyer" src={require("assets/img/gallery/4.png")} />
+              </div>
+            </Col>
+          </Row>
+          <Row className="my-3">
+          <Col lg={6} md={6} sm={12}>
+            <div
+                className="w-100 h-100 flyer-container"
+              >
+                <img className="flyer" src={require("assets/img/gallery/2.png")} />
+              </div>
+            </Col>
+            <Col lg={6} md={6} sm={12}>
+            <div
+                className="w-100 h-100 flyer-container"
+              >
+                <img className="flyer" src={require("assets/img/gallery/1.png")} />
+              </div>
             </Col>
           </Row>
         </Container>
-
       </div>
-    </>
   );
 }
 

@@ -877,7 +877,6 @@ ul.card-description {
         // box-sizing: border-box;
         min-height: 36px;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
         font-weight: 500;
         line-height: 1.75;
         letter-spacing: 0.02857em;
@@ -950,10 +949,17 @@ ul.card-description {
   }
 //gallery page styles
 
-// .image-gallery-left-nav .image-gallery-svg, .image-gallery-right-nav .image-gallery-svg {
-//     height: 60px !important;
-//     width: 60px !important;
-// }
+.image-gallery-left-nav .image-gallery-svg, .image-gallery-right-nav .image-gallery-svg {
+    height: 60px !important;
+    width: 60px !important;
+}
+
+.image-gallery-slide .image-gallery-image {
+    width: 100%;
+    height: 100vh !important;
+    object-fit: cover !important;
+    max-height: unset !important;
+}
 
 .carousel.inactive {
     // filter: brightness(0.6),
