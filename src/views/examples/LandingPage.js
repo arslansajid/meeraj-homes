@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 
 // reactstrap components
 import {
@@ -6,34 +6,20 @@ import {
   Row,
   Col
 } from "reactstrap";
-// import Map from '../../components/Map/map';
-// import ContactDetails from '../../components/ContactDetails/contact';
-// import ImageGallery from 'react-image-gallery';
 
 // core components
 import ExamplesNavbar from "../../components/Navbars/ExamplesNavbar";
 import IndexHeader from "../../components/Headers/IndexHeader";
 import DemoFooter from "../../components/Footers/DemoFooter";
-import ItemsCarousel from 'react-items-carousel';
+import Gallery from "../../components/Carousel"
 
 //third party carousel
 // import Slider from "react-slick";
 
 const LandingPage = () => {
-  const [activeItemIndex, setactiveItemIndex] = useState(0)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setactiveItemIndex(activeItemIndex => activeItemIndex + 1);
-    }, 2500); //2.5sec
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
 
   document.documentElement.classList.remove("nav-open");
-  React.useEffect(() => {
+  useEffect(() => {
     document.body.classList.add("profile-page");
     return function cleanup() {
       document.body.classList.remove("profile-page");
@@ -78,14 +64,18 @@ const LandingPage = () => {
 
               </Col>
               <Col lg={6} md={6} sm={12}>
-                <h3>Live at the heart of the district</h3>
-                <br />
-                <div>
-                  Sialkot’s first society located at the most ideal location of the district. Meraj housing aims to provide our city with a modern state of the art society with world-class amenities at the heart of the district, Sialkot <br />
-                  <br />
-                  The geographical location of the society makes it the most ideal place to live. Located just 250 feet away from the newly laid motorway. The society is well connected to all nearby premium locations in the shortest time possible adding convenience to the life of residents <br />
-                  <br />
-                  We have designed the exteriors keeping in mind the need for a modern society in our city, thus adding value to the dignity of our city. Our infrastructure is inspired by the modern minimalist trend highlighting sleek and clean exteriors executed by a team of renowned designers and architects. Modern infrastructure coupled with beautiful landscaped parks will provide residents with all the comforts of an enriched peaceful lifestyle. <br />
+                <div className="content-center">
+                  <div>
+                    <h3>Live at the heart of the district</h3>
+                    <br />
+                    <div>
+                      Sialkot’s first society located at the most ideal location of the district. Meraj housing aims to provide our city with a modern state of the art society with world-class amenities at the heart of the district, Sialkot <br />
+                      <br />
+                      The geographical location of the society makes it the most ideal place to live. Located just 250 feet away from the newly laid motorway. The society is well connected to all nearby premium locations in the shortest time possible adding convenience to the life of residents <br />
+                      <br />
+                      We have designed the exteriors keeping in mind the need for a modern society in our city, thus adding value to the dignity of our city. Our infrastructure is inspired by the modern minimalist trend highlighting sleek and clean exteriors executed by a team of renowned designers and architects. Modern infrastructure coupled with beautiful landscaped parks will provide residents with all the comforts of an enriched peaceful lifestyle. <br />
+                    </div>
+                  </div>
                 </div>
               </Col>
             </Row>
@@ -132,7 +122,7 @@ const LandingPage = () => {
                           <td>5 mins</td>
                         </tr>
                         <tr>
-                          <td><img className="map-marker" src={require("assets/img/footer/map.png")} />Lahore</td>
+                          <td><img className="map-marker" src={require("assets/img/footer/map-brown.png")} />Lahore</td>
                           <td>100 km</td>
                           <td>41 mins</td>
                         </tr>
@@ -142,7 +132,7 @@ const LandingPage = () => {
                           <td>20 mins</td>
                         </tr>
                         <tr>
-                          <td><img className="map-marker" src={require("assets/img/footer/map.png")} />Wazirabad road Sambrial </td>
+                          <td><img className="map-marker" src={require("assets/img/footer/map-brown.png")} />Sambrial </td>
                           <td>13 km</td>
                           <td>12 mins</td>
                         </tr>
@@ -152,7 +142,7 @@ const LandingPage = () => {
                           <td>19 mins</td>
                         </tr>
                         <tr>
-                          <td><img className="map-marker" src={require("assets/img/footer/map.png")} />Sialkot</td>
+                          <td><img className="map-marker" src={require("assets/img/footer/map-brown.png")} />Sialkot</td>
                           <td>16 km</td>
                           <td>17 mins</td>
                         </tr>
@@ -177,36 +167,7 @@ const LandingPage = () => {
         </div>
 
         <div className="gallery-section">
-          <ItemsCarousel
-            // leftChevron={<button>{'<'}</button>}
-            // rightChevron={<button>{'>'}</button>}
-            infiniteLoop={true}
-            gutter={window.innerWidth * 0.025}
-            activePosition={'center'}
-            chevronWidth={60}
-            disableSwipe={false}
-            alwaysShowChevrons={false}
-            numberOfCards={1}
-            slidesToScroll={1}
-            outsideChevron={false}
-            showSlither={true}
-            firstAndLastGutter={true}
-            activeItemIndex={activeItemIndex}
-            requestToChangeActive={value => setactiveItemIndex(value)}
-          >
-            {Array.from(new Array(10)).map((_, i) =>
-              <div
-                key={i}
-                style={{
-                  height: '70vh',
-                  backgroundImage: "url(" + require("assets/img/gallery@2x.png") + ")",
-                  backgroundPosition: 'center center',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundSize: 'cover',
-                }}
-              />
-            )}
-          </ItemsCarousel>
+          <Gallery />
           {/* <ImageGallery
             items={images}
             autoPlay={true}
