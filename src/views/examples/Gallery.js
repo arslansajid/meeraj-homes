@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState } from "react";
 
 // reactstrap components
 import {
@@ -20,9 +20,12 @@ import {
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import ImageGallery from 'react-image-gallery';
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
 
-function Gallery() {
-
+const Gallery = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(0);
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("landing-page");
@@ -30,6 +33,12 @@ function Gallery() {
       document.body.classList.remove("landing-page");
     };
   });
+
+  const customStyles = {
+    content : {
+      zIndex: 1031
+    }
+  };
 
   const images = [
     {
@@ -58,60 +67,76 @@ function Gallery() {
     },
   ];
 
+  const lightBoximages = [
+    `${require("assets/img/gallery/2.png")}`,
+    `${require("assets/img/gallery/1.png")}`,
+    `${require("assets/img/gallery/3.png")}`,
+    `${require("assets/img/gallery/4.png")}`,
+    `${require("assets/img/gallery/2.png")}`,
+    `${require("assets/img/gallery/1.png")}`,
+  ];
+
   return (
+    <>
     <div className="gallery">
       <ExamplesNavbar />
         <ImageGallery
           items={images}
-          autoPlay={true}
+          autoPlay={false}
           showPlayButton={false}
           showThumbnails={false}
           showFullscreenButton={false}
           showNav={false}
         />
         <Container className="my-5">
-          <Row className="my-3">
-            <Col lg={6} md={6} sm={12}>
+          <Row >
+            <Col lg={6} md={6} sm={12} className="my-3">
             <div
+                onClick={() => setIsOpen(true)}
                 className="w-100 h-100 flyer-container"
               >
                 <img className="flyer" src={require("assets/img/gallery/2.png")} />
               </div>
             </Col>
-            <Col lg={6} md={6} sm={12}>
+            <Col lg={6} md={6} sm={12} className="my-3">
             <div
+              onClick={() => setIsOpen(true)}
                 className="w-100 h-100 flyer-container"
               >
                 <img className="flyer" src={require("assets/img/gallery/1.png")} />
               </div>
             </Col>
           </Row>
-          <Row className="my-3">
-          <Col lg={6} md={6} sm={12}>
+          <Row >
+          <Col lg={6} md={6} sm={12} className="my-3">
             <div
+              onClick={() => setIsOpen(true)}
                 className="w-100 h-100 flyer-container"
               >
                 <img className="flyer" src={require("assets/img/gallery/3.png")} />
               </div>
             </Col>
-            <Col lg={6} md={6} sm={12}>
+            <Col lg={6} md={6} sm={12} className="my-3">
             <div
+              onClick={() => setIsOpen(true)}
                 className="w-100 h-100 flyer-container"
               >
                 <img className="flyer" src={require("assets/img/gallery/4.png")} />
               </div>
             </Col>
           </Row>
-          <Row className="my-3">
-          <Col lg={6} md={6} sm={12}>
+          <Row >
+          <Col lg={6} md={6} sm={12} className="my-3">
             <div
+              onClick={() => setIsOpen(true)}
                 className="w-100 h-100 flyer-container"
               >
                 <img className="flyer" src={require("assets/img/gallery/2.png")} />
               </div>
             </Col>
-            <Col lg={6} md={6} sm={12}>
+            <Col lg={6} md={6} sm={12} className="my-3">
             <div
+              onClick={() => setIsOpen(true)}
                 className="w-100 h-100 flyer-container"
               >
                 <img className="flyer" src={require("assets/img/gallery/1.png")} />
@@ -120,6 +145,21 @@ function Gallery() {
           </Row>
         </Container>
       </div>
+      {isOpen && (
+        <Lightbox
+          mainSrc={lightBoximages[photoIndex]}
+          nextSrc={lightBoximages[(photoIndex + 1) % lightBoximages.length]}
+          prevSrc={lightBoximages[(photoIndex + lightBoximages.length - 1) % lightBoximages.length]}
+          onCloseRequest={() => setIsOpen(false)}
+          onMovePrevRequest={() =>
+            setPhotoIndex((photoIndex + lightBoximages.length - 1) % lightBoximages.length)}
+          onMoveNextRequest={() =>
+            setPhotoIndex((photoIndex + 1) % lightBoximages.length)}
+            enableZoom={true} 
+            reactModalStyle={customStyles}
+        />
+      )}
+      </>
   );
 }
 

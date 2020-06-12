@@ -41,7 +41,8 @@ const Gallery  = () => {
               <div
                 key={i}
                 style={{
-                  height: '70vh',
+                  minHeight: '50vh',
+                  maxHeight: '60vh',
                   backgroundImage: "url(" + require("assets/img/gallery@2x.png") + ")",
                   backgroundPosition: 'center center',
                   backgroundRepeat: 'no-repeat',

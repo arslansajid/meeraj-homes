@@ -1058,3 +1058,11 @@ ul.card-description {
     z-index: 99;
     opacity: 1;
 }
+
+.ReactModal__Overlay {
+    z-index: 1031 !important;
+}
+
+body.ReactModal__Body--open {
+    overflow: hidden;
+}

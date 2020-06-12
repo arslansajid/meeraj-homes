@@ -86,7 +86,7 @@ const Amenities = () => {
             </Row>
           </Container>
         </div>
-        <div className="amenity-gradient">
+        <div className="amenity-gradient py-3">
           <Container>
             <Row>
               <Col lg={4}>
