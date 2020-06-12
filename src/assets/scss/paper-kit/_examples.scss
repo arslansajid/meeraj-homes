@@ -693,6 +693,42 @@ ul.card-description {
     border-top: 1px solid #5D5855;
 }
 
+@media (max-width: 500px) {
+    .left-border {
+        border: unset;
+    }
+    
+    .right-border {
+        border: unset;
+    }
+    
+    .bottom-border {
+        border: unset;
+    }
+    
+    .top-border {
+        border: unset;
+    }
+
+    .payment-plan-card {
+        .left-border {
+            border-left: 2px solid #5D5855;
+        }
+        
+        .right-border {
+            border-right: 1px solid #5D5855;
+        }
+        
+        .bottom-border {
+            border-bottom: 1px solid #5D5855;
+        }
+        
+        .top-border {
+            border-top: 1px solid #5D5855;
+        }
+    }
+}
+
 .payment-section {
     padding: 100px 0px 100px 0px;
     color: black;
@@ -861,7 +897,6 @@ ul.card-description {
         width: 100px;
         height: 100px;
         object-fit: contain;
-        margin-bottom: 20px;
     }
 }
 
@@ -999,12 +1034,6 @@ ul.card-description {
     height: 100%;
     object-fit: cover;
 }
-
-@media (max-width: 768px) {
-    .flyer-container{
-        padding-bottom: 30px; 
-    }
-  }
 
 .view-society .overlay-button {
     color: #B5A194;
