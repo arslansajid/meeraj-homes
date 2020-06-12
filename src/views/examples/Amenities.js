@@ -55,7 +55,7 @@ const Amenities = () => {
               </Col>
             </Row>
             <Row>
-              <Col lg={6} className="right-border">
+              <Col lg={6} md={6} className="right-border">
                 <div className="amenities-container">
                   <img className="amenity-image" src={require("assets/img/amenities/gate.png")} />
                   <h3 className="text-center mb-3">
@@ -69,7 +69,7 @@ const Amenities = () => {
                   </div>
                 </div>
               </Col>
-              <Col lg={6}>
+              <Col lg={6} md={6}>
                 <div className="amenities-container">
                   <img className="amenity-image" src={require("assets/img/amenities/integrated.png")} />
                   <h3 className="text-center mb-3">
@@ -112,7 +112,7 @@ const Amenities = () => {
         </div>
         <Container>
           <Row className="my-2">
-            <Col lg={6} className="right-border">
+            <Col lg={6} md={6} className="right-border">
               <div className="amenities-container bottom-border">
                 <img className="amenity-image" src={require("assets/img/amenities/mosque.png")} />
                 <h3 className="text-center mb-3">
@@ -127,7 +127,7 @@ const Amenities = () => {
                   </div>
               </div>
             </Col>
-            <Col lg={6}>
+            <Col lg={6} md={6}>
               <div className="amenities-container bottom-border">
                 <img className="amenity-image" src={require("assets/img/amenities/landscape.png")} />
                 <h3 className="text-center mb-3">
@@ -145,7 +145,7 @@ const Amenities = () => {
             </Col>
           </Row>
           <Row>
-            <Col lg={6} className="right-border">
+            <Col lg={6} md={6} className="right-border">
               <div className="amenities-container">
                 <img className="amenity-image" src={require("assets/img/amenities/commercial.png")} />
                 <h3 className="text-center mb-3">
@@ -162,7 +162,7 @@ const Amenities = () => {
                   </div>
               </div>
             </Col>
-            <Col lg={6}>
+            <Col lg={6} md={6}>
               <div className="amenities-container">
                 <img className="amenity-image" src={require("assets/img/amenities/security.png")} />
                 <h3 className="text-center mb-3">
@@ -182,7 +182,7 @@ const Amenities = () => {
             </Col>
           </Row>
           <Row>
-            <Col className="ml-auto mr-auto my-3" lg={6}>
+            <Col className="ml-auto mr-auto my-3" lg={6} md={6}>
               <div className="top-border">
                 <div className="amenities-container">
                   <img className="amenity-image" src={require("assets/img/amenities/garbage.png")} />

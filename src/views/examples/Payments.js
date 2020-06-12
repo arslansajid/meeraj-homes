@@ -54,28 +54,28 @@ function ProfilePage() {
             <h4 className="">{size}</h4>
             <img className="plot-image" src={require(`assets/img/plots/${image}.png`)} />
 
-            <h3 className="py-2 bottom-border">{price}</h3>
+            <h3 className="py-2 my-3 bottom-border">{price}</h3>
           </div>
           <Row noGutters>
-            <Col lg={6} className="">
+            <Col className="col-6">
               <div className="right-border p-3 text-center">
                 5% <br />Booking Fee
               </div>
             </Col>
-            <Col lg={6}>
+            <Col className="col-6">
               <div className="p-3 text-center">
                 12 Quarterly
                 Installments
               </div>
             </Col>
-            <Col lg={6} className="">
+            <Col className="col-6">
               <div className="right-border top-border p-3 text-center">
                 10% On <br />
                 Confirmation <br />
                 After 30 Days
               </div>
             </Col>
-            <Col lg={6}>
+            <Col className="col-6">
               <div className="top-border p-3 text-center">
                 10% On <br />
                 Allocation <br />
@@ -86,12 +86,12 @@ function ProfilePage() {
           </div>
           {/* className="payment-plan-buttons-container" */}
           <Row noGutters className="pt-3">
-            <Col lg={6} className="w-100 px-2 payment-plan-buttons-container">
+            <Col lg={6} md={6} className="w-100 px-2 payment-plan-buttons-container">
               <Link to="/view-society">
                 <Button className="w-100">View</Button>
               </Link>
             </Col>
-            <Col lg={6} className="w-100 px-2 payment-plan-buttons-container">
+            <Col lg={6} md={6} className="w-100 px-2 payment-plan-buttons-container">
               <ReactToPrint
                 trigger={() => <Button className="w-100">Print</Button>}
                 content={() => componentRef.current}
@@ -123,7 +123,7 @@ function ProfilePage() {
             <Col lg={12}>
               <h2 className="title my-4 text-center">QUARTERLY PAYMENT PLAN</h2>
               <Row className="my-3">
-                <Col lg={4}>
+                <Col lg={4} md={6} className="mb-3 mb-lg-0">
                   <CardContent
                     title={"5 MARLA"}
                     price={"Rs. 3,250,000"}
@@ -131,7 +131,7 @@ function ProfilePage() {
                     size={"(25 x 45)"}
                   />
                 </Col>
-                <Col lg={4}>
+                <Col lg={4} md={6} className="mb-3 mb-lg-0">
                   <CardContent
                     title={"10 MARLA"}
                     price={"Rs. 6,000,000"}
@@ -139,7 +139,7 @@ function ProfilePage() {
                     size={"(37.5 x 60)"}
                   />
                 </Col>
-                <Col lg={4}>
+                <Col lg={4} md={6} className="mb-3 mb-lg-0">
                   <CardContent
                     title={"1 KANAL"}
                     price={"Rs. 12,000,000"}
@@ -207,7 +207,7 @@ function ProfilePage() {
                 <h1 className="title my-4 text-center">MONTHLY PAYMENT PLAN</h1>
               </div>
               <Row className="my-3">
-                <Col lg={4}>
+                <Col lg={4} md={6} className="mb-3 mb-lg-0">
                   <CardContent
                     title={"5 MARLA"}
                     price={"Rs. 3,250,000"}
@@ -215,7 +215,7 @@ function ProfilePage() {
                     size={"(25 x 45)"}
                   />
                 </Col>
-                <Col lg={4}>
+                <Col lg={4} md={6} className="mb-3 mb-lg-0">
                   <CardContent
                     title={"10 MARLA"}
                     price={"Rs. 6,000,000"}
@@ -223,7 +223,7 @@ function ProfilePage() {
                     size={"(37.5 x 60)"}
                   />
                 </Col>
-                <Col lg={4}>
+                <Col lg={4} md={6} className="mb-3 mb-lg-0">
                   <CardContent
                     title={"1 KANAL"}
                     price={"Rs. 12,000,000"}

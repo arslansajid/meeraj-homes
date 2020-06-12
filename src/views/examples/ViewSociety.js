@@ -61,9 +61,10 @@ const ViewSociety = () => {
         <Container fluid>
           <Row>
             <Col
-              lg={6}
+              lg={6} md={6}
               onMouseEnter={() => onMouseEnter(1)}
               onMouseLeave={() => onMouseLeave(1)}
+              className="mb-3 mb-lg-0 mb-md-0"
             >
               <div
                 className="w-100 h-100 flyer-container"
@@ -83,7 +84,7 @@ const ViewSociety = () => {
             </Col>
             <Col
               className=""
-              lg={6}
+              lg={6} md={6}
               onMouseEnter={() => onMouseEnter(2)}
               onMouseLeave={() => onMouseLeave(2)}
             >
