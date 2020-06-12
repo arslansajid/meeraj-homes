@@ -4,7 +4,8 @@ import React from "react";
 
 // reactstrap components
 import { Container } from "reactstrap";
-
+import LogoGif from "../../assets/img/gif/Meraj-Logo.gif";
+import LogoVideo from "../../assets/img/gif/logo.mp4";
 // core components
 
 function IndexHeader() {
@@ -23,7 +24,9 @@ function IndexHeader() {
             <div className="title-brand">
               {/* <h1 className="presentation-title">Meraj Housing</h1> */}
               <div className="landing-logo-container">
-                <img className="logo" src={require('../../assets/img/logo@2x.png')} />
+                {/* <img className="logo" src={require('../../assets/img/logo@2x.png')} /> */}
+                <img src={LogoGif} alt="loading..." />
+                {/* <video src={LogoVideo} width="600" height="300" autoplay="true" /> */}
               </div>
               {/* <div className="fog-low">
                 <img alt="..." src={require("assets/img/fog-low.png")} />
