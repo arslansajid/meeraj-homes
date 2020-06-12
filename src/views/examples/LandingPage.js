@@ -12,6 +12,7 @@ import ExamplesNavbar from "../../components/Navbars/ExamplesNavbar";
 import IndexHeader from "../../components/Headers/IndexHeader";
 import DemoFooter from "../../components/Footers/DemoFooter";
 import Gallery from "../../components/Carousel"
+import { Link } from "react-router-dom";
 
 //third party carousel
 // import Slider from "react-slick";
@@ -364,7 +365,9 @@ const LandingPage = () => {
                       <h4 className="title">5 MARLA</h4>
                       <h5 className="mb-5">RESIDENTIAL PLOTS</h5>
                       <div className="learn-more content-center">
-                        LEARN MORE
+                        <Link className="text-white" to="/payments">
+                          LEARN MORE
+                        </Link>
                     </div>
                     </div>
                   </Col>
@@ -374,7 +377,9 @@ const LandingPage = () => {
                       <h4 className="title">10 MARLA</h4>
                       <h5 className="mb-5">RESIDENTIAL PLOTS</h5>
                       <div className="learn-more content-center">
-                        LEARN MORE
+                        <Link className="text-white" to="/payments">
+                          LEARN MORE
+                        </Link>
                     </div>
                     </div>
                   </Col>
@@ -384,7 +389,9 @@ const LandingPage = () => {
                       <h4 className="title">1 KANAL</h4>
                       <h5 className="mb-5">RESIDENTIAL PLOTS</h5>
                       <div className="learn-more content-center">
-                        LEARN MORE
+                        <Link className="text-white" to="/payments">
+                          LEARN MORE
+                        </Link>
                     </div>
                     </div>
                   </Col>
@@ -394,7 +401,9 @@ const LandingPage = () => {
                       <h4 className="title">COMMERCIAL PLOTS</h4>
                       <h5 className="mb-5">RESIDENTIAL PLOTS</h5>
                       <div className="learn-more content-center">
-                        LEARN MORE
+                        <Link className="text-white" to="/payments">
+                          LEARN MORE
+                        </Link>
                     </div>
                     </div>
                   </Col>
