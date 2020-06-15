@@ -398,7 +398,7 @@ ul.card-description {
 }
 
 .left-logo {
-    width: 25vw;
+    width: 40vw;
     height: 53px;
     max-width: 250px;
 }
@@ -1001,12 +1001,12 @@ ul.card-description {
     max-height: unset !important;
 }
 
-.carousel.inactive {
+.main .carousel.inactive {
     // filter: brightness(0.6),
     opacity: 0.5;
 }
 
-.carousel.active {
+.main .carousel.active {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -1110,6 +1110,32 @@ body.ReactModal__Body--open {
     ul .list-detail {
         padding-inline-start: 16px !important;
         font-size: 1.25em;
+        color: #5D5855 !important;
     }
-    
+    ul {
+        padding-inline-start: 18px !important;
+    }
+    .carousel-arrow-btn {
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        font-size: 16px;
+        border-radius: 50%;
+        border: unset;
+        background: transparent;
+        
+        .left {
+            margin-top: 5px;
+            margin-right: 3px;
+        }
+        .right {
+            margin-top: 5px;
+            margin-left: 4px;
+        }
+    }
+
+    .project-carousel {
+        max-width: 320px;
+        margin: 0 auto;
+      }
 }
