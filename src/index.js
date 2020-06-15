@@ -19,6 +19,7 @@ import Payments from "views/examples/Payments.js";
 import LandingPage from "views/examples/LandingPage.js";
 import Projects from "views/examples/Projects";
 import Gallery from "views/examples/Gallery";
+import Infrastructure from "views/examples/Infrastructure";
 import ViewSociety from "views/examples/ViewSociety";
 // others
 
@@ -50,6 +51,10 @@ ReactDOM.render(
       <Route
         path="/gallery"
         render={props => <Gallery {...props} />}
+      />
+      <Route
+        path="/infrastructure"
+        render={props => <Infrastructure {...props} />}
       />
       <Route
         path="/view-society"

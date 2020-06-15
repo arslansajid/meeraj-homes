@@ -177,6 +177,11 @@ const ExamplesNavbar = (props) => {
               </NavLink>
             </NavItem>
             <NavItem>
+              <NavLink to="/infrastructure" tag={Link}>
+                INFRASTRUCTURE
+              </NavLink>
+            </NavItem>
+            <NavItem>
               <NavLink to="/public-notice" tag={Link}>
                 Public Notices
               </NavLink>

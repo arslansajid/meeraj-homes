@@ -5,8 +5,6 @@
 .page-bg {
     background-position: center center;
     background-size: cover;
-    // min-height: 100vh;
-    max-height: 999px;
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -1065,4 +1063,53 @@ ul.card-description {
 
 body.ReactModal__Body--open {
     overflow: hidden;
+}
+
+.project-details {
+    padding-top: 70px;
+
+    .title {
+        color: #5D5855 !important;
+    }
+    .heading {
+        padding: 5px;
+        background-color: #B5A194;
+        color: white;
+        font-weight: 500;
+        font-size: 2em;
+    }
+    .section-light {
+        background: #f5f5f5;
+        padding: 15px;
+    }
+    .plot-card {
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        padding-top: 20px;
+        margin: 20px 20px 30px 20px;
+        min-height: 250px;
+        position: relative;
+    }
+    @media (max-width: 768px) {
+        .plot-card {
+            margin: 0;
+            margin-bottom: 30px;
+            min-height: 200px;
+        }
+    }    
+    .detail {
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        position: absolute;
+        bottom: -20px;
+        color: black;
+        text-align: center;
+        min-height: 50px;
+        right: 15px;
+        left: 15px;
+    }
+    ul .list-detail {
+        padding-inline-start: 16px !important;
+        font-size: 1.25em;
+    }
+    
 }
