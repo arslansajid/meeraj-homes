@@ -64,7 +64,7 @@ const Projects = () => {
                     </Container>
                     <div className="section-light">
                         <h2 className="my-3 text-center">TYPES OF PLOTS</h2>
-                        <Container className="d-lg-block d-md-block d-none">
+                        <Container className="">
                             <Row>
                                 <div className="col-4">
                                     <div style={{ background: '#B5A194' }} className="plot-card">
@@ -97,7 +97,7 @@ const Projects = () => {
                                 </div>
                             </Row>
                         </Container>
-                        <div className="d-lg-none d-md-none d-block project-carousel">
+                        {/* <div className="d-lg-none d-md-none d-block project-carousel">
                         <ItemsCarousel
                             outsideChevron={true}
                             leftChevron={<button className="carousel-arrow-btn">
@@ -142,7 +142,7 @@ const Projects = () => {
                                 </div>
                             </div>
                         </ItemsCarousel>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
