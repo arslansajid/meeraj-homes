@@ -8,7 +8,7 @@ import {
     AccordionItemHeading,
     AccordionItemButton,
     AccordionItemPanel,
-  } from 'react-accessible-accordion';
+} from 'react-accessible-accordion';
 
 const Projects = () => {
     document.documentElement.classList.remove("nav-open");
@@ -17,108 +17,89 @@ const Projects = () => {
         console.log("######### Projects Page Rendered...")
     }, [])
 
-    const switchTab = (value) => {
-        if (tab !== value) {
-            selectedTab(value);
-        }
-    }
     return (
-        <div className="lightgrey-bg">
-            <ExamplesNavbar notHome={true} />
-            {/* <ProfilePageHeader /> */}
-            <Container className="py-5">
-                <Row className="d-lg-flex d-none">
-                    <Col className="mt-5" md="12">
-                        <div className="tabs-container">
-                            <Button onClick={() => switchTab(1)} className={tab === 1 ? "tab-selected blue-bg-btn" : "tab"}>MERAJ RESIDENTIAL PLOTS</Button>
-                            <Button onClick={() => switchTab(2)} className={tab === 2 ? "tab-selected blue-bg-btn" : "tab"}>MERAJ AVENUE COMMERCIAL</Button>
-                            <Button onClick={() => switchTab(3)} className={tab === 3 ? "tab-selected blue-bg-btn" : "tab"}>MERAJ HOMES</Button>
-                            <Button onClick={() => switchTab(4)} className={tab === 4 ? "tab-selected blue-bg-btn" : "tab"}>MERAJ PARK APPARTMENTS</Button>
-                            <Button onClick={() => switchTab(5)} className={tab === 5 ? "tab-selected blue-bg-btn" : "tab"}>MERAJ OVERSEAS BLOCK</Button>
-                        </div>
-                        <h3 className="title">
-                            Projects {tab}
-                        </h3>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col className="mt-5" md="12">
-                        <div className="d-lg-none d-md-none d-sm-none d-block">
-                        <Accordion
-                        // allowMultipleExpanded={true}
-                        allowZeroExpanded={true}
-                        >
-                        <AccordionItem>
-                            <AccordionItemHeading>
-                                <AccordionItemButton>
-                                    MERAJ RESIDENTIAL PLOTS
-                                </AccordionItemButton>
-                            </AccordionItemHeading>
-                            <AccordionItemPanel>
-                                <div>
-                                    MERAJ RESIDENTIAL PLOTS
-                                </div>
-                            </AccordionItemPanel>
-                        </AccordionItem>
-                        <AccordionItem>
-                            <AccordionItemHeading>
-                                <AccordionItemButton>
-                                    MERAJ AVENUE COMMERCIAL
-                                </AccordionItemButton>
-                            </AccordionItemHeading>
-                            <AccordionItemPanel>
-                                <div>
-                                    <div className="bold">
-                                     MERAJ AVENUE COMMERCIAL
+        <>
+            <div className="project-details">
+                <div style={{
+                    backgroundImage: "url(" + require("assets/img/bg.png") + ")"
+                }}
+                    className="page-bg"
+                >
+                    <ExamplesNavbar notHome={true} />
+                    <Container>
+                        <Row>
+                            <Col lg={12}>
+                            <h1 className="title my-3">PROJECT DETAILS</h1>
+                            <div className="my-5">
+                                <span className="heading">Salient Features Of Our Project</span>
+                                <ul className="my-3">
+                                     <li className="list-detail">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                    </li>
+                                     <li className="list-detail">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                    </li>
+                                     <li className="list-detail">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="my-5">
+                                <span className="heading">Importance Of Our Prime Location</span>
+                                <ul className="my-3">
+                                     <li className="list-detail">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                    </li>
+                                     <li className="list-detail">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                    </li>
+                                     <li className="list-detail">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                    </li>
+                                </ul>
+                            </div>
+                            </Col>
+                        </Row>
+                    </Container>
+                    <div className="section-light">
+                        <h2 className="my-3 text-center">TYPES OF PLOTS</h2>
+                        <Container>
+                            <Row>
+                                <div className="col-4">
+                                    <div style={{ background: '#B5A194' }} className="plot-card">
+                                        <h3 className="text-center">RESIDENTIAL </h3>
+                                        <h4 className="text-center">5 Marla </h4>
+                                        <h4 className="text-center">10 Marla </h4>
+                                        <h4 className="text-center">1 Kanal </h4>
+                                        <div style={{ background: '#9D948B' }} className="detail content-center">
+                                            Under Construction
+                                        </div>
                                     </div>
-                                    {'shipping costs: € 13, free return'}<br />
-                                    delivery: 2-3 working days, free return of the goods possible within 30 days
                                 </div>
-                            </AccordionItemPanel>
-                        </AccordionItem>
-                        <AccordionItem>
-                            <AccordionItemHeading>
-                                <AccordionItemButton>
-                                    MERAJ HOMES
-                                </AccordionItemButton>
-                            </AccordionItemHeading>
-                            <AccordionItemPanel>
-                                <div>
-                                    MERAJ HOMES
+                                <div className="col-4">
+                                    <div style={{ background: '#E8E5E0' }} className="plot-card">
+                                        <h3 className="text-center">COMMERCIAL </h3>
+                                        <h4 className="text-center">Types </h4>
+                                        <div style={{ background: '#B5A194' }} className="detail content-center">
+                                            Under Construction
+                                        </div>
+                                    </div>
                                 </div>
-                            </AccordionItemPanel>
-                        </AccordionItem>
-                        <AccordionItem>
-                            <AccordionItemHeading>
-                                <AccordionItemButton>
-                                MERAJ PARK APPARTMENTS
-                                </AccordionItemButton>
-                            </AccordionItemHeading>
-                            <AccordionItemPanel>
-                                <div>
-                                    MERAJ PARK APPARTMENTS
+                                <div className="col-4">
+                                    <div style={{ background: '#9D948B' }} className="plot-card">
+                                        <h3 className="text-center">RETAIL PARK</h3>
+                                        <h4 className="text-center">Types </h4>
+                                        <div style={{ background: '#E8E5E0' }} className="detail content-center">
+                                            Under Construction
+                                        </div>
+                                    </div>
                                 </div>
-                            </AccordionItemPanel>
-                        </AccordionItem>
-                        <AccordionItem>
-                            <AccordionItemHeading>
-                                <AccordionItemButton>
-                                MERAJ OVERSEAS BLOCK
-                                </AccordionItemButton>
-                            </AccordionItemHeading>
-                            <AccordionItemPanel>
-                                <div>
-                                    MERAJ OVERSEAS BLOCK
-                                </div>
-                            </AccordionItemPanel>
-                            </AccordionItem>
-                        </Accordion>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
-            <DemoFooter />
-        </div>
+                            </Row>
+                        </Container>
+                    </div>
+                </div>
+            </div>
+        </>
     )
 }
 
