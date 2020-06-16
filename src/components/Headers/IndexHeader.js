@@ -4,8 +4,8 @@ import React from "react";
 
 // reactstrap components
 import { Container } from "reactstrap";
-import LogoGif from "../../assets/img/gif/Meraj-Logo.gif";
-import LogoVideo from "../../assets/img/gif/logo.mp4";
+// import LogoGif from "../../assets/img/gif/Meraj-Logo.gif";
+import LottieAnimation from "../../components/LottieAnimation";
 // core components
 
 function IndexHeader() {
@@ -25,7 +25,8 @@ function IndexHeader() {
               {/* <h1 className="presentation-title">Meraj Housing</h1> */}
               <div className="landing-logo-container">
                 {/* <img className="logo" src={require('../../assets/img/logo@2x.png')} /> */}
-                <img src={LogoGif} alt="loading..." />
+                {/* <img src={LogoGif} alt="loading..." /> */}
+                <LottieAnimation />
                 {/* <svg>
                   <use xlinkHref={`${require('logo.svg')}#onlyLogo`}></use>
                 </svg> */}
