@@ -41,11 +41,10 @@ const SocietyMaps = () => {
           <Row>
             <Col lg={12}>
               <div className="d-flex justify-content-between align-items-center">
-              <h1 className="title my-3 text-center">PROJECT MAP</h1>
+              <h1 className="title my-3">PROJECT MAP</h1>
               <ReactToPrint
                 trigger={() => (
-                  <Button className="print-btn" size="lg">
-                    {/* <img src={require("assets/img/print@2x.png")} className="mr-3" /> */}
+                  <Button className="print-btn" size="md">
                     PRINT MAP
                   </Button>
                 )}

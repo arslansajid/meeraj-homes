@@ -26,7 +26,9 @@ function IndexHeader() {
               <div className="landing-logo-container">
                 {/* <img className="logo" src={require('../../assets/img/logo@2x.png')} /> */}
                 <img src={LogoGif} alt="loading..." />
-                {/* <video src={LogoVideo} width="600" height="300" autoplay="true" /> */}
+                {/* <svg>
+                  <use xlinkHref={`${require('logo.svg')}#onlyLogo`}></use>
+                </svg> */}
               </div>
               {/* <div className="fog-low">
                 <img alt="..." src={require("assets/img/fog-low.png")} />

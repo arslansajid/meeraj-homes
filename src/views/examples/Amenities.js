@@ -97,15 +97,17 @@ const Amenities = () => {
                   </h3>
                 </div>
               </Col>
-              <Col lg={8} className="content-center text-white">
-                Introducing a world class retail park to the city of Daska, with international chain
-                of restaurants, cafes and clothing brands like never before in the city. The retail
-                park will introduce new shopping and clothing brands to the city giving a boom
-                to the industrial sector of the city. The retail park will be equipped with high
-                speed Wi-Fi connection for the shoppers to enjoy
-                Located just a few steps away from our society The retail park will provide a truly
-                refined shopping experience to the residents of Meraj housing with leisure and
-                Re entertainment activities for the whole family to enjoy
+              <Col lg={8} className="content-center">
+                <div style={{fontSize: '1.25em'}} className="text-white">
+                  Introducing a world class retail park to the city of Daska, with international chain
+                  of restaurants, cafes and clothing brands like never before in the city. The retail
+                  park will introduce new shopping and clothing brands to the city giving a boom
+                  to the industrial sector of the city. The retail park will be equipped with high
+                  speed Wi-Fi connection for the shoppers to enjoy
+                  Located just a few steps away from our society The retail park will provide a truly
+                  refined shopping experience to the residents of Meraj housing with leisure and
+                  Re entertainment activities for the whole family to enjoy
+                </div>
               </Col>
             </Row>
           </Container>

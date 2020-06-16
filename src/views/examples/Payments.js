@@ -85,15 +85,20 @@ function ProfilePage() {
           </Row>
           </div>
           {/* className="payment-plan-buttons-container" */}
+          <div style={{ display: "none" }}>
+            <div className="w-100 h-100" ref={componentRef}>
+              <img className="flyer" src={require("assets/img/flyer/flyer2.png")} />
+            </div>
+          </div>
           <Row noGutters className="pt-3">
             <Col className="col-6 w-100 px-2 payment-plan-buttons-container">
               <Link to="/view-society">
-                <Button className="w-100">View</Button>
+                <button className="w-100">View</button>
               </Link>
             </Col>
             <Col className="col-6 w-100 px-2 payment-plan-buttons-container">
               <ReactToPrint
-                trigger={() => <Button className="w-100">Print</Button>}
+                trigger={() => <button className="w-100">Print</button>}
                 content={() => componentRef.current}
               />
             </Col>

@@ -45,18 +45,18 @@ const Gallery = () => {
       original: require("assets/img/gate@2x.png"),
       thumbnail: require("assets/img/gate@2x.png"),
     },
-    {
-      original: require("assets/img/entrance@2x.png"),
-      thumbnail: require("assets/img/entrance@2x.png"),
-    },
+    // {
+    //   original: require("assets/img/entrance@2x.png"),
+    //   thumbnail: require("assets/img/entrance@2x.png"),
+    // },
     {
       original: require("assets/img/gate@2x.png"),
       thumbnail: require("assets/img/gate@2x.png"),
     },
-    {
-      original: require("assets/img/entrance@2x.png"),
-      thumbnail: require("assets/img/entrance@2x.png"),
-    },
+    // {
+    //   original: require("assets/img/entrance@2x.png"),
+    //   thumbnail: require("assets/img/entrance@2x.png"),
+    // },
     // {
     //   original: 'https://picsum.photos/id/1015/1000/600/',
     //   thumbnail: 'https://picsum.photos/id/1015/250/150/',
@@ -82,7 +82,7 @@ const Gallery = () => {
       <ExamplesNavbar />
         <ImageGallery
           items={images}
-          autoPlay={false}
+          autoPlay={true}
           showPlayButton={false}
           showThumbnails={false}
           showFullscreenButton={false}
