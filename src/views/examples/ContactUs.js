@@ -53,7 +53,7 @@ function AboutUs() {
 
   return (
     <>
-    <div className="contact-us section">
+    <div className="contact-us">
       <div style={{
         backgroundImage: "url(" + require("assets/img/bg.png") + ")"
       }}

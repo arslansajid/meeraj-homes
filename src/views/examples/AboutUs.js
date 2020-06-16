@@ -34,8 +34,14 @@ const AboutUs = () => {
 
   return (
     <>
+    <div className="about-us section">
+      <div style={{
+        backgroundImage: "url(" + require("assets/img/bg.png") + ")"
+      }}
+        className="page-bg"
+      >
       <ExamplesNavbar notHome={true} />
-      <div className="section about-us">
+      {/* <div className="section about-us"> */}
         <Container>
           <Row>
             <Col lg={12}>
@@ -92,8 +98,10 @@ const AboutUs = () => {
             </Col>
           </Row>
         </Container>
-      </div>
+      {/* </div> */}
       <DemoFooter />
+      </div>
+      </div>
     </>
   );
 }
