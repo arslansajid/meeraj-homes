@@ -86,12 +86,12 @@ function ProfilePage() {
           </div>
           {/* className="payment-plan-buttons-container" */}
           <Row noGutters className="pt-3">
-            <Col lg={6} md={6} className="w-100 px-2 payment-plan-buttons-container">
+            <Col className="col-6 w-100 px-2 payment-plan-buttons-container">
               <Link to="/view-society">
                 <Button className="w-100">View</Button>
               </Link>
             </Col>
-            <Col lg={6} md={6} className="w-100 px-2 payment-plan-buttons-container">
+            <Col className="col-6 w-100 px-2 payment-plan-buttons-container">
               <ReactToPrint
                 trigger={() => <Button className="w-100">Print</Button>}
                 content={() => componentRef.current}
@@ -204,7 +204,7 @@ function ProfilePage() {
             </Col>
             <Col lg={12}>
               <div className="content-center">
-                <h1 className="title my-4 text-center">MONTHLY PAYMENT PLAN</h1>
+                <h2 className="title my-4 text-center">MONTHLY PAYMENT PLAN</h2>
               </div>
               <Row className="my-3">
                 <Col lg={4} md={6} className="mb-3 mb-lg-0">
@@ -237,7 +237,6 @@ function ProfilePage() {
         </Container>
       </div>
     </div>
-    <DemoFooter />
     </>
   );
 }
