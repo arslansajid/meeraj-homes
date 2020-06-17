@@ -18,7 +18,6 @@ class LottieAnimation extends Component {
     };
 
     const WIDTH = window.innerWidth;
-    const HEIGHT = window.innerHeight;
 
     return(
         <Lottie options={defaultOptions}
