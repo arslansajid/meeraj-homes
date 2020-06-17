@@ -121,7 +121,12 @@ const ExamplesNavbar = (props) => {
           <Nav navbar>
             <Link to="/">
               <div className="logo-container navbar-toggler">
-                <img className="logo sidebar-logo" src={require("assets/img/white25.png")} />
+                {/* <img className="logo sidebar-logo" src={require("assets/img/white25.png")} /> */}
+                  <img style={{
+                    width: 150,
+                    height: 150,
+                    objectFit: 'cover'
+                  }} src={require("assets/img/logo@2x.png")} />
               </div>
             </Link>
             {/* <NavItem
