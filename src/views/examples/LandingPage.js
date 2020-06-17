@@ -35,12 +35,20 @@ const LandingPage = () => {
 
   const images = [
     {
-      original: require("assets/img/gate@2x.png"),
-      thumbnail: require("assets/img/gate@2x.png"),
+      original: require("assets/img/3d/3d/4.jpg"),
+      thumbnail: require("assets/img/3d/3d/1.jpg"),
     },
     {
-      original: require("assets/img/gate@2x.png"),
-      thumbnail: require("assets/img/gate@2x.png"),
+      original: require("assets/img/3d/attachments/1.jpg"),
+      thumbnail: require("assets/img/3d/3d/1.jpg"),
+    },
+    {
+      original: require("assets/img/3d/attachments/2.jpg"),
+      thumbnail: require("assets/img/3d/3d/1.jpg"),
+    },
+    {
+      original: require("assets/img/3d/attachments/3.jpg"),
+      thumbnail: require("assets/img/3d/3d/1.jpg"),
     },
   ]
 
@@ -164,7 +172,7 @@ const LandingPage = () => {
         </div>
         <div
           style={{
-            backgroundImage: "url(" + require("assets/img/gate@2x.png") + ")",
+            backgroundImage: "url(" + require("assets/img/3d/3d/3.jpg") + ")",
           }}
           className="bg-image">
           <div className="meeraj-gate-text">

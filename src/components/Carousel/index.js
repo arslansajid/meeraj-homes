@@ -2,6 +2,37 @@
 import React, { useEffect, useState } from "react";
 import ItemsCarousel from 'react-items-carousel';
 
+const Images = [
+  {
+    original: require("assets/img/3d/3d/1.jpg"),
+    thumbnail: require("assets/img/3d/3d/1.jpg"),
+  },
+  {
+    original: require("assets/img/3d/3d/2.jpg"),
+    thumbnail: require("assets/img/3d/3d/1.jpg"),
+  },
+  {
+    original: require("assets/img/3d/3d/3.jpg"),
+    thumbnail: require("assets/img/3d/3d/1.jpg"),
+  },
+  {
+    original: require("assets/img/3d/3d/4.jpg"),
+    thumbnail: require("assets/img/3d/3d/1.jpg"),
+  },
+  {
+    original: require("assets/img/3d/attachments/1.jpg"),
+    thumbnail: require("assets/img/3d/3d/1.jpg"),
+  },
+  {
+    original: require("assets/img/3d/attachments/2.jpg"),
+    thumbnail: require("assets/img/3d/3d/1.jpg"),
+  },
+  {
+    original: require("assets/img/3d/attachments/3.jpg"),
+    thumbnail: require("assets/img/3d/3d/1.jpg"),
+  },
+];
+
 const Gallery  = () => {
     const [activeItemIndex, setactiveItemIndex] = useState(0)
 
@@ -22,7 +53,7 @@ const Gallery  = () => {
         <ItemsCarousel
             // leftChevron={<button>{'<'}</button>}
             // rightChevron={<button>{'>'}</button>}
-            infiniteLoop={false}
+            infiniteLoop={true}
             gutter={window.innerWidth * 0.025}
             activePosition={'center'}
             chevronWidth={60}
@@ -36,18 +67,18 @@ const Gallery  = () => {
             activeItemIndex={activeItemIndex}
             requestToChangeActive={value => setactiveItemIndex(value)}
           >
-            {Array.from(new Array(activeItemIndex + 2)).map((_, i) =>
+            {Images.map((image, i) =>
             <div key={i} className="carousel-img-container">
               <div
                 style={{
                   minHeight: '50vh',
                   maxHeight: '60vh',
-                  backgroundImage: "url(" + require("assets/img/gallery@2x.png") + ")",
+                  backgroundImage: "url(" + image.original + ")",
                   backgroundPosition: 'center center',
                   backgroundRepeat: 'no-repeat',
                   backgroundSize: 'cover',
                 }}
-                className={`carousel ${activeItemIndex === i ? 'active' : 'inactive'}`}
+                className={`carousel ${activeItemIndex === i || activeItemIndex > Images.length ? 'active' : 'inactive'}`}
               />
               </div>
             )}
