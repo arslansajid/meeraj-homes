@@ -219,7 +219,7 @@ const LandingPage = () => {
           <h2 className="title text-center">AMENITIES</h2>
           <Container>
             <Row>
-              <Col lg={4} md={6} sm={6}>
+              <Col className="col-lg-4 col-md-6 col-sm-6 col-6">
                 <div className="amenities-container">
                   <img className="amenity-image" src={require("assets/img/amenities/mosque.png")} />
                   <div className="text-center amenity-text">
@@ -227,7 +227,7 @@ const LandingPage = () => {
                   </div>
                 </div>
               </Col>
-              <Col lg={4} md={6} sm={6}>
+              <Col className="col-lg-4 col-md-6 col-sm-6 col-6">
                 <div className="amenities-container">
                   <img className="amenity-image" src={require("assets/img/amenities/landscape.png")} />
                   <div className="text-center amenity-text">
@@ -236,7 +236,7 @@ const LandingPage = () => {
                 </div>
 
               </Col>
-              <Col lg={4} md={6} sm={6}>
+              <Col className="col-lg-4 col-md-6 col-sm-6 col-6">
                 <div className="amenities-container">
                   <img className="amenity-image" src={require("assets/img/amenities/kids-play.png")} />
                   <div className="text-center amenity-text">
@@ -245,7 +245,7 @@ const LandingPage = () => {
                 </div>
 
               </Col>
-              <Col lg={4} md={6} sm={6}>
+              <Col className="col-lg-4 col-md-6 col-sm-6 col-6">
                 <div className="amenities-container">
                   <img className="amenity-image" src={require("assets/img/amenities/commercial.png")} />
                   <div className="text-center amenity-text">
@@ -254,7 +254,7 @@ const LandingPage = () => {
                 </div>
 
               </Col>
-              <Col lg={4} md={6} sm={6}>
+              <Col className="col-lg-4 col-md-6 col-sm-6 col-6">
                 <div className="amenities-container">
                   <img className="amenity-image" src={require("assets/img/amenities/security.png")} />
                   <div className="text-center amenity-text">
@@ -263,7 +263,7 @@ const LandingPage = () => {
                 </div>
 
               </Col>
-              <Col lg={4} md={6} sm={6}>
+              <Col className="col-lg-4 col-md-6 col-sm-6 col-6">
                 <div className="amenities-container">
                   <img className="amenity-image" src={require("assets/img/amenities/CCTV.png")} />
                   <div className="text-center amenity-text">
@@ -272,7 +272,7 @@ const LandingPage = () => {
                 </div>
 
               </Col>
-              <Col lg={4} md={6} sm={6}>
+              <Col className="col-lg-4 col-md-6 col-sm-6 col-6">
                 <div className="amenities-container">
                   <img className="amenity-image" src={require("assets/img/amenities/park.png")} />
                   <div className="text-center amenity-text">
@@ -281,7 +281,7 @@ const LandingPage = () => {
                 </div>
 
               </Col>
-              <Col lg={4} md={6} sm={6}>
+              <Col className="col-lg-4 col-md-6 col-sm-6 col-6">
                 <div className="amenities-container">
                   <img className="amenity-image" src={require("assets/img/amenities/wifi.png")} />
                   <div className="text-center amenity-text">
@@ -290,7 +290,7 @@ const LandingPage = () => {
                 </div>
 
               </Col>
-              <Col lg={4} md={6} sm={6}>
+              <Col className="col-lg-4 col-md-6 col-sm-6 col-6">
                 <div className="amenities-container">
                   <img className="amenity-image" src={require("assets/img/amenities/integrated.png")} />
                   <div className="text-center amenity-text">
