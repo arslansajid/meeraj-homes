@@ -66,7 +66,7 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="" style={{ position: "relative" }}>
-          <div style={{minHeight: colHeight}} className="image-container">
+          <div /* style={{minHeight: colHeight}} */ className="image-container">
             <img src={require("../../assets/img/entrance2@2x.png")} />
           </div>
         </div>
@@ -99,7 +99,10 @@ const LandingPage = () => {
             <Row>
               <Col lg={6}>
                 <div className="importance">
-                  <h3 className="title text-center heading">Importance of location</h3>
+                  {/* <h3 className="title text-center heading">Importance of location</h3> */}
+                  <h4 style={{textTransform: 'uppercase', textAlign: 'center'}} className="title text-white mb-4">
+                    Importance of location
+                  </h4>
                   <div className="important-points">
                     The most centrally connected society: <br /> <br />
                     <ul>
@@ -121,7 +124,7 @@ const LandingPage = () => {
               <Col lg={6}>
                 <div className="importance">
                   <div className="paper">
-                    <h4 style={{textTransform: 'uppercase', textAlign: 'center'}} className="title">
+                    <h4 style={{textTransform: 'uppercase', textAlign: 'center'}} className="title mb-4">
                       Travel Time to Premium Locations from
                     MERAJ HOUSING through MOTORWAY M11</h4>
                     <table className="table">
@@ -309,12 +312,12 @@ const LandingPage = () => {
               <Col className="col-6" lg={6}>
                 <div style={{ position: "relative" }} className="left-border h-100">
                   <div className="coming-soon-container">
-                    <h4 className="title text-center coming-soon-intro">
+                    <h5 className="title text-center coming-soon-intro">
                       Introducing City's First World Class Retail Park
-                    </h4>
-                    <h3 className="title text-center coming-soon-text">
+                    </h5>
+                    <h4 className="title text-center coming-soon-text">
                       COMING SOON
-                    </h3>
+                    </h4>
                   </div>
                 </div>
               </Col>
@@ -330,29 +333,29 @@ const LandingPage = () => {
               </Col>
             </Row>
             <Row>
-              <Col className="right-border content-center">
+              <Col className="right-border align-center mb-3">
                 <img className="feature-image" src={require("assets/img/park-features/cafe.png")} />
                 <div className="text-center">International chains of restaurants and cafes</div>
               </Col>
-              <Col className="right-border content-center">
+              <Col className="right-border align-center mb-3">
                 <img className="feature-image" src={require("assets/img/park-features/shopping.png")} />
                 <div className="text-center">
                   New Shopping brands
                 </div>
               </Col>
-              <Col className="right-border content-center">
+              <Col className="right-border align-center mb-3">
                 <img className="feature-image" src={require("assets/img/park-features/kids.png")} />
                 <div className="text-center">
                   Entertainment for kids
                 </div>
               </Col>
-              <Col className="right-border content-center">
+              <Col className="right-border align-center mb-3">
                 <img className="feature-image" src={require("assets/img/park-features/parking.png")} />
                 <div className="text-center">
                   large open parking space
                 </div>
               </Col>
-              <Col className="content-center">
+              <Col className="align-center mb-3">
                 <img className="feature-image" src={require("assets/img/park-features/wifi.png")} />
                 <div className="text-center">
                   High Speed Free Wifi Connectivity
@@ -369,11 +372,11 @@ const LandingPage = () => {
             }}
             className="bg-image">
             <div className="payment-section">
-              <h3>PROJECT DETAILS</h3>
-              <h2 className="title">3 YEARS EASY PAYMENT PLAN</h2>
+              <h4>PROJECT DETAILS</h4>
+              <h3 className="title">3 YEARS EASY PAYMENT PLAN</h3>
               <Container>
                 <Row>
-                  <Col lg={3} md={6} sm={12}>
+                  <Col className="col-lg-3 col-md-6 col-6">
                     <div style={{ background: '#B5A194' }} className="plot-card content-center">
                       <img className="plot-image" src={require("assets/img/plots/5.png")} />
                       <h4 className="title">5 MARLA</h4>
@@ -385,7 +388,7 @@ const LandingPage = () => {
                     </div>
                     </div>
                   </Col>
-                  <Col lg={3} md={6} sm={12}>
+                  <Col className="col-lg-3 col-md-6 col-6">
                     <div style={{ background: '#E8E5E0' }} className="plot-card content-center">
                       <img className="plot-image" src={require("assets/img/plots/10.png")} />
                       <h4 className="title">10 MARLA</h4>
@@ -397,7 +400,7 @@ const LandingPage = () => {
                     </div>
                     </div>
                   </Col>
-                  <Col lg={3} md={6} sm={12}>
+                  <Col className="col-lg-3 col-md-6 col-6">
                     <div style={{ background: '#9D948B' }} className="plot-card content-center">
                       <img className="plot-image" src={require("assets/img/plots/1.png")} />
                       <h4 className="title">1 KANAL</h4>
@@ -409,7 +412,7 @@ const LandingPage = () => {
                     </div>
                     </div>
                   </Col>
-                  <Col lg={3} md={6} sm={12}>
+                  <Col className="col-lg-3 col-md-6 col-6">
                     <div style={{ background: '#F5F5F5' }} className="plot-card content-center">
                       <img className="plot-image" src={require("assets/img/plots/commercial.png")} />
                       <h4 className="title">COMMERCIAL PLOTS</h4>

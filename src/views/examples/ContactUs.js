@@ -63,7 +63,7 @@ function AboutUs() {
         <Container>
           <Row>
             <Col className="ml-auto mr-auto" lg={12}>
-              <h1 className="title my-3">CONTACT US</h1>
+              <h2 className="title my-4">CONTACT US</h2>
             </Col>
             <Col className="ml-auto mr-auto mt-2" md="12">
               <Form className="contact-form" onSubmit={e => onFormSubmit(e)}>

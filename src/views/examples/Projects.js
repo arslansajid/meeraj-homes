@@ -30,7 +30,7 @@ const Projects = () => {
                     <Container>
                         <Row>
                             <Col lg={12}>
-                                <h1 className="title my-3">PROJECT DETAILS</h1>
+                                <h2 className="title my-4">PROJECT DETAILS</h2>
                                 <div className="my-5">
                                     <div className="heading">Salient Features Of Our Project</div>
                                     <ul className="my-3">
