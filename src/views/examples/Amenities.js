@@ -51,7 +51,7 @@ const Amenities = () => {
           <Container>
             <Row>
               <Col className="ml-auto mr-auto" lg={12}>
-                <h1 className="title my-3">AMENITIES</h1>
+                <h2 className="title my-4">AMENITIES</h2>
               </Col>
             </Row>
             <Row>
@@ -86,7 +86,7 @@ const Amenities = () => {
             </Row>
           </Container>
         </div>
-        <div className="amenity-gradient py-3">
+        <div className="amenity-gradient py-5">
           <Container>
             <Row>
               <Col lg={4}>
