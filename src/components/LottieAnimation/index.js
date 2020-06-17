@@ -22,8 +22,8 @@ class LottieAnimation extends Component {
 
     return(
         <Lottie options={defaultOptions}
-              height={200}
-              width={350}
+              height={WIDTH > 768 ? 300 : 200}
+              width={WIDTH > 768 ? 600 : 320}
         />
     )
   }
