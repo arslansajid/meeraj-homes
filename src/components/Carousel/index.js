@@ -37,9 +37,8 @@ const Gallery  = () => {
             requestToChangeActive={value => setactiveItemIndex(value)}
           >
             {Array.from(new Array(activeItemIndex + 2)).map((_, i) =>
-            <div className="carousel-img-container">
+            <div key={i} className="carousel-img-container">
               <div
-                key={i}
                 style={{
                   minHeight: '50vh',
                   maxHeight: '60vh',

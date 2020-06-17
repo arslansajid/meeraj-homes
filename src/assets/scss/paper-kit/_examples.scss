@@ -471,13 +471,24 @@ ul.card-description {
     position: absolute;
     padding: 30px 30px 30px 0;
     left: 0;
-    top: 20px;
+    top: 40px;
     width: 45%;
     height: 100%;
-    min-height: 500px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-
 }
+
+@media (max-width: 768px) {
+    .image-container {
+        background: black;
+        position: absolute;
+        padding: 15px 15px 15px 0;
+        left: 0;
+        top: 40px;
+        width: 45%;
+        height: 100%;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    }
+  }
 
 .image-container img {
     object-fit: cover;
@@ -562,7 +573,7 @@ ul.card-description {
     position: absolute;
     top: 140px;
     right: 0;
-    padding: 17px 117px 17px 117px;
+    padding: 17px 50px 17px 50px;
     text-align: center;
 }
 
@@ -573,17 +584,17 @@ ul.card-description {
         position: absolute;
         top: 140px;
         right: 0;
-        padding: 15px 30px 15px 30px;
+        padding: 8px 15px 8px 15px;
         text-align: center;
     }
   }
 
 .meeraj-gate-text .large {
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .meeraj-gate-text .small {
-    font-size: 1.5em;
+    font-size: 1.25em;
 }
 
 .gallery-section {
@@ -636,6 +647,15 @@ ul.card-description {
     object-fit: contain;
 }
 
+@media (max-width: 768px) {
+    .park-parking-image {
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
 .coming-soon-container {
     width: 120%;
     height: 100%;
@@ -651,9 +671,29 @@ ul.card-description {
     flex-direction: column;
 }
 
+@media (max-width: 768px) {
+    .coming-soon-container {
+        width: 120%;
+        height: 100%;
+        min-height: 75vw;
+        max-height: 100%;
+        background: #b5a194;
+        opacity: 0.85;
+        position: absolute;
+        left: 0;
+        z-index: 100;
+        padding: 15px 10px 15px 10px;
+        color: white !important;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+  }
+
+
 .coming-soon-intro {
     font-weight: 500;
-    font-size: 2em;
+    font-size: 1.5em;
     color: white;
 }
 
@@ -702,6 +742,10 @@ ul.card-description {
     
     .bottom-border {
         border: unset;
+    }
+
+    .payments .title.bottom-border {
+        border-bottom: 1px solid #5D5855;
     }
     
     .top-border {

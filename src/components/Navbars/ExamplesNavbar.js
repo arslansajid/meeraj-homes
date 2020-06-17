@@ -14,10 +14,6 @@ import {
   Nav,
   Container,
   Button,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
 } from "reactstrap";
 
 const ExamplesNavbar = (props) => {
@@ -82,12 +78,6 @@ const ExamplesNavbar = (props) => {
               <span className="navbar-toggler-bar bar2" />
               <span className="navbar-toggler-bar bar3" />
             </button>
-            {/* <NavbarBrand
-            data-placement="bottom"
-            to="/"
-            tag={Link}
-          > */}
-            {/* <div className={`${showLogo || props.notHome ? "d-block" : "d-none"}`} style={{ borderRadius: '2px' }}> */}
             <div>
               <Link to="/">
                 <div className="logo-container left-logo">
@@ -95,7 +85,6 @@ const ExamplesNavbar = (props) => {
                 </div>
               </Link>
             </div>
-            {/* </NavbarBrand> */}
           </div>
           <div className="d-flex mr-3">
             <Link to={props.match.path === "/" ? "/contact-us" : "/"}>
@@ -129,23 +118,6 @@ const ExamplesNavbar = (props) => {
                   }} src={require("assets/img/logo@2x.png")} />
               </div>
             </Link>
-            {/* <NavItem
-              id="get-in-touch-btn"
-            >
-              <Link to={props.match.path === "/contact-us" ? "/" : "/contact-us"}>
-                <Button
-                  className="btn-round"
-                >
-                  {
-                    props.match.path === "/contact-us"
-                      ?
-                      "Home"
-                      :
-                      "Get In Touch"
-                  }
-                </Button>
-              </Link>
-            </NavItem> */}
             <NavItem>
               <NavLink to="/" tag={Link}>
                 Home

@@ -3,18 +3,18 @@ import React from "react";
 // reactstrap components
 import { Col, Row, Container } from "reactstrap";
 
-function DemoFooter() {
+function DemoFooter(props) {
   return (
-    <footer className="footer">
-      <h2 className="title text-center">
+    <footer className={props.dark ? 'footer-dark' : `footer`}>
+      <h3 className="title text-center">
         CONTACT US
-      </h2>
+      </h3>
       <Container fluid>
         <Row className="">
           <Col lg={4} md={6} sm={12}>
             <div className=" footer-card border-right">
               <img className="footer-icon" src={require("assets/img/footer/call.png")} />
-              <div>+92 300 8512727</div>
+              <div>+923000247777</div>
             </div>
           </Col>
           <Col lg={4} md={6} sm={12}>
@@ -29,7 +29,7 @@ function DemoFooter() {
           <Col lg={4} md={6} sm={12}>
             <div className=" footer-card">
             <img className="footer-icon" src={require("assets/img/footer/msg.png")} />
-              <div>khurram@virkgroup.com</div>
+              <div>info@merajhousing.com</div>
             </div>
           </Col>
         </Row>

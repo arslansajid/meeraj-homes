@@ -121,7 +121,7 @@ function AboutUs() {
         </Container>
       </div>
     </div>
-    <DemoFooter />
+    <DemoFooter dark={true} />
     </>
   );
 }

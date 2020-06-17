@@ -63,12 +63,11 @@ const SocietyMaps = () => {
         <div className="content-center">
           <img src={require("assets/img/map-legend@2x.png")} className="d-lg-none d-md-none d-block" />
         </div>
-        <DemoFooter />
+        {/* <DemoFooter /> */}
         </div>
         <div className="map-legend d-none d-lg-block">
           <img src={require("assets/img/map-legend@2x.png")} className="" />
         </div>
-      {/* <DemoFooter /> */}
     </>
   );
 }

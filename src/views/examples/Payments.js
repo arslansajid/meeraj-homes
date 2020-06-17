@@ -50,11 +50,11 @@ function ProfilePage() {
           className="payment-plan-card">
           <div className="payment-plan-print" ref={componentRef}>
           <div className="content-center">
-            <h4 className="">{title}</h4>
-            <h4 className="">{size}</h4>
+            <h5 className="">{title}</h5>
+            <h5 className="">{size}</h5>
             <img className="plot-image" src={require(`assets/img/plots/${image}.png`)} />
 
-            <h3 className="py-2 my-3 bottom-border">{price}</h3>
+            <h4 className="py-2 my-3 bottom-border">{price}</h4>
           </div>
           <Row noGutters>
             <Col className="col-6">
@@ -121,12 +121,12 @@ function ProfilePage() {
           <Row>
             <Col className="ml-auto mr-auto" lg={12}>
               <div className="content-center">
-                <h2 className="title my-3 text-center bottom-border">RESIDENTIAL PLOTS</h2>
+                <h3 className="title my-3 text-center bottom-border">RESIDENTIAL PLOTS</h3>
               </div>
-              <h3 className="title my-3 text-center">3 YEARS EASY INSTALLMENT PLAN</h3>
+              <h4 className="title my-3 text-center">3 YEARS EASY INSTALLMENT PLAN</h4>
             </Col>
             <Col lg={12}>
-              <h2 className="title my-4 text-center">QUARTERLY PAYMENT PLAN</h2>
+              <h3 className="title my-4 text-center">QUARTERLY PAYMENT PLAN</h3>
               <Row className="my-3">
                 <Col lg={4} md={6} className="mb-3 mb-lg-0">
                   <CardContent
@@ -209,7 +209,7 @@ function ProfilePage() {
             </Col>
             <Col lg={12}>
               <div className="content-center">
-                <h2 className="title my-4 text-center">MONTHLY PAYMENT PLAN</h2>
+                <h3 className="title my-4 text-center">MONTHLY PAYMENT PLAN</h3>
               </div>
               <Row className="my-3">
                 <Col lg={4} md={6} className="mb-3 mb-lg-0">

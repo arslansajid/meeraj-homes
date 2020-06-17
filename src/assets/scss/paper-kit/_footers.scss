@@ -3,6 +3,15 @@
     background: #B5A194 !important;
     color: white !important;
 }
+.footer-dark {
+    padding: 20px 0 20px 0;
+    background-color: #5D5855;
+    color: white;
+
+    .title {
+        color: white;
+    }
+}
 .footer .border-right {
     border-right: 1px solid white;
 }
@@ -25,6 +34,7 @@
     }
   }
 
+.footer-dark,
 .footer {
     .title{
         color: white !important;
@@ -36,4 +46,5 @@
         object-fit: contain;
         margin-bottom: 15px;
     }
+    
 }

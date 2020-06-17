@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 // reactstrap components
 import {
@@ -18,14 +18,18 @@ import { Link } from "react-router-dom";
 // import Slider from "react-slick";
 
 const LandingPage = () => {
-
+  const [colHeight, setColHeight] = useState(500)
   document.documentElement.classList.remove("nav-open");
   useEffect(() => {
+
+    if(document.getElementById("get-height")) {
+      setColHeight(document.getElementById("get-height").clientHeight)
+    }
     document.body.classList.add("profile-page");
     return function cleanup() {
       document.body.classList.remove("profile-page");
     };
-  });
+  }, [colHeight]);
 
   const formRef = useRef(null);
 
@@ -53,19 +57,19 @@ const LandingPage = () => {
             THE MAGNIFICENT MERAJ
           </div>
         </div>
-        <div className="d-none d-lg-block d-md-block" style={{ position: "relative" }}>
-          <div className="image-container">
+        <div className="" style={{ position: "relative" }}>
+          <div style={{minHeight: colHeight}} className="image-container">
             <img src={require("../../assets/img/entrance2@2x.png")} />
           </div>
         </div>
         <div className="location-importance-section">
           <Container>
-            <Row>
-              <Col lg={6} md={6}>
+            <Row noGutters={true}>
+              <Col className="col-6">
 
               </Col>
-              <Col lg={6} md={6} sm={12}>
-                <div className="content-center">
+              <Col className="col-6">
+                <div id="get-height" className="content-center">
                   <div>
                     <h3>Live at the heart of the district</h3>
                     <br />
@@ -109,7 +113,9 @@ const LandingPage = () => {
               <Col lg={6}>
                 <div className="importance">
                   <div className="paper">
-                    <h4 className="title">Travel Time to Premium Locations from MERAJ HOUSING through MOTORWAY M11</h4>
+                    <h4 style={{textTransform: 'uppercase', textAlign: 'center'}} className="title">
+                      Travel Time to Premium Locations from
+                    MERAJ HOUSING through MOTORWAY M11</h4>
                     <table className="table">
                       <tbody>
                         <tr>
@@ -292,15 +298,15 @@ const LandingPage = () => {
         <div className="park-features-section">
           <Container>
             <Row>
-              <Col className="d-none d-lg-block" lg={6}>
+              <Col className="col-6" lg={6}>
                 <div style={{ position: "relative" }} className="left-border h-100">
                   <div className="coming-soon-container">
-                    <h3 className="title text-center coming-soon-intro">
+                    <h4 className="title text-center coming-soon-intro">
                       Introducing City's First World Class Retail Park
-                    </h3>
-                    <h2 className="title text-center coming-soon-text">
+                    </h4>
+                    <h3 className="title text-center coming-soon-text">
                       COMING SOON
-                    </h2>
+                    </h3>
                   </div>
                 </div>
               </Col>

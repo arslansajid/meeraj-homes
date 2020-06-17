@@ -32,7 +32,7 @@ const Projects = () => {
                             <Col lg={12}>
                                 <h1 className="title my-3">PROJECT DETAILS</h1>
                                 <div className="my-5">
-                                    <span className="heading">Salient Features Of Our Project</span>
+                                    <div className="heading">Salient Features Of Our Project</div>
                                     <ul className="my-3">
                                         <li className="list-detail">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
@@ -46,7 +46,7 @@ const Projects = () => {
                                     </ul>
                                 </div>
                                 <div className="my-5">
-                                    <span className="heading">Importance Of Our Prime Location</span>
+                                    <div className="heading">Importance Of Our Prime Location</div>
                                     <ul className="my-3">
                                         <li className="list-detail">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
