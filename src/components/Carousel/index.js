@@ -71,12 +71,7 @@ const Gallery  = () => {
             <div key={i} className="carousel-img-container">
               <div
                 style={{
-                  minHeight: '50vh',
-                  maxHeight: '60vh',
                   backgroundImage: "url(" + image.original + ")",
-                  backgroundPosition: 'center center',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundSize: 'cover',
                 }}
                 className={`carousel ${activeItemIndex === i || activeItemIndex > Images.length ? 'active' : 'inactive'}`}
               />

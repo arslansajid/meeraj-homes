@@ -76,10 +76,10 @@ const LandingPage = () => {
               <Col className="col-6">
 
               </Col>
-              <Col className="col-6">
+              <Col className="col-12 col-lg-6 col-md-6">
                 <div id="get-height" className="content-center">
                   <div>
-                    <h3>Live at the heart of the district</h3>
+                    <h3 className="title text-white">Live at the heart of the district</h3>
                     <br />
                     <div>
                       Sialkot’s first society located at the most ideal location of the district. Meraj housing aims to provide our city with a modern state of the art society with world-class amenities at the heart of the district, Sialkot <br />
@@ -100,9 +100,9 @@ const LandingPage = () => {
               <Col lg={6}>
                 <div className="importance">
                   {/* <h3 className="title text-center heading">Importance of location</h3> */}
-                  <h4 style={{textTransform: 'uppercase', textAlign: 'center'}} className="title text-white mb-4">
+                  <h5 style={{textTransform: 'uppercase', textAlign: 'center'}} className="title text-white mb-4">
                     Importance of location
-                  </h4>
+                  </h5>
                   <div className="important-points">
                     The most centrally connected society: <br /> <br />
                     <ul>
@@ -122,11 +122,11 @@ const LandingPage = () => {
                 </div>
               </Col>
               <Col lg={6}>
-                <div className="importance">
+                <div className="importance-paper">
                   <div className="paper">
-                    <h4 style={{textTransform: 'uppercase', textAlign: 'center'}} className="title mb-4">
+                    <h5 style={{textTransform: 'uppercase', textAlign: 'center'}} className="title">
                       Travel Time to Premium Locations from
-                    MERAJ HOUSING through MOTORWAY M11</h4>
+                    MERAJ HOUSING through MOTORWAY M11</h5>
                     <table className="table">
                       <tbody>
                         <tr>
@@ -166,7 +166,7 @@ const LandingPage = () => {
                         </tr>
                       </tbody>
                     </table>
-                    <img className="map-location-image" src={require("assets/img/location.png")} alt="map-location" />
+                    <img className="map-location-image" src={require("assets/img/location2.png")} alt="map-location" />
                   </div>
                 </div>
               </Col>
@@ -306,7 +306,7 @@ const LandingPage = () => {
           </Container>
         </div>
 
-        <div className="park-features-section">
+        <div className="park-featur-container">
           <Container>
             <Row>
               <Col className="col-6" lg={6}>

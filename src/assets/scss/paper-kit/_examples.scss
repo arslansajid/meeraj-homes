@@ -329,9 +329,21 @@ ul.card-description {
     font-weight: 500;
 }
 
+.table {
+    font-size: 14px;
+    white-space: nowrap;
+}
+
 .table td,
 .table th {
     border: unset;
+}
+
+@media (max-width: 768px) {
+    .table td,
+    .table th {
+        padding: 0.75em 0.5em;
+    }
 }
 
 .table td {
@@ -344,10 +356,10 @@ ul.card-description {
   }
 
 .table .map-marker {
-    width: 20px;
-    height: 20px;
+    width: 1.25em;
+    height: 1.25em;
     object-fit: contain;
-    margin-right: 15px;
+    margin-right: 0.75em;
 }
 
 .payment-row i {
@@ -483,11 +495,12 @@ ul.card-description {
 @media (max-width: 768px) {
     .image-container {
         background: black;
-        position: absolute;
-        padding: 15px 15px 15px 0;
+        filter: brightness(0.4);
+        // position: absolute;
+        padding: 0;
         left: 0;
-        top: 30vh;
-        width: 45%;
+        // top: 30vh;
+        width: 100%;
         height: 100%;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
         min-height: 450px;
@@ -509,7 +522,16 @@ ul.card-description {
 .location-section .importance {
     background: #B5A194;
     color: white;
-    padding: 4em 2.5em 4em 2.5em;
+    padding: 2em;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.location-section .importance-paper {
+    background: #B5A194;
+    color: white;
+    padding: 2em;
     width: 100%;
     height: 100%;
     position: relative;
@@ -521,10 +543,16 @@ ul.card-description {
 }
 .location-section .importance .important-points {
     color: white;
-    font-size: 1.2em;
+    font-size: 1em;
 }
+@media (max-width: 768px) {
+    .location-section .importance .important-points {
+        color: white;
+        font-size: 1.25em;
+    }
+  }
 
-.location-section .importance .paper {
+.location-section .importance-paper .paper {
     position: absolute;
     background: #E8E5E0;
     top: 20px;
@@ -537,17 +565,19 @@ ul.card-description {
 }
 
 @media (max-width: 768px) {
-    .location-section .importance .paper {
+    .location-section .importance-paper {
+        background: unset;
+    }
+    .location-section .importance-paper .paper {
         top: 20px;
         left: 0px;
         box-shadow: unset;
-        min-height: 105%;
     }
   }
 
 .map-location-image {
     width: 100%;
-    // height: 100%;
+    height: 150px;
     object-fit: contain;
 }
 
@@ -608,15 +638,8 @@ ul.card-description {
 
 .gallery-section {
     background: #E8E5E0;
-    padding: 50px; 
+    padding: 3em 1.5em; 
 }
-
-@media (max-width: 768px) {
-    .gallery-section{
-        padding: 20px; 
-    }
-  }
-
 
 .amenities-section {
     background: #9D948B;
@@ -651,21 +674,22 @@ ul.card-description {
     font-size: 1.25em;
 }
 
-.park-features-section {
+.park-featur-container {
     background: #E8E5E0;
-    padding: 5em 0px 5em 0px; 
+    padding: 2em 0px 2em 0px; 
 }
 
 .park-parking-image {
     padding: 30px;
     width: 100%;
     height: 100%;
+    max-height: 360px;
     object-fit: contain;
 }
 
 @media (max-width: 768px) {
     .park-parking-image {
-        padding: 10px;
+        padding: 5px;
         width: 100%;
         height: 100%;
         object-fit: contain;
@@ -678,9 +702,9 @@ ul.card-description {
     background: #b5a194;
     opacity: 0.85;
     position: absolute;
-    left: 20%;
+    left: 15%;
     z-index: 100;
-    padding: 30px 100px 30px 100px;
+    padding: 1.5em 4em;
     color: white !important;
     display: flex;
     justify-content: space-between;
@@ -719,16 +743,16 @@ ul.card-description {
     color: white;
 }
 
-.park-features-section .feature-text {
-    padding: 2em 0px 2em 0px;
-    font-size: 1.3em;
+.park-featur-container .feature-text {
+    padding: 1.25em 0px 1.25em 0px;
+    font-size: 1em;
 }
 
-.park-features-section .feature-image {
-    width: 4em;
-    height: 4em;
+.park-featur-container .feature-image {
+    width: 3em;
+    height: 3em;
     object-fit: contain;
-    margin-bottom: 1.25em;
+    margin-bottom: 1em;
 }
 
 .align-center {
@@ -1089,7 +1113,19 @@ ul.card-description {
         object-fit: cover !important;
         max-height: unset !important;
     }
-}  
+}
+
+.carousel {
+    min-height: 80vh;
+    background-position: center center;
+    background-size: cover;
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        min-height: 50vh !important;
+    }
+}   
 
 .main .carousel.inactive {
     // filter: brightness(0.6),
