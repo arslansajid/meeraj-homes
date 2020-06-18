@@ -45,7 +45,7 @@ const LandingPage = () => {
       // setMerajGateImage(true)
     }
     else {
-      setMerajText(false)
+      // setMerajText(false)
     }
   }
 

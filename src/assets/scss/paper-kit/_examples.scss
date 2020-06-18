@@ -1290,15 +1290,24 @@ body.ReactModal__Body--open {
 //     }
 //   }
   @keyframes slideInFade {
-    0% {
-      transform: translateX(-900px);
-      opacity: 0;
-      display: none;
+    // 0% {
+    //   transform: translateX(-900px);
+    //   opacity: 0;
+    //   display: none;
+    // }
+    // 100% {
+    //   transform: translateX(0);
+    //   opacity: 1;
+    //   display: block;
+    // }
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
     }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-      display: block;
+
+    to {
+        opacity: 1;
+        transform: translateX(0%);
     }
   }
 
