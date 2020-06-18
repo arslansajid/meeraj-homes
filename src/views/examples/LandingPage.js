@@ -19,38 +19,46 @@ import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   const [colHeight, setColHeight] = useState(500)
+  const [merajText, setMerajText] = useState(false)
+  const [merajGateImage, setMerajGateImage] = useState(false)
   document.documentElement.classList.remove("nav-open");
   useEffect(() => {
-
-    if(document.getElementById("get-height")) {
-      setColHeight(document.getElementById("get-height").clientHeight)
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
     }
-    document.body.classList.add("profile-page");
-    return function cleanup() {
-      document.body.classList.remove("profile-page");
-    };
-  }, [colHeight]);
+
+    // if(document.getElementById("get-height")) {
+    //   setColHeight(document.getElementById("get-height").clientHeight)
+    // }
+    // document.body.classList.add("profile-page");
+    // return function cleanup() {
+    //   document.body.classList.remove("profile-page");
+    // };
+  }, []);
+
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+    console.log({ currentScrollY, merajTextRef})
+    if (isInViewport()) {
+      setMerajText(true)
+      // setMerajGateImage(true)
+    }
+    else {
+      setMerajText(false)
+    }
+  }
 
   const formRef = useRef(null);
 
-  const images = [
-    {
-      original: require("assets/img/3d/3d/4.jpg"),
-      thumbnail: require("assets/img/3d/3d/1.jpg"),
-    },
-    {
-      original: require("assets/img/3d/attachments/1.jpg"),
-      thumbnail: require("assets/img/3d/3d/1.jpg"),
-    },
-    {
-      original: require("assets/img/3d/attachments/2.jpg"),
-      thumbnail: require("assets/img/3d/3d/1.jpg"),
-    },
-    {
-      original: require("assets/img/3d/attachments/3.jpg"),
-      thumbnail: require("assets/img/3d/3d/1.jpg"),
-    },
-  ]
+  const merajTextRef = useRef();
+  const merajEntranceGate = useRef();
+  
+  const isInViewport = (offset = 0) => {
+    if (!merajTextRef) return false;
+    const top = merajTextRef.current.getBoundingClientRect().top;
+    return (top + offset) >= 0 && (top - offset) <= window.innerHeight;
+  }
 
   return (
     <>
@@ -58,10 +66,10 @@ const LandingPage = () => {
       <IndexHeader />
       <div className="main">
         <div className="entrance-gate-section">
-          <div className="entrance-gate">
+          <div ref={merajEntranceGate} className={`${merajGateImage && "left-to-right"} entrance-gate`}>
             <img className="entrance-gate-image" src={require("../../assets/img/entrance@2x.png")} />
           </div>
-          <div className="entrance-heading">
+          <div ref={merajTextRef} className={`${merajText && "left-to-right-fade"} entrance-heading`}>
             THE MAGNIFICENT MERAJ
           </div>
         </div>
