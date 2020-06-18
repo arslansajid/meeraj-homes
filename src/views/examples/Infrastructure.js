@@ -21,7 +21,7 @@ const Projects = () => {
                     <Container>
                         <Row>
                             <Col lg={12}>
-                            <h1 className="title my-3">INFRASTRUCTURE</h1>
+                            <h2 className="title my-3">INFRASTRUCTURE</h2>
                             <div className="my-5">
                                 <span className="heading">Winding Roads</span>
                                 <ul className="my-3">

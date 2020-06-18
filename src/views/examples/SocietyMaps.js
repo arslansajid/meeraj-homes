@@ -41,7 +41,7 @@ const SocietyMaps = () => {
           <Row>
             <Col lg={12}>
               <div className="d-flex justify-content-between align-items-center">
-              <h1 className="title my-3">PROJECT MAP</h1>
+              <h2 className="title my-3">PROJECT MAP</h2>
               <ReactToPrint
                 trigger={() => (
                   <Button className="print-btn" size="md">
