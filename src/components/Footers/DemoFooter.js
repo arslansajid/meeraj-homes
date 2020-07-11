@@ -13,13 +13,13 @@ function DemoFooter(props) {
         <Row className="">
           <Col lg={4} md={6} sm={12}>
             <div className=" footer-card border-right">
-              <img className="footer-icon" src={require("assets/img/footer/call.png")} />
+              <img className="footer-icon" src={require("assets/resources/phone.svg")} />
               <div>+923000247777</div>
             </div>
           </Col>
           <Col lg={4} md={6} sm={12}>
             <div className=" footer-card border-right">
-            <img className="footer-icon" src={require("assets/img/footer/map.png")} />
+            <img className="footer-icon" src={require("assets/resources/map-pin.svg")} />
             <div>
               3KM Main Daska Road towards Sialkot, <br />
               Near Sialkot-Lahore Motorway Interchange point, <br />
@@ -28,10 +28,15 @@ function DemoFooter(props) {
           </Col>
           <Col lg={4} md={6} sm={12}>
             <div className=" footer-card">
-            <img className="footer-icon" src={require("assets/img/footer/msg.png")} />
+            <img className="footer-icon" src={require("assets/resources/mail.svg")} />
               <div>info@merajhousing.com</div>
             </div>
           </Col>
+        </Row>
+        <Row className="my-2 justify-content-center">
+          <img className="social-icon mr-5" src={require("assets/resources/facebook.svg")} />
+          <img className="social-icon mr-5" src={require("assets/resources/instagram.svg")} />
+          <img className="social-icon" src={require("assets/resources/whatsapp.svg")} />
         </Row>
       </Container>
     </footer>
