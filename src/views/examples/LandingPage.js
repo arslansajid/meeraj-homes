@@ -78,7 +78,7 @@ const LandingPage = () => {
             <img src={require("../../assets/img/entrance2@2x.png")} />
           </div>
         </div>
-        <div className="location-importance-section">
+        <div className="location-importance-section full-screen content-center">
           <Container>
             <Row noGutters={true}>
               <Col className="col-6">
