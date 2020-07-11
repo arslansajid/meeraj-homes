@@ -81,7 +81,7 @@ const ExamplesNavbar = (props) => {
             <div>
               <Link to="/">
                 <div className="logo-container left-logo">
-                  <img className="logo" src={require("assets/img/navlogo@2x.png")} />
+                  <img className="logo" src={require("assets/resources/logo.svg")} />
                 </div>
               </Link>
             </div>
@@ -153,11 +153,11 @@ const ExamplesNavbar = (props) => {
                 Gallery
               </NavLink>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLink to="/infrastructure" tag={Link}>
                 INFRASTRUCTURE
               </NavLink>
-            </NavItem>
+            </NavItem> */}
             <NavItem>
               <NavLink to="/public-notice" tag={Link}>
                 Public Notices

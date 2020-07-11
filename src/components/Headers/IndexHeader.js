@@ -14,7 +14,7 @@ function IndexHeader() {
       <div
         className="page-header"
         style={{
-          backgroundImage: "url(" + require("assets/img/bg.png") + ")",
+          backgroundImage: "url(" + require("assets/resources/pattern.svg") + ")",
           backgroundColor: "#5D5855",
         }}
       >

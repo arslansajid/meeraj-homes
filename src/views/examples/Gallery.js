@@ -34,6 +34,10 @@ const Gallery = () => {
     };
   });
 
+  React.useEffect(() => {
+    window.scrollTo(0,0);
+  }, []);
+
   const customStyles = {
     content : {
       zIndex: 1031
