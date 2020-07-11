@@ -14,6 +14,8 @@ import {
   Nav,
   Container,
   Button,
+  UncontrolledDropdown,
+  DropdownToggle, DropdownMenu, DropdownItem
 } from "reactstrap";
 
 const ExamplesNavbar = (props) => {
@@ -21,6 +23,9 @@ const ExamplesNavbar = (props) => {
   const [navbarColor, setNavbarColor] = React.useState("");
   const [showLogo, setShowLogo] = React.useState(false);
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
+  const [dropdownOpen, setDropdownOpen] = React.useState(false);
+
+  const toggle = () => setDropdownOpen(prevState => !prevState);
 
   const toggleNavbarCollapse = () => {
     setNavbarCollapse(!navbarCollapse);
@@ -32,32 +37,14 @@ const ExamplesNavbar = (props) => {
     props.formRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
-  // React.useEffect(() => {
-  //   console.log("#########", props)
-  //   const updateNavbarColor = () => {
-  //     if (!props.notHome) { //this is to control navbar on routes other than home
-  //       if (
-  //         document.documentElement.scrollTop > 299 ||
-  //         document.body.scrollTop > 299
-  //       ) {
-  //         setNavbarColor("");
-  //         setShowLogo(true)
-  //       } else if (
-  //         document.documentElement.scrollTop < 300 ||
-  //         document.body.scrollTop < 300
-  //       ) {
-  //         setNavbarColor("navbar-transparent");
-  //         setShowLogo(false)
-  //       }
-  //     }
-  //   };
+  const onMouseEnter = () => {
+    setDropdownOpen(true);
+  };
 
-  //   window.addEventListener("scroll", updateNavbarColor);
+  const onMouseLeave = () => {
+    setDropdownOpen(false);
+  };
 
-  //   return function cleanup() {
-  //     window.removeEventListener("scroll", updateNavbarColor);
-  //   };
-  // });
   return (
     <Navbar
       className={classnames("fixed-top", navbarColor)}
@@ -111,11 +98,11 @@ const ExamplesNavbar = (props) => {
             <Link to="/">
               <div className="logo-container navbar-toggler">
                 {/* <img className="logo sidebar-logo" src={require("assets/img/white25.png")} /> */}
-                  <img style={{
-                    width: 150,
-                    height: 150,
-                    objectFit: 'cover'
-                  }} src={require("assets/img/logo@2x.png")} />
+                <img style={{
+                  width: 150,
+                  height: 150,
+                  objectFit: 'cover'
+                }} src={require("assets/img/logo@2x.png")} />
               </div>
             </Link>
             <NavItem>
@@ -128,11 +115,33 @@ const ExamplesNavbar = (props) => {
                 About Us
               </NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink to="/projects" tag={Link}>
+            {/* <NavItem
+              to="/projects"
+              tag={Link}
+            >
+              <NavLink>
                 Project Details
               </NavLink>
-            </NavItem>
+            </NavItem> */}
+            {/* Drop down starts */}
+            <UncontrolledDropdown
+              onMouseEnter={() => onMouseEnter()}
+              onMouseLeave={() => onMouseLeave()}
+              isOpen={dropdownOpen} nav inNavbar>
+              <DropdownToggle nav onClick={() => window.location.replace('/projects')}>
+                Project Details
+                </DropdownToggle>
+              <DropdownMenu down>
+                <DropdownItem>
+                  INFRASTRUCTURE
+                </DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem>
+                  NEWS
+                </DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+            {/* Drop down ends */}
             <NavItem>
               <NavLink to="/amenities" tag={Link}>
                 Amenities
