@@ -87,7 +87,7 @@ const LandingPage = () => {
               <Col className="col-12 col-lg-6 col-md-6">
                 <div id="get-height" className="content-center">
                   <div>
-                    <h3 className="title text-white">Live at the heart of the district</h3>
+                    <h3 className="title text-white text-uppercase">Live at the heart of the district</h3>
                     <br />
                     <div>
                       Sialkot’s first society located at the most ideal location of the district. Meraj housing aims to provide our city with a modern state of the art society with world-class amenities at the heart of the district, Sialkot <br />
@@ -112,7 +112,9 @@ const LandingPage = () => {
                     Importance of location
                   </h5>
                   <div className="important-points">
-                    The most centrally connected society: <br /> <br />
+                    <div className="text-center text-uppercase">
+                      The most centrally connected society: <br /> <br />
+                    </div>
                     <ul>
                       <li>
                         Meraj housing society is ideally situated 250 feet away from the newly laid motorway M11, interconnecting the entire district to the nearby cities very conveniently
@@ -132,9 +134,9 @@ const LandingPage = () => {
               <Col lg={6}>
                 <div className="importance-paper">
                   <div className="paper">
-                    <h5 style={{textTransform: 'uppercase', textAlign: 'center'}} className="title">
+                    <h6 style={{textTransform: 'uppercase', textAlign: 'center'}} className="title">
                       Travel Time to Premium Locations from
-                    MERAJ HOUSING through MOTORWAY M11</h5>
+                    MERAJ HOUSING through MOTORWAY M11</h6>
                     <table className="table">
                       <tbody>
                         <tr>
@@ -143,38 +145,38 @@ const LandingPage = () => {
                           <th>Time</th>
                         </tr>
                         <tr>
-                          <td><img className="map-marker" src={require("assets/img/footer/map.png")} />Daska</td>
+                          <td><img className="map-marker-white" src={require("assets/resources/map-pin.svg")} />Daska</td>
                           <td>3 km</td>
                           <td>5 mins</td>
                         </tr>
                         <tr>
-                          <td><img className="map-marker" src={require("assets/img/footer/map-brown.png")} />Lahore</td>
-                          <td>100 km</td>
-                          <td>41 mins</td>
-                        </tr>
-                        <tr>
-                          <td><img className="map-marker" src={require("assets/img/footer/map.png")} />Sialkot Airport</td>
-                          <td>22 km</td>
-                          <td>20 mins</td>
-                        </tr>
-                        <tr>
-                          <td><img className="map-marker" src={require("assets/img/footer/map-brown.png")} />Sambrial </td>
+                          <td><img className="map-marker-black" src={require("assets/resources/map-pin.svg")} />Sambrial </td>
                           <td>13 km</td>
                           <td>12 mins</td>
                         </tr>
                         <tr>
-                          <td><img className="map-marker" src={require("assets/img/footer/map.png")} />Ugoki</td>
+                          <td><img className="map-marker-white" src={require("assets/resources/map-pin.svg")} />Sialkot</td>
+                          <td>16 km</td>
+                          <td>17 mins</td>
+                        </tr>
+                        <tr>
+                          <td><img className="map-marker-black" src={require("assets/resources/map-pin.svg")} />Ugoki</td>
                           <td>18 km</td>
                           <td>19 mins</td>
                         </tr>
                         <tr>
-                          <td><img className="map-marker" src={require("assets/img/footer/map-brown.png")} />Sialkot</td>
-                          <td>16 km</td>
-                          <td>17 mins</td>
+                          <td><img className="map-marker-white" src={require("assets/resources/map-pin.svg")} />Sialkot Airport</td>
+                          <td>22 km</td>
+                          <td>20 mins</td>
+                        </tr>
+                        <tr>
+                          <td><img className="map-marker-black" src={require("assets/resources/map-pin.svg")} />Lahore</td>
+                          <td>100 km</td>
+                          <td>41 mins</td>
                         </tr>
                       </tbody>
                     </table>
-                    <img className="map-location-image" src={require("assets/img/location2.png")} alt="map-location" />
+                    <img className="map-location-image" src={require("assets/resources/map.svg")} alt="map-location" />
                   </div>
                 </div>
               </Col>
@@ -192,42 +194,44 @@ const LandingPage = () => {
           </div>
         </div>
 
-        <div className="gallery-section">
-          <Gallery />
-          {/* <ImageGallery
-            items={images}
-            autoPlay={true}
-            showPlayButton={false}
-            showBullets={false}
-            showThumbnails={false}
-            showFullscreenButton={false}
-            showNav={false}
-          /> */}
-          {/* <Slider
-            className="center carousel-slider"
-            // centerMode={true}
-            slidesToShow={1}
-            slidesToScroll={1}
-            speed={1000}
-            autoplay={true}
-            cssEase="linear"
-            pauseOnHover={false}
-            arrows={false}
-          >
-            <div>
-              <img src={require("assets/img/gallery@2x.png")} />
-            </div>
-            <div>
-              <img src={require("assets/img/gallery@2x.png")} />
-            </div>
-            <div>
-              <img src={require("assets/img/gallery@2x.png")} />
-            </div>
-          </Slider> */}
-        </div>
+        <Link to="/gallery">
+          <div className="gallery-section">
+            <Gallery />
+            {/* <ImageGallery
+              items={images}
+              autoPlay={true}
+              showPlayButton={false}
+              showBullets={false}
+              showThumbnails={false}
+              showFullscreenButton={false}
+              showNav={false}
+            /> */}
+            {/* <Slider
+              className="center carousel-slider"
+              // centerMode={true}
+              slidesToShow={1}
+              slidesToScroll={1}
+              speed={1000}
+              autoplay={true}
+              cssEase="linear"
+              pauseOnHover={false}
+              arrows={false}
+            >
+              <div>
+                <img src={require("assets/img/gallery@2x.png")} />
+              </div>
+              <div>
+                <img src={require("assets/img/gallery@2x.png")} />
+              </div>
+              <div>
+                <img src={require("assets/img/gallery@2x.png")} />
+              </div>
+            </Slider> */}
+          </div>
+        </Link>
 
         <div className="amenities-section">
-          <h2 className="title text-center">AMENITIES</h2>
+          <h3 className="title text-center mb-4">AMENITIES</h3>
           <Container>
             <Row>
               <Col className="col-lg-4 col-md-6 col-sm-6 col-6">
@@ -260,7 +264,7 @@ const LandingPage = () => {
                 <div className="amenities-container">
                   <img className="amenity-image" src={require("assets/img/amenities/commercial.png")} />
                   <div className="text-center amenity-text">
-                    Commercial Zone for Daily Needs
+                    Commercial Zone for <br/> Daily Needs
                   </div>
                 </div>
 
@@ -305,7 +309,7 @@ const LandingPage = () => {
                 <div className="amenities-container">
                   <img className="amenity-image" src={require("assets/img/amenities/integrated.png")} />
                   <div className="text-center amenity-text">
-                    Flawlessly Integrated Security System
+                    Smart Society With Upgraded Technology
                   </div>
                 </div>
 
@@ -321,7 +325,7 @@ const LandingPage = () => {
                 <div style={{ position: "relative" }} className="left-border h-100">
                   <div className="coming-soon-container">
                     <h5 className="title text-center coming-soon-intro">
-                      Introducing City's First World Class Retail Park
+                      Introducing City's First <br/> World Class Retail Park
                     </h5>
                     <h4 className="title text-center coming-soon-text">
                       COMING SOON
@@ -330,9 +334,10 @@ const LandingPage = () => {
                 </div>
               </Col>
               <Col lg={6}>
-                <img className="park-parking-image" src={require("assets/img/parking@2x.png")}></img>
+                <img className="park-parking-image" src={require("assets/resources/retailpark.jpg")}></img>
               </Col>
               <Col lg={12}>
+                <h4 className="title text-center mt-4">RETAIL PARK FEATURES</h4>
                 <div className="feature-text">
                   Bringing world-class retail park to the city of daska.
                   The retail park will give a boom to the business sector of the city and will also be an amazing recreational spot for families to enjoy.
@@ -348,13 +353,13 @@ const LandingPage = () => {
               <Col className="right-border align-center mb-3">
                 <img className="feature-image" src={require("assets/img/park-features/shopping.png")} />
                 <div className="text-center">
-                  New Shopping brands
+                  New Shopping <br /> brands
                 </div>
               </Col>
               <Col className="right-border align-center mb-3">
                 <img className="feature-image" src={require("assets/img/park-features/kids.png")} />
                 <div className="text-center">
-                  Entertainment for kids
+                  Entertainment for <br /> kids
                 </div>
               </Col>
               <Col className="right-border align-center mb-3">
@@ -376,19 +381,20 @@ const LandingPage = () => {
         <div className="">
           <div
             style={{
-              backgroundImage: "url(" + require("assets/img/bg.png") + ")",
+              backgroundImage: "url(" + require("assets/resources/pattern.svg") + ")",
+              // opacity: 0.5,
             }}
             className="bg-image">
             <div className="payment-section">
               <h4>PROJECT DETAILS</h4>
               <h3 className="title">3 YEARS EASY PAYMENT PLAN</h3>
-              <Container>
+              <Container fluid>
                 <Row>
                   <Col className="col-lg-3 col-md-6 col-6">
-                    <div style={{ background: '#B5A194' }} className="plot-card content-center">
+                    <div style={{ background: '#B5A194' }} className="plot-card py-5">
                       <img className="plot-image" src={require("assets/img/plots/5.png")} />
-                      <h4 className="title">5 MARLA</h4>
-                      <h5 className="mb-5">RESIDENTIAL PLOTS</h5>
+                      <h4 className="title mt-4">5 MARLA</h4>
+                      <div className="mb-5">RESIDENTIAL PLOTS</div>
                       <div className="learn-more content-center">
                         <Link className="text-white" to="/payments">
                           LEARN MORE
@@ -397,10 +403,10 @@ const LandingPage = () => {
                     </div>
                   </Col>
                   <Col className="col-lg-3 col-md-6 col-6">
-                    <div style={{ background: '#E8E5E0' }} className="plot-card content-center">
+                    <div style={{ background: '#E8E5E0' }} className="plot-card py-5">
                       <img className="plot-image" src={require("assets/img/plots/10.png")} />
-                      <h4 className="title">10 MARLA</h4>
-                      <h5 className="mb-5">RESIDENTIAL PLOTS</h5>
+                      <h4 className="title mt-4">10 MARLA</h4>
+                      <div className="mb-5">RESIDENTIAL PLOTS</div>
                       <div className="learn-more content-center">
                         <Link className="text-white" to="/payments">
                           LEARN MORE
@@ -409,10 +415,10 @@ const LandingPage = () => {
                     </div>
                   </Col>
                   <Col className="col-lg-3 col-md-6 col-6">
-                    <div style={{ background: '#9D948B' }} className="plot-card content-center">
+                    <div style={{ background: '#9D948B' }} className="plot-card py-5">
                       <img className="plot-image" src={require("assets/img/plots/1.png")} />
-                      <h4 className="title">1 KANAL</h4>
-                      <h5 className="mb-5">RESIDENTIAL PLOTS</h5>
+                      <h4 className="title mt-4">1 KANAL</h4>
+                      <div className="mb-5">RESIDENTIAL PLOTS</div>
                       <div className="learn-more content-center">
                         <Link className="text-white" to="/payments">
                           LEARN MORE
@@ -421,10 +427,9 @@ const LandingPage = () => {
                     </div>
                   </Col>
                   <Col className="col-lg-3 col-md-6 col-6">
-                    <div style={{ background: '#F5F5F5' }} className="plot-card content-center">
+                    <div style={{ background: '#F5F5F5' }} className="plot-card py-5">
                       <img className="plot-image" src={require("assets/img/plots/commercial.png")} />
-                      <h4 className="title">COMMERCIAL PLOTS</h4>
-                      <h5 className="mb-5">RESIDENTIAL PLOTS</h5>
+                      <h4 className="title mt-4">COMMERCIAL PLOTS</h4>
                       <div className="learn-more content-center">
                         <Link className="text-white" to="/payments">
                           LEARN MORE
